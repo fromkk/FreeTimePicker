@@ -21,39 +21,44 @@ final class SearchViewModel: ObservableObject {
     @Published var transitTimeDate: Date? = nil
     @Published var transitTimeText: String? = nil
     @Published var ignoreAllDays: Bool = true
-    @Published private var changeValue: Void? = nil
+    @Published var search: Void? = nil
     
     private var cancellables: [AnyCancellable] = []
+
+    typealias Range = (Date?, Date?)
 
     init() {
         bind()
     }
     
     private func bind() {
-        $searchDateType.filter { $0 != nil }.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        $minFreeTimeDate.filter { $0 != nil }.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        $fromTime.filter { $0 != nil }.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        $toTime.filter { $0 != nil }.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        $transitTimeDate.filter { $0 != nil }.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        $ignoreAllDays.map { _ in () }.assign(to: \.changeValue, on: self).store(in: &cancellables)
-        
-        $changeValue.filter { $0 != nil }.sink { [weak self] _ in
-            self?.handleIsValid()
-        }.store(in: &cancellables)
+        let fromTo = Publishers.CombineLatest($fromTime, $toTime)
+        let freeTimeAndTransitTime = Publishers.CombineLatest($minFreeTimeDate, $transitTimeDate)
+        let combine = Publishers.CombineLatest4($searchDateType, fromTo, freeTimeAndTransitTime, $ignoreAllDays).share()
+        combine.sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
+                self?.handleIsValid(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
+            }.store(in: &cancellables)
+
+        $search.filter { $0 != nil }
+            .combineLatest(combine, { $1 })
+                .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
+                    self?.search(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
+            }.store(in: &cancellables)
     }
 
-    private func handleIsValid() {
-        guard let _ = searchDateType, let _ = minFreeTimeDate, let _ = fromTime, let _ = toTime, let _ = transitTimeDate else {
-            isValid = false
-            return
-        }
-        isValid = true
+    private func handleIsValid(searchDateType: SearchDateType?, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+        let isValidFromTo: Bool = {
+            if let from = fromTo.0, let to = fromTo.1 {
+                return from < to
+            } else {
+                return false
+            }
+        }()
+
+        isValid = searchDateType != nil && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
-    func search() {
-        guard let searchDateType = searchDateType, let minFreeTime = minFreeTimeDate, let fromTime = fromTime, let toTime = toTime, let transitTime = transitTimeDate else {
-            return
-        }
-        print("search")
+    private func search(searchDateType: SearchDateType?, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+        print(searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays)
     }
 }

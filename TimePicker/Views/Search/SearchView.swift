@@ -50,7 +50,7 @@ struct SearchView: View {
     }
 
     private func search() {
-        viewModel.search()
+        viewModel.search = ()
     }
 
     private func endEditing() {
