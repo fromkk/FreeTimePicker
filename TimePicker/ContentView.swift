@@ -7,15 +7,32 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct ContentView: View {
+    @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            if self.calendarPermissionViewModel.isGranted {
+                SearchView(viewModel: SearchViewModel())
+                .navigationBarTitle("Search free time")
+            } else {
+                NoPermissionView()
+            }
+        }.onAppear {
+            self.calendarPermissionViewModel.request()
+        }
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: false)))
+            ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: true)))
+        }
     }
 }
+#endif

@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  TimePicker
+
+  Created by Kazuya Ueoka on 2020/02/06.
+  Copyright © 2020 fromKK. All rights reserved.
+*/
+
+"Completion" = "Completion";
+
+"No permissions" = "Allow access to your calendar.";
+
+"Go to Settings" = "Go to Settings";
+
+"Search free time" = "Search free time";
+
+"Search" = "Search";
+
+"Search date today" = "Today";
+
+"Search date tomorrow" = "Tomorrow";
+
+"Search date this week" = "This week";
+
+"Search date next week" = "Next week";
+
+"Search date this month" = "This month";
+
+"Search date next month" = "Next month";
+
+"Search date custom" = "Custom";
+
+"Date" = "Date";
+
+"Min free time" = "Min free time";
+
+"Transit time" = "Transit time";
+
+"Ignore all days" = "Ignore all days";
+
+" - " = " - ";
+
+"Search range" = "Search range";
