@@ -26,8 +26,11 @@ final class SearchViewModel: ObservableObject {
     private var cancellables: [AnyCancellable] = []
 
     typealias Range = (Date?, Date?)
+    
+    let eventRepository: EventRepositoryProtocol
 
-    init() {
+    init(eventRepository: EventRepositoryProtocol) {
+        self.eventRepository = eventRepository
         bind()
     }
     
@@ -42,6 +45,7 @@ final class SearchViewModel: ObservableObject {
         $search.filter { $0 != nil }
             .combineLatest(combine, { $1 })
                 .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
+                    guard let searchDateType = searchDateType else { return }
                     self?.search(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
             }.store(in: &cancellables)
     }
@@ -58,7 +62,11 @@ final class SearchViewModel: ObservableObject {
         isValid = searchDateType != nil && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
-    private func search(searchDateType: SearchDateType?, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
-        print(searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays)
+    private func search(searchDateType: SearchDateType, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+        let (startDate, endDate) = searchDateType.dates()
+        eventRepository.fetch(startDate: startDate, endDate: endDate, ignoreAllDay: ignoreAllDays)
+            .sink { events in
+                print(events)
+        }.store(in: &cancellables)
     }
 }

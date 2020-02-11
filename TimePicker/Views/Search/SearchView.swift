@@ -52,16 +52,12 @@ struct SearchView: View {
     private func search() {
         viewModel.search = ()
     }
-
-    private func endEditing() {
-        UIApplication.shared.endEditing()
-    }
 }
 
 struct SearchView_Preview: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchView(viewModel: SearchViewModel())
+            SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
         }
     }
 }

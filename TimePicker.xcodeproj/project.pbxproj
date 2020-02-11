@@ -21,6 +21,8 @@
 		AD034B3423EBFBDF00415E9A /* CalendarPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */; };
 		AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3623EC083600415E9A /* SearchViewModel.swift */; };
 		AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3923EC090700415E9A /* DateTypeView.swift */; };
+		AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EC23F29D9500755C9D /* EventEntity.swift */; };
+		AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EF23F29E5100755C9D /* EventRepository.swift */; };
 		AD97444B23EFA95900EACECB /* UIApplication+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444A23EFA95900EACECB /* UIApplication+extensions.swift */; };
 		AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444D23EFAA4700EACECB /* Toolbar.swift */; };
 		AD97445A23EFE5B600EACECB /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97445823EFE5B600EACECB /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +95,8 @@
 		AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPermissionViewModel.swift; sourceTree = "<group>"; };
 		AD034B3623EC083600415E9A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AD034B3923EC090700415E9A /* DateTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTypeView.swift; sourceTree = "<group>"; };
+		AD1332EC23F29D9500755C9D /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
+		AD1332EF23F29E5100755C9D /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
 		AD97444A23EFA95900EACECB /* UIApplication+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extensions.swift"; sourceTree = "<group>"; };
 		AD97444D23EFAA4700EACECB /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		AD97444F23EFE53900EACECB /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		AD034B3223EBFBB800415E9A /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				AD1332EE23F29E4500755C9D /* Event */,
 				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
 			);
 			path = Support;
@@ -255,6 +260,15 @@
 				AD034B3923EC090700415E9A /* DateTypeView.swift */,
 			);
 			path = DateTypeView;
+			sourceTree = "<group>";
+		};
+		AD1332EE23F29E4500755C9D /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				AD1332EC23F29D9500755C9D /* EventEntity.swift */,
+				AD1332EF23F29E5100755C9D /* EventRepository.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		AD97444923EFA94C00EACECB /* Extensions */ = {
@@ -475,8 +489,10 @@
 				AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */,
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
 				AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */,
+				AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */,
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
 				AD034B3423EBFBDF00415E9A /* CalendarPermissionViewModel.swift in Sources */,
+				AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,

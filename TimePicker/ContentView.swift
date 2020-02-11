@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if self.calendarPermissionViewModel.isGranted {
-                SearchView(viewModel: SearchViewModel())
+                SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
                 .navigationBarTitle("Search free time")
             } else {
                 NoPermissionView()
