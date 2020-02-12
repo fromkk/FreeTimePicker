@@ -18,10 +18,12 @@ final class DetailViewController: UIViewController {
         target: self,
         action: #selector(share)
     )
+    lazy var closeBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(close))
 
     override func loadView() {
         super.loadView()
         title = NSLocalizedString("Free time", comment: "Free time")
+        navigationItem.leftBarButtonItem = closeBarButtonItem
         navigationItem.rightBarButtonItem = shareBarButtonItem
         addTextView()
         bind()
@@ -54,6 +56,10 @@ final class DetailViewController: UIViewController {
         let activityViewController = UIActivityViewController(activityItems: [self.text], applicationActivities: nil)
         activityViewController.popoverPresentationController?.barButtonItem = shareBarButtonItem
         present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @objc private func close() {
+        dismiss(animated: true, completion: nil)
     }
 }
 

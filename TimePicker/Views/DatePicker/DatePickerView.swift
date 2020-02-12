@@ -40,6 +40,7 @@ final class DatePicker: UITextField {
     convenience init(datePickerMode: UIDatePicker.Mode) {
         self.init()
         setUp(datePickerMode: datePickerMode)
+        setUpNotification()
     }
 
     override init(frame: CGRect) {
@@ -56,6 +57,7 @@ final class DatePicker: UITextField {
         let toolbar = Toolbar(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 44)))
         toolbar.completion.sink { [weak self] (_) in
             guard let self = self else { return }
+            self.datePickerDidChange(self.datePicker)
             self.datePickerDelegate?.datePickerDidChanged(self)
             self.resignFirstResponder()
         }.store(in: &cancellables)
@@ -77,13 +79,25 @@ final class DatePicker: UITextField {
         inputAccessoryView = toolbar
         placeholder = datePickerMode.placeholder()
     }
+    
+    private func setUpNotification() {
+        NotificationCenter.default
+            .publisher(for: UITextField.textDidChangeNotification, object: self)
+            .sink { [weak self] _ in
+                self?.setText(self?.text)
+        }.store(in: &cancellables)
+    }
 
     override var text: String? {
         didSet {
-            guard let text = text, let date = convertToDate(text) else { return }
-            datePicker.date = date
-            datePickerDelegate?.datePickerDidChanged(self)
+            setText(text)
         }
+    }
+    
+    private func setText(_ text: String?) {
+        guard let text = text, let date = convertToDate(text) else { return }
+        datePicker.date = date
+        datePickerDelegate?.datePickerDidChanged(self)
     }
 
     var date: Date? {
