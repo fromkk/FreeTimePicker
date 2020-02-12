@@ -21,7 +21,7 @@ final class SearchViewModel: ObservableObject {
     @Published var transitTimeDate: Date? = nil
     @Published var transitTimeText: String? = nil
     @Published var ignoreAllDays: Bool = true
-    @Published var search: Void? = nil
+    private var _search: PassthroughSubject<Void?, Never> = .init()
     
     private var cancellables: [AnyCancellable] = []
 
@@ -42,12 +42,17 @@ final class SearchViewModel: ObservableObject {
                 self?.handleIsValid(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
             }.store(in: &cancellables)
 
-        $search.filter { $0 != nil }
-            .combineLatest(combine, { $1 })
+        _search.filter { $0 != nil }
+            .zip(combine, { $1 })
                 .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
                     guard let searchDateType = searchDateType else { return }
-                    self?.search(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
+                    self?.performSearch(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
             }.store(in: &cancellables)
+    }
+
+    func search() {
+        _search.send(())
+        _search.send(nil)
     }
 
     private func handleIsValid(searchDateType: SearchDateType?, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
@@ -62,7 +67,7 @@ final class SearchViewModel: ObservableObject {
         isValid = searchDateType != nil && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
-    private func search(searchDateType: SearchDateType, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+    private func performSearch(searchDateType: SearchDateType, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
         let (startDate, endDate) = searchDateType.dates()
         eventRepository.fetch(startDate: startDate, endDate: endDate, ignoreAllDay: ignoreAllDays)
             .sink { events in
