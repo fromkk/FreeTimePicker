@@ -27,7 +27,6 @@
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */; };
-		AD97444B23EFA95900EACECB /* UIApplication+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444A23EFA95900EACECB /* UIApplication+extensions.swift */; };
 		AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444D23EFAA4700EACECB /* Toolbar.swift */; };
 		AD97445A23EFE5B600EACECB /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97445823EFE5B600EACECB /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97445623EFE5B600EACECB /* UI.framework */; };
@@ -105,7 +104,6 @@
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
-		AD97444A23EFA95900EACECB /* UIApplication+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extensions.swift"; sourceTree = "<group>"; };
 		AD97444D23EFAA4700EACECB /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		AD97444F23EFE53900EACECB /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		AD97445623EFE5B600EACECB /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +172,6 @@
 		AD034AF223EBE8ED00415E9A /* TimePicker */ = {
 			isa = PBXGroup;
 			children = (
-				AD97444923EFA94C00EACECB /* Extensions */,
 				AD034B3223EBFBB800415E9A /* Support */,
 				AD034B2B23EBEF8600415E9A /* Resources */,
 				AD034B2423EBEE1C00415E9A /* Views */,
@@ -289,14 +286,6 @@
 				AD70587B23F3E66500C88099 /* DetailViewModel.swift */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		AD97444923EFA94C00EACECB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				AD97444A23EFA95900EACECB /* UIApplication+extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AD97444C23EFAA3700EACECB /* Toolbar */ = {
@@ -504,7 +493,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD97444B23EFA95900EACECB /* UIApplication+extensions.swift in Sources */,
 				AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */,
 				AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */,
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
