@@ -11,8 +11,9 @@ import Foundation
 final class DetailViewModel: ObservableObject {
     let separator = NSLocalizedString(" - ", comment: " - ")
     var dateFormat: String = {
-        let defaultDateFormat = "MMM d, yyyy, HH:mm"
-        return DateFormatter.dateFormat(fromTemplate: defaultDateFormat, options: 0, locale: .current) ?? defaultDateFormat
+        let defaultDateFormat = "EEE, d MMM yyyy, HH:mm"
+        let userDefaultsFormat = UserDefaults.standard.string(forKey: "date_format")
+        return DateFormatter.dateFormat(fromTemplate: userDefaultsFormat ?? defaultDateFormat, options: 0, locale: .current) ?? defaultDateFormat
     }()
 
     private var dateFormatter: DateFormatter = {

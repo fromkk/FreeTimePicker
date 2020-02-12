@@ -27,6 +27,7 @@
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */; };
+		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
 		AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444D23EFAA4700EACECB /* Toolbar.swift */; };
 		AD97445A23EFE5B600EACECB /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97445823EFE5B600EACECB /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97445623EFE5B600EACECB /* UI.framework */; };
@@ -104,6 +105,7 @@
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
+		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD97444D23EFAA4700EACECB /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		AD97444F23EFE53900EACECB /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		AD97445623EFE5B600EACECB /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				AD034B3023EBF4C000415E9A /* Localizable.strings */,
+				AD90749223F427D200E07C31 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			files = (
 				AD034B0023EBE8EE00415E9A /* LaunchScreen.storyboard in Resources */,
 				AD034B2E23EBF4C000415E9A /* Localizable.strings in Resources */,
+				AD90749323F427D200E07C31 /* Settings.bundle in Resources */,
 				AD034AFD23EBE8EE00415E9A /* Preview Assets.xcassets in Resources */,
 				AD034AFA23EBE8EE00415E9A /* Assets.xcassets in Resources */,
 			);
