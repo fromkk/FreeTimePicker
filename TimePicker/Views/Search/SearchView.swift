@@ -60,6 +60,9 @@ struct SearchView: View {
 
     private func search() {
         viewModel.search()
+        if let searchDateType = viewModel.searchDateType {
+            SiriRegister.register(with: searchDateType)
+        }
     }
 }
 

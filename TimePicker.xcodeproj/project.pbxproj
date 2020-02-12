@@ -28,6 +28,10 @@
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
+		AD90749623F42ABF00E07C31 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; };
+		AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A023F42D8F00E07C31 /* SiriRegister.swift */; };
+		AD9074A323F42E9A00E07C31 /* SearchDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A223F42E9A00E07C31 /* SearchDateType.swift */; };
+		AD9074A523F42EB100E07C31 /* SearchDateType+Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */; };
 		AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444D23EFAA4700EACECB /* Toolbar.swift */; };
 		AD97445A23EFE5B600EACECB /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97445823EFE5B600EACECB /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97445623EFE5B600EACECB /* UI.framework */; };
@@ -106,6 +110,11 @@
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		AD90749F23F42D2900E07C31 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		AD9074A023F42D8F00E07C31 /* SiriRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriRegister.swift; sourceTree = "<group>"; };
+		AD9074A223F42E9A00E07C31 /* SearchDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateType.swift; sourceTree = "<group>"; };
+		AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDateType+Intents.swift"; sourceTree = "<group>"; };
 		AD97444D23EFAA4700EACECB /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		AD97444F23EFE53900EACECB /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		AD97445623EFE5B600EACECB /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +261,7 @@
 			children = (
 				AD034B3023EBF4C000415E9A /* Localizable.strings */,
 				AD90749223F427D200E07C31 /* Settings.bundle */,
+				AD90749823F42ABF00E07C31 /* Intents.intentdefinition */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -259,6 +269,7 @@
 		AD034B3223EBFBB800415E9A /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				AD90749D23F42CD700E07C31 /* Siri */,
 				AD1332EE23F29E4500755C9D /* Event */,
 				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
 				AD70587023F3817000C88099 /* EventDateCalculator.swift */,
@@ -271,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				AD034B3923EC090700415E9A /* DateTypeView.swift */,
+				AD9074A223F42E9A00E07C31 /* SearchDateType.swift */,
+				AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */,
 			);
 			path = DateTypeView;
 			sourceTree = "<group>";
@@ -291,6 +304,14 @@
 				AD70587B23F3E66500C88099 /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		AD90749D23F42CD700E07C31 /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				AD9074A023F42D8F00E07C31 /* SiriRegister.swift */,
+			);
+			path = Siri;
 			sourceTree = "<group>";
 		};
 		AD97444C23EFAA3700EACECB /* Toolbar */ = {
@@ -501,14 +522,18 @@
 			files = (
 				AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */,
 				AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */,
+				AD90749623F42ABF00E07C31 /* Intents.intentdefinition in Sources */,
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
 				AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */,
 				AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */,
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
+				AD9074A323F42E9A00E07C31 /* SearchDateType.swift in Sources */,
+				AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */,
 				AD034B3423EBFBDF00415E9A /* CalendarPermissionViewModel.swift in Sources */,
 				AD70587123F3817000C88099 /* EventDateCalculator.swift in Sources */,
 				AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
+				AD9074A523F42EB100E07C31 /* SearchDateType+Intents.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
@@ -579,6 +604,15 @@
 				AD034B3123EBF4CF00415E9A /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AD90749823F42ABF00E07C31 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD90749723F42ABF00E07C31 /* en */,
+				AD90749F23F42D2900E07C31 /* ja */,
+			);
+			name = Intents.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
