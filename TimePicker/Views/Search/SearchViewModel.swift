@@ -142,6 +142,14 @@ final class SearchViewModel: ObservableObject {
                 }
             }
         }
-        print(#function, "result \(result)")
+        result = result.map { adjust(dates: $0, withTransit: transitTime) }
+        print(result)
+    }
+    
+    private func adjust(dates: (Date, Date), withTransit transitTime: TimeInterval) -> (Date, Date) {
+        return (
+            dates.0.addingTimeInterval(transitTime),
+            dates.1.addingTimeInterval(-transitTime)
+        )
     }
 }
