@@ -8,8 +8,8 @@ Search | Detail
 
 ## Environment
 
-macOS Catalina 10.15.3（19D76）
-Xcode Version 11.3.1 (11C504)
+- macOS Catalina 10.15.3（19D76）
+- Xcode Version 11.3.1 (11C504)
 
 ## Using
 
