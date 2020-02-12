@@ -112,6 +112,7 @@
 		AD97446423EFE5CB00EACECB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD97446623EFE5E800EACECB /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		ADBB0E2E23F406AC00258A88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +151,7 @@
 		AD034AE723EBE8ED00415E9A = {
 			isa = PBXGroup;
 			children = (
+				ADBB0E2E23F406AC00258A88 /* README.md */,
 				AD034AF223EBE8ED00415E9A /* TimePicker */,
 				AD034B0923EBE8EE00415E9A /* TimePickerTests */,
 				AD034B1423EBE8EE00415E9A /* TimePickerUITests */,
