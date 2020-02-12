@@ -20,7 +20,9 @@ struct ContentView: View {
             } else {
                 NoPermissionView()
             }
-        }.onAppear {
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
             self.calendarPermissionViewModel.request()
         }
     }
