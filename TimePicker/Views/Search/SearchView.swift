@@ -35,7 +35,7 @@ struct SearchView: View {
                     DatePickerView(datePickerModel: .countDownTimer, date: $viewModel.transitTimeDate, text: $viewModel.transitTimeText)
                     Toggle(isOn: $viewModel.ignoreAllDays, label: {
                         Text("Ignore all days").bold()
-                    })
+                    }).padding([.trailing], 8)
                 }
                 Spacer(minLength: 32)
                 Button(action: {
