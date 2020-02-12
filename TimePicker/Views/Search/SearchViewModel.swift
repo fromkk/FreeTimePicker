@@ -25,7 +25,9 @@ final class SearchViewModel: ObservableObject {
     
     private var cancellables: [AnyCancellable] = []
 
-    typealias Range = (Date?, Date?)
+    typealias RangeOfDates = (Date?, Date?)
+    @Published var result: [(Date, Date)] = []
+    @Published var hasResults: Bool = false
     
     let eventRepository: EventRepositoryProtocol
     private let calculator: EventDateCalculator = .init()
@@ -43,8 +45,10 @@ final class SearchViewModel: ObservableObject {
                 self?.handleIsValid(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
             }.store(in: &cancellables)
 
-        _search.filter { $0 != nil }
-            .combineLatest(combine, { $1 })
+        _search
+            .combineLatest(combine)
+            .filter { $0.0 != nil }
+            .map { $0.1 }
                 .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
                     guard let searchDateType = searchDateType else { return }
                     self?.performSearch(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
@@ -56,7 +60,7 @@ final class SearchViewModel: ObservableObject {
         _search.send(nil)
     }
 
-    private func handleIsValid(searchDateType: SearchDateType?, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+    private func handleIsValid(searchDateType: SearchDateType?, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignoreAllDays: Bool) {
         let isValidFromTo: Bool = {
             if let from = fromTo.0, let to = fromTo.1 {
                 return from < to
@@ -68,7 +72,7 @@ final class SearchViewModel: ObservableObject {
         isValid = searchDateType != nil && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
-    private func performSearch(searchDateType: SearchDateType, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
+    private func performSearch(searchDateType: SearchDateType, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignoreAllDays: Bool) {
         guard let startDate = fromTo.0, let endDate = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
             return
         }
@@ -99,12 +103,13 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval) {
+        print(#function, from, to, startDate, endDate, freeTime, transitTime)
         let dates = calculator.split(from: from, to: to, startDate: startDate, endDate: endDate)
         let minFreeTime = freeTime + transitTime * 2
         
         var result: [(Date, Date)] = []
         dates.forEach { (start, end) in
-            let eventsOfTheDay = events.search(in: start)
+            let eventsOfTheDay = events.search(in: start, and: end)
             if 0 == eventsOfTheDay.count {
                 let timeInterval = abs(start.distance(to: end))
                 if timeInterval >= minFreeTime {
@@ -143,7 +148,8 @@ final class SearchViewModel: ObservableObject {
             }
         }
         result = result.map { adjust(dates: $0, withTransit: transitTime) }
-        print(result)
+        self.result = result
+        self.hasResults = result.count > 0
     }
     
     private func adjust(dates: (Date, Date), withTransit transitTime: TimeInterval) -> (Date, Date) {

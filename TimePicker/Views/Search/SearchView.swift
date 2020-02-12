@@ -7,10 +7,16 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel
-    
+    private var cancellables: [AnyCancellable] = []
+
+    init(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading) {
@@ -47,6 +53,9 @@ struct SearchView: View {
         }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .padding(16)
+        .sheet(isPresented: $viewModel.hasResults) {
+            DetailView(viewModel: .init(dates: self.viewModel.result))
+        }        
     }
 
     private func search() {
