@@ -96,7 +96,7 @@ enum SearchDateType: CaseIterable, Identifiable, Equatable {
         dateComponents.weekOfMonth = 1
         dateComponents.second = -1
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
-        return (startDate, endDate)
+        return (calendar.startOfDay(for: date), endDate)
     }
     
     private func nextWeek(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
@@ -126,7 +126,7 @@ enum SearchDateType: CaseIterable, Identifiable, Equatable {
         dateComponents.month = 1
         dateComponents.second = -1
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
-        return (startDate, endDate)
+        return (calendar.startOfDay(for: date), endDate)
     }
     
     private func nextMonth(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {

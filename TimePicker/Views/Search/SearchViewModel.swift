@@ -28,6 +28,7 @@ final class SearchViewModel: ObservableObject {
     typealias Range = (Date?, Date?)
     
     let eventRepository: EventRepositoryProtocol
+    private let calculator: EventDateCalculator = .init()
 
     init(eventRepository: EventRepositoryProtocol) {
         self.eventRepository = eventRepository
@@ -43,7 +44,7 @@ final class SearchViewModel: ObservableObject {
             }.store(in: &cancellables)
 
         _search.filter { $0 != nil }
-            .zip(combine, { $1 })
+            .combineLatest(combine, { $1 })
                 .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignoreAllDays in
                     guard let searchDateType = searchDateType else { return }
                     self?.performSearch(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignoreAllDays: ignoreAllDays)
@@ -68,10 +69,79 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func performSearch(searchDateType: SearchDateType, fromTo: Range, freeTimeAndTransitTime: Range, ignoreAllDays: Bool) {
-        let (startDate, endDate) = searchDateType.dates()
-        eventRepository.fetch(startDate: startDate, endDate: endDate, ignoreAllDay: ignoreAllDays)
-            .sink { events in
-                print(events)
+        guard let startDate = fromTo.0, let endDate = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
+            return
+        }
+
+        let (from, to) = searchDateType.dates()
+        eventRepository.fetch(startDate: from, endDate: to, ignoreAllDay: ignoreAllDays)
+            .sink { [weak self] events in
+                guard let self = self else { return }
+                self.searchFreeTime(
+                    in: events,
+                    from: from,
+                    to: to,
+                    startDate: startDate,
+                    endDate: endDate,
+                    freeTime: self.timeInterval(of: freeTime),
+                    transitTime: self.timeInterval(of: transitTime)
+                )
         }.store(in: &cancellables)
+    }
+
+    private func timeInterval(of date: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> TimeInterval {
+        var calendar = calendar
+        calendar.timeZone = timeZone
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: date)
+        let minute: TimeInterval = 60.0
+        let hour: TimeInterval = 60.0 * 60.0
+        return TimeInterval(dateComponents.hour!) * hour + TimeInterval(dateComponents.minute!) * minute
+    }
+
+    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval) {
+        let dates = calculator.split(from: from, to: to, startDate: startDate, endDate: endDate)
+        let minFreeTime = freeTime + transitTime * 2
+        
+        var result: [(Date, Date)] = []
+        dates.forEach { (start, end) in
+            let eventsOfTheDay = events.search(in: start)
+            if 0 == eventsOfTheDay.count {
+                let timeInterval = abs(start.distance(to: end))
+                if timeInterval >= minFreeTime {
+                    result.append((start, end))
+                }
+            } else if 1 == eventsOfTheDay.count, let first = eventsOfTheDay.first {
+                let startTimeIntervalOfTheDay = calculator.startTimeInterval(at: start, for: first)
+                let endTimeIntervalOfTheDay = calculator.endTimeInterval(at: end, for: first)
+                
+                if startTimeIntervalOfTheDay >= minFreeTime {
+                    result.append((start, first.startDate))
+                }
+                if endTimeIntervalOfTheDay >= minFreeTime {
+                    result.append((first.endDate, end))
+                }
+            } else {
+                eventsOfTheDay.enumerated().forEach { offset, event in
+                    if offset == 0 {
+                        let startTimeIntervalOfTheDay = calculator.startTimeInterval(at: start, for: event)
+                        if startTimeIntervalOfTheDay >= minFreeTime {
+                            result.append((start, event.startDate))
+                        }
+                    } else if offset == eventsOfTheDay.count - 1 {
+                        let endTimeIntervalOfTheDay = calculator.endTimeInterval(at: end, for: event)
+                        if endTimeIntervalOfTheDay >= minFreeTime {
+                            result.append((event.endDate, end))
+                        }
+                    } else {
+                        let preEvent = eventsOfTheDay[offset - 1]
+                        let timeInterval = calculator.timeInterval(from: preEvent, to: event)
+                        if timeInterval >= minFreeTime {
+                            result.append((preEvent.endDate, event.startDate))
+                        }
+                    }
+                }
+            }
+        }
+        print(#function, "result \(result)")
     }
 }
