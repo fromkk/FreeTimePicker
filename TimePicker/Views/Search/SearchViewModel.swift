@@ -22,13 +22,13 @@ final class SearchViewModel: ObservableObject {
     @Published var transitTimeText: String? = nil
     @Published var ignoreAllDays: Bool = true
     private var _search: PassthroughSubject<Void?, Never> = .init()
-    
+
     private var cancellables: [AnyCancellable] = []
 
     typealias RangeOfDates = (Date?, Date?)
     @Published var result: [(Date, Date)] = []
     @Published var hasResults: Bool = false
-    
+
     let eventRepository: EventRepositoryProtocol
     private let calculator: EventDateCalculator = .init()
 
@@ -36,7 +36,7 @@ final class SearchViewModel: ObservableObject {
         self.eventRepository = eventRepository
         bind()
     }
-    
+
     private func bind() {
         let fromTo = Publishers.CombineLatest($fromTime, $toTime)
         let freeTimeAndTransitTime = Publishers.CombineLatest($minFreeTimeDate, $transitTimeDate)
@@ -103,59 +103,16 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval) {
-        print(#function, from, to, startDate, endDate, freeTime, transitTime)
-        let dates = calculator.split(from: from, to: to, startDate: startDate, endDate: endDate)
-        let minFreeTime = freeTime + transitTime * 2
-        
-        var result: [(Date, Date)] = []
-        dates.forEach { (start, end) in
-            let eventsOfTheDay = events.search(in: start, and: end)
-            if 0 == eventsOfTheDay.count {
-                let timeInterval = abs(start.distance(to: end))
-                if timeInterval >= minFreeTime {
-                    result.append((start, end))
-                }
-            } else if 1 == eventsOfTheDay.count, let first = eventsOfTheDay.first {
-                let startTimeIntervalOfTheDay = calculator.startTimeInterval(at: start, for: first)
-                let endTimeIntervalOfTheDay = calculator.endTimeInterval(at: end, for: first)
-                
-                if startTimeIntervalOfTheDay >= minFreeTime {
-                    result.append((start, first.startDate))
-                }
-                if endTimeIntervalOfTheDay >= minFreeTime {
-                    result.append((first.endDate, end))
-                }
-            } else {
-                eventsOfTheDay.enumerated().forEach { offset, event in
-                    if offset == 0 {
-                        let startTimeIntervalOfTheDay = calculator.startTimeInterval(at: start, for: event)
-                        if startTimeIntervalOfTheDay >= minFreeTime {
-                            result.append((start, event.startDate))
-                        }
-                    } else if offset == eventsOfTheDay.count - 1 {
-                        let endTimeIntervalOfTheDay = calculator.endTimeInterval(at: end, for: event)
-                        if endTimeIntervalOfTheDay >= minFreeTime {
-                            result.append((event.endDate, end))
-                        }
-                    } else {
-                        let preEvent = eventsOfTheDay[offset - 1]
-                        let timeInterval = calculator.timeInterval(from: preEvent, to: event)
-                        if timeInterval >= minFreeTime {
-                            result.append((preEvent.endDate, event.startDate))
-                        }
-                    }
-                }
-            }
-        }
-        result = result.map { adjust(dates: $0, withTransit: transitTime) }
-        self.result = result
-        self.hasResults = result.count > 0
-    }
-    
-    private func adjust(dates: (Date, Date), withTransit transitTime: TimeInterval) -> (Date, Date) {
-        return (
-            dates.0.addingTimeInterval(transitTime),
-            dates.1.addingTimeInterval(-transitTime)
+        self.result = FreeTimeFinder.find(
+            with: calculator,
+            in: events,
+            from: from,
+            to: to,
+            startDate: startDate,
+            endDate: endDate,
+            freeTime: freeTime,
+            transitTime: transitTime
         )
+        self.hasResults = result.count > 0
     }
 }
