@@ -24,7 +24,7 @@ struct SearchView: View {
                     Text("Date").bold()
                     SearchDateView(selectedSearchDateType: $viewModel.searchDateType)
                     Text("Min free time").bold()
-                    DatePickerView(datePickerModel: .countDownTimer, date: $viewModel.minFreeTimeDate, text: $viewModel.minFreeTimeText)
+                    DatePickerView(datePickerModel: .time, date: $viewModel.minFreeTimeDate, text: $viewModel.minFreeTimeText)
                     Text("Search range").bold()
                     HStack {
                         DatePickerView(datePickerModel: .time, date: $viewModel.fromTime, text: $viewModel.fromText)
@@ -32,7 +32,7 @@ struct SearchView: View {
                         DatePickerView(datePickerModel: .time, date: $viewModel.toTime, text: $viewModel.toText)
                     }
                     Text("Transit time").bold()
-                    DatePickerView(datePickerModel: .countDownTimer, date: $viewModel.transitTimeDate, text: $viewModel.transitTimeText)
+                    DatePickerView(datePickerModel: .time, date: $viewModel.transitTimeDate, text: $viewModel.transitTimeText)
                     Toggle(isOn: $viewModel.ignoreAllDays, label: {
                         Text("Ignore all days").bold()
                     }).padding([.trailing], 8)

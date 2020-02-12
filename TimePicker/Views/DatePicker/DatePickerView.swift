@@ -78,8 +78,9 @@ final class DatePicker: UITextField {
         inputView = datePicker
         inputAccessoryView = toolbar
         placeholder = datePickerMode.placeholder()
+        datePicker.date = datePicker.calendar.startOfDay(for: Date())
     }
-    
+
     private func setUpNotification() {
         NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: self)
@@ -113,6 +114,9 @@ final class DatePicker: UITextField {
 
     lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 216)))
+        picker.calendar = Calendar(identifier: .gregorian)
+        picker.timeZone = .current
+        picker.locale = .current
         picker.addTarget(self, action: #selector(datePickerDidChange(_:)), for: .valueChanged)
         return picker
     }()
