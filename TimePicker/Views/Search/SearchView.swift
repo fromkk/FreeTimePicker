@@ -36,12 +36,16 @@ struct SearchView: View {
                     Toggle(isOn: $viewModel.ignoreAllDays, label: {
                         Text("Ignore all days").bold()
                     }).padding([.trailing], 8)
+                    Toggle(isOn: $viewModel.ignoreHolidays, label: {
+                        Text("Ignore holidays").bold()
+                    }).padding([.top, .trailing], 8)
                 }
                 Spacer(minLength: 32)
                 Button(action: {
                     self.search()
                 }, label: {
                     Text("Search")
+                        .bold()
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .foregroundColor(Color.white)
                 })

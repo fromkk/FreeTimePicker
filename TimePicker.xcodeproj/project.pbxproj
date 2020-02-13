@@ -23,6 +23,7 @@
 		AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3923EC090700415E9A /* DateTypeView.swift */; };
 		AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EC23F29D9500755C9D /* EventEntity.swift */; };
 		AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EF23F29E5100755C9D /* EventRepository.swift */; };
+		AD2D15A023F4DE0900422C64 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
 		AD70587123F3817000C88099 /* EventDateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587023F3817000C88099 /* EventDateCalculator.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
@@ -105,6 +106,7 @@
 		AD034B3923EC090700415E9A /* DateTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTypeView.swift; sourceTree = "<group>"; };
 		AD1332EC23F29D9500755C9D /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		AD1332EF23F29E5100755C9D /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		AD2D159F23F4DE0900422C64 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		AD70587023F3817000C88099 /* EventDateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculator.swift; sourceTree = "<group>"; };
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		AD034AF223EBE8ED00415E9A /* TimePicker */ = {
 			isa = PBXGroup;
 			children = (
+				AD2D159E23F4DD0400422C64 /* Extensions */,
 				AD034B3223EBFBB800415E9A /* Support */,
 				AD034B2B23EBEF8600415E9A /* Resources */,
 				AD034B2423EBEE1C00415E9A /* Views */,
@@ -295,6 +298,14 @@
 				AD1332EF23F29E5100755C9D /* EventRepository.swift */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		AD2D159E23F4DD0400422C64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD2D159F23F4DE0900422C64 /* Date+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AD70587823F3E47200C88099 /* Detail */ = {
@@ -533,6 +544,7 @@
 				AD70587123F3817000C88099 /* EventDateCalculator.swift in Sources */,
 				AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
+				AD2D15A023F4DE0900422C64 /* Date+extension.swift in Sources */,
 				AD9074A523F42EB100E07C31 /* SearchDateType+Intents.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */,
