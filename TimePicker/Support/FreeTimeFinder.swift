@@ -33,11 +33,12 @@ final class FreeTimeFinder {
                 eventsOfTheDay.enumerated().forEach { offset, event in
                     if offset == 0 {
                         self.first(with: calculator, at: start, with: event, minFreeTime: minFreeTime, in: &result)
-                    } else if offset == eventsOfTheDay.count - 1 {
-                        self.end(with: calculator, at: start, with: event, minFreeTime: minFreeTime, in: &result)
                     } else {
                         let preEvent = eventsOfTheDay[offset - 1]
                         self.between(with: calculator, preEvent: preEvent, currentEvent: event, minFreeTime: minFreeTime, in: &result)
+                    }
+                    if offset == eventsOfTheDay.count - 1 {
+                        self.end(with: calculator, at: end, with: event, minFreeTime: minFreeTime, in: &result)
                     }
                 }
             }

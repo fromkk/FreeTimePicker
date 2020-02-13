@@ -59,7 +59,10 @@ struct SearchView: View {
             .padding(16)
         .sheet(isPresented: $viewModel.hasResults) {
             DetailView(viewModel: .init(dates: self.viewModel.result))
-        }        
+        }
+        .alert(isPresented: $viewModel.noResults) {
+            Alert(title: Text("No free time"), message: nil, dismissButton: Alert.Button.default(Text("OK")))
+        }
     }
 
     private func search() {

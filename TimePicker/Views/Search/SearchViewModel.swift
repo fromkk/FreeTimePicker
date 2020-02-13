@@ -30,6 +30,7 @@ final class SearchViewModel: ObservableObject {
     typealias Ignores = (allDay: Bool, holidays: Bool)
     @Published var result: [(Date, Date)] = []
     @Published var hasResults: Bool = false
+    @Published var noResults: Bool = false
 
     let eventRepository: EventRepositoryProtocol
     private let calculator: EventDateCalculator = .init()
@@ -120,5 +121,6 @@ final class SearchViewModel: ObservableObject {
             ignoreHolidays: ignoreHolidays
         )
         self.hasResults = result.count > 0
+        self.noResults = result.count == 0
     }
 }
