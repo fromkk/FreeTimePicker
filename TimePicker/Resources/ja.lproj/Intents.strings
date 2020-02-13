@@ -1,4 +1,4 @@
-"CXsiIP" = "空き時間ある？";
+"CXsiIP" = "${dateType}空き時間ある？";
 
 "J84E41" = "空き時間";
 
@@ -6,9 +6,19 @@
 
 "ZuraeV" = "今週";
 
-"bajqC5" = "空き時間ある？";
+"bajqC5-U4p93D" = "今日空き時間ある？";
 
-"d8wDay" = "来週";
+"bajqC5-ZuraeV" = "今週空き時間ある？";
+
+"bajqC5-d8wDay" = "来月空き時間ある？";
+
+"bajqC5-g2zivO" = "今月空き時間ある？";
+
+"bajqC5-oD5wpv" = "明日空き時間ある？";
+
+"bajqC5-pcrhPF" = "来週空き時間ある？";
+
+"d8wDay" = "来月";
 
 "dGyHI3" = "いつ";
 
@@ -16,17 +26,19 @@
 
 "g2zivO" = "今月";
 
-"h76VsB-U4p93D" = "確認ですが‘today’でいいですか？";
+"Ek0zNy" = "カレンダーから空き時間を検索します";
 
-"h76VsB-ZuraeV" = "確認ですが‘this week’でいいですか？";
+"h76VsB-U4p93D" = "確認ですが今日でいいですか？";
 
-"h76VsB-d8wDay" = "確認ですが‘next month’でいいですか？";
+"h76VsB-ZuraeV" = "確認ですが今週でいいですか？";
 
-"h76VsB-g2zivO" = "確認ですが‘this month’でいいですか？";
+"h76VsB-d8wDay" = "確認ですが来月でいいですか？";
 
-"h76VsB-oD5wpv" = "確認ですが‘tomorrow’でいいですか？";
+"h76VsB-g2zivO" = "確認ですが今月でいいですか？";
 
-"h76VsB-pcrhPF" = "確認ですが‘next week’でいいですか？";
+"h76VsB-oD5wpv" = "確認ですが明日でいいですか？";
+
+"h76VsB-pcrhPF" = "確認ですが来週でいいですか？";
 
 "kYkjSu" = "結果";
 
@@ -34,16 +46,16 @@
 
 "oD5wpv" = "明日";
 
-"oxRZ7l-U4p93D" = "‘today’空き時間ある？";
+"oxRZ7l-U4p93D" = "今日空き時間ある？";
 
-"oxRZ7l-ZuraeV" = "‘this week’空き時間ある？";
+"oxRZ7l-ZuraeV" = "今週空き時間ある？";
 
-"oxRZ7l-d8wDay" = "‘next month’空き時間ある？";
+"oxRZ7l-d8wDay" = "来月空き時間ある？";
 
-"oxRZ7l-g2zivO" = "‘this month’空き時間ある？";
+"oxRZ7l-g2zivO" = "今月空き時間ある？";
 
-"oxRZ7l-oD5wpv" = "‘tomorrow’空き時間ある？";
+"oxRZ7l-oD5wpv" = "明日空き時間ある？";
 
-"oxRZ7l-pcrhPF" = "‘next week’空き時間ある？";
+"oxRZ7l-pcrhPF" = "来週空き時間ある？";
 
 "pcrhPF" = "来週";

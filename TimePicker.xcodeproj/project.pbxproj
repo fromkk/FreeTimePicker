@@ -113,7 +113,6 @@
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
-		AD90749F23F42D2900E07C31 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
 		AD9074A023F42D8F00E07C31 /* SiriRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriRegister.swift; sourceTree = "<group>"; };
 		AD9074A223F42E9A00E07C31 /* SearchDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateType.swift; sourceTree = "<group>"; };
 		AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDateType+Intents.swift"; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		AD97446623EFE5E800EACECB /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		ADBB0E2E23F406AC00258A88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ADBE60E123F513BD009A7FE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,7 +622,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD90749723F42ABF00E07C31 /* en */,
-				AD90749F23F42D2900E07C31 /* ja */,
+				ADBE60E123F513BD009A7FE5 /* ja */,
 			);
 			name = Intents.intentdefinition;
 			sourceTree = "<group>";

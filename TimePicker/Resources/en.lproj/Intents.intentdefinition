@@ -105,9 +105,13 @@
 			<string>search</string>
 			<key>INIntentConfigurable</key>
 			<true/>
+			<key>INIntentDescription</key>
+			<string>Find free time in your calendar.</string>
 			<key>INIntentDescriptionID</key>
 			<string>Ek0zNy</string>
 			<key>INIntentInput</key>
+			<string>dateType</string>
+			<key>INIntentKeyParameter</key>
 			<string>dateType</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>2</integer>
@@ -118,7 +122,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Are there free time?</string>
+					<string>Find free time in ${dateType}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>CXsiIP</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -136,7 +140,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Are there free time?</string>
+					<string>Find free time in ${dateType}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>bajqC5</string>
 				</dict>
