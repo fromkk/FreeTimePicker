@@ -10,12 +10,14 @@ import Foundation
 import EventKit
 import Combine
 
-protocol CalendarPermissionRepositoryProtocol {
+public protocol CalendarPermissionRepositoryProtocol {
     func request(_ callback: @escaping (Bool) -> Void)
 }
 
-final class CalendarPermissionRepository: CalendarPermissionRepositoryProtocol {
-    func request(_ callback: @escaping (Bool) -> Void) {
+public final class CalendarPermissionRepository: CalendarPermissionRepositoryProtocol {
+    public init() {}
+    
+    public func request(_ callback: @escaping (Bool) -> Void) {
         let status = EKEventStore.authorizationStatus(for: .event)
         handleAuthorizationStatus(status, callback: callback)
     }
@@ -38,27 +40,27 @@ final class CalendarPermissionRepository: CalendarPermissionRepositoryProtocol {
 }
 
 #if DEBUG
-final class CalendarPermissionRepositoryStub: CalendarPermissionRepositoryProtocol {
-    var stubbedIsGranted: Bool
-    init(stubbedIsGranted: Bool) {
+public final class CalendarPermissionRepositoryStub: CalendarPermissionRepositoryProtocol {
+    public var stubbedIsGranted: Bool
+    public init(stubbedIsGranted: Bool) {
         self.stubbedIsGranted = stubbedIsGranted
     }
     
-    func request(_ callback: @escaping (Bool) -> Void) {
+    public func request(_ callback: @escaping (Bool) -> Void) {
         callback(self.stubbedIsGranted)
     }
 }
 #endif
 
-final class CalendarPermissionViewModel: ObservableObject {
+public final class CalendarPermissionViewModel: ObservableObject {
     private let repository: CalendarPermissionRepositoryProtocol
-    init(repository: CalendarPermissionRepositoryProtocol) {
+    public init(repository: CalendarPermissionRepositoryProtocol) {
         self.repository = repository
     }
     
-    @Published var isGranted: Bool = false
+    @Published public var isGranted: Bool = false
     
-    func request() {
+    public func request() {
         repository.request { [weak self] (isGranted) in
             self?.isGranted = isGranted
         }

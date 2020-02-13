@@ -9,7 +9,7 @@
 import Foundation
 
 extension Date {
-    func isHoliday(_ calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Bool {
+    public func isHoliday(_ calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Bool {
         var calendar = calendar
         calendar.timeZone = timeZone
         return [1, 7].contains(calendar.component(.weekday, from: self))

@@ -10,12 +10,14 @@ import Foundation
 import Combine
 import EventKit
 
-protocol EventRepositoryProtocol {
+public protocol EventRepositoryProtocol {
     func fetch(startDate: Date, endDate: Date, ignoreAllDay: Bool) -> AnyPublisher<[EventEntity], Never>
 }
 
-final class EventRepository: EventRepositoryProtocol {
-    func fetch(startDate: Date, endDate: Date, ignoreAllDay: Bool) -> AnyPublisher<[EventEntity], Never> {
+public final class EventRepository: EventRepositoryProtocol {
+    public init() {}
+
+    public func fetch(startDate: Date, endDate: Date, ignoreAllDay: Bool) -> AnyPublisher<[EventEntity], Never> {
         return Deferred {
             Future<[EventEntity], Never> { promise in
                 DispatchQueue.global(qos: .userInitiated).async {

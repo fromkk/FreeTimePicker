@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Core
 
 struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel

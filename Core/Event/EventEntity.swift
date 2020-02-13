@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct EventEntity {
-    let title: String
-    let startDate: Date
-    let endDate: Date
-    let isAllDay: Bool
+public struct EventEntity {
+    public let title: String
+    public let startDate: Date
+    public let endDate: Date
+    public let isAllDay: Bool
 }
 
 extension Collection where Element == EventEntity {
-    func search(in startDate: Date, and endDate: Date) -> [EventEntity] {
+    public func search(in startDate: Date, and endDate: Date) -> [EventEntity] {
         return filter { entity in
             if startDate <= entity.startDate, endDate >= entity.endDate {
                 return true

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import EventKit
+import Core
 
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel

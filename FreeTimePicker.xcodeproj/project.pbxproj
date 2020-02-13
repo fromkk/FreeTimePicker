@@ -18,16 +18,10 @@
 		AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B2623EBEE3200415E9A /* SearchView.swift */; };
 		AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B2923EBEEAE00415E9A /* NoPermissionView.swift */; };
 		AD034B2E23EBF4C000415E9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD034B3023EBF4C000415E9A /* Localizable.strings */; };
-		AD034B3423EBFBDF00415E9A /* CalendarPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */; };
 		AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3623EC083600415E9A /* SearchViewModel.swift */; };
 		AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3923EC090700415E9A /* DateTypeView.swift */; };
-		AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EC23F29D9500755C9D /* EventEntity.swift */; };
-		AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EF23F29E5100755C9D /* EventRepository.swift */; };
-		AD2D15A023F4DE0900422C64 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
-		AD70587123F3817000C88099 /* EventDateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587023F3817000C88099 /* EventDateCalculator.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
-		AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
 		AD90749623F42ABF00E07C31 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; };
 		AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A023F42D8F00E07C31 /* SiriRegister.swift */; };
@@ -41,6 +35,17 @@
 		AD97446523EFE5CB00EACECB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97446423EFE5CB00EACECB /* Colors.swift */; };
 		AD97446723EFE5E800EACECB /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97446623EFE5E800EACECB /* UI.swift */; };
 		ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */; };
+		ADBE60F623F53C8F009A7FE5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
+		ADBE60FD23F53C8F009A7FE5 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */; };
+		ADBE60FF23F53C8F009A7FE5 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBE60EF23F53C8F009A7FE5 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADBE610223F53C8F009A7FE5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
+		ADBE610323F53C8F009A7FE5 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ADBE610A23F53CB2009A7FE5 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EC23F29D9500755C9D /* EventEntity.swift */; };
+		ADBE610B23F53CD0009A7FE5 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1332EF23F29E5100755C9D /* EventRepository.swift */; };
+		ADBE610C23F53CE7009A7FE5 /* CalendarPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */; };
+		ADBE610D23F53D14009A7FE5 /* FreeTimeFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */; };
+		ADBE610E23F53D14009A7FE5 /* EventDateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587023F3817000C88099 /* EventDateCalculator.swift */; };
+		ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,27 @@
 			remoteGlobalIDString = AD97445523EFE5B600EACECB;
 			remoteInfo = UI;
 		};
+		ADBE60F723F53C8F009A7FE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD034AE823EBE8ED00415E9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADBE60EC23F53C8F009A7FE5;
+			remoteInfo = Core;
+		};
+		ADBE60F923F53C8F009A7FE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD034AE823EBE8ED00415E9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD034AEF23EBE8ED00415E9A;
+			remoteInfo = TimePicker;
+		};
+		ADBE610023F53C8F009A7FE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD034AE823EBE8ED00415E9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADBE60EC23F53C8F009A7FE5;
+			remoteInfo = Core;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +101,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				AD97445E23EFE5B600EACECB /* UI.framework in Embed Frameworks */,
+				ADBE610323F53C8F009A7FE5 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AD034AF023EBE8ED00415E9A /* TimePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD034AF023EBE8ED00415E9A /* FreeFreeTimePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeFreeTimePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034AF323EBE8ED00415E9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD034AF723EBE8ED00415E9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,13 +117,13 @@
 		AD034AFC23EBE8EE00415E9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD034AFF23EBE8EE00415E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD034B0123EBE8EE00415E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD034B0623EBE8EE00415E9A /* TimePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD034B0623EBE8EE00415E9A /* FreeTimePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeTimePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034B0A23EBE8EE00415E9A /* TimePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerTests.swift; sourceTree = "<group>"; };
 		AD034B0C23EBE8EE00415E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD034B1123EBE8EE00415E9A /* TimePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD034B1123EBE8EE00415E9A /* FreeTimePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeTimePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034B1523EBE8EE00415E9A /* TimePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerUITests.swift; sourceTree = "<group>"; };
 		AD034B1723EBE8EE00415E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD034B2323EBEE0400415E9A /* TimePicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimePicker.entitlements; sourceTree = "<group>"; };
+		AD034B2323EBEE0400415E9A /* FreeTimePicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreeTimePicker.entitlements; sourceTree = "<group>"; };
 		AD034B2623EBEE3200415E9A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AD034B2923EBEEAE00415E9A /* NoPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionView.swift; sourceTree = "<group>"; };
 		AD034B2F23EBF4C000415E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -126,6 +153,12 @@
 		ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		ADBB0E2E23F406AC00258A88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ADBE60E523F51B1D009A7FE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		ADBE60ED23F53C8F009A7FE5 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBE60EF23F53C8F009A7FE5 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		ADBE60F023F53C8F009A7FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		ADBE60FE23F53C8F009A7FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */,
+				ADBE610223F53C8F009A7FE5 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +192,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADBE60EA23F53C8F009A7FE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBE60F223F53C8F009A7FE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBE60F623F53C8F009A7FE5 /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -165,10 +214,12 @@
 			isa = PBXGroup;
 			children = (
 				ADBB0E2E23F406AC00258A88 /* README.md */,
-				AD034AF223EBE8ED00415E9A /* TimePicker */,
-				AD034B0923EBE8EE00415E9A /* TimePickerTests */,
-				AD034B1423EBE8EE00415E9A /* TimePickerUITests */,
+				AD034AF223EBE8ED00415E9A /* FreeTimePicker */,
+				AD034B0923EBE8EE00415E9A /* FreeTimePickerTests */,
+				AD034B1423EBE8EE00415E9A /* FreeTimePickerUITests */,
 				AD97445723EFE5B600EACECB /* UI */,
+				ADBE60EE23F53C8F009A7FE5 /* Core */,
+				ADBE60FB23F53C8F009A7FE5 /* CoreTests */,
 				AD034AF123EBE8ED00415E9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -176,22 +227,23 @@
 		AD034AF123EBE8ED00415E9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD034AF023EBE8ED00415E9A /* TimePicker.app */,
-				AD034B0623EBE8EE00415E9A /* TimePickerTests.xctest */,
-				AD034B1123EBE8EE00415E9A /* TimePickerUITests.xctest */,
+				AD034AF023EBE8ED00415E9A /* FreeFreeTimePicker.app */,
+				AD034B0623EBE8EE00415E9A /* FreeTimePickerTests.xctest */,
+				AD034B1123EBE8EE00415E9A /* FreeTimePickerUITests.xctest */,
 				AD97445623EFE5B600EACECB /* UI.framework */,
+				ADBE60ED23F53C8F009A7FE5 /* Core.framework */,
+				ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AD034AF223EBE8ED00415E9A /* TimePicker */ = {
+		AD034AF223EBE8ED00415E9A /* FreeTimePicker */ = {
 			isa = PBXGroup;
 			children = (
-				AD2D159E23F4DD0400422C64 /* Extensions */,
 				AD034B3223EBFBB800415E9A /* Support */,
 				AD034B2B23EBEF8600415E9A /* Resources */,
 				AD034B2423EBEE1C00415E9A /* Views */,
-				AD034B2323EBEE0400415E9A /* TimePicker.entitlements */,
+				AD034B2323EBEE0400415E9A /* FreeTimePicker.entitlements */,
 				AD034AF323EBE8ED00415E9A /* AppDelegate.swift */,
 				AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */,
 				AD034AF723EBE8ED00415E9A /* ContentView.swift */,
@@ -200,7 +252,7 @@
 				AD034B0123EBE8EE00415E9A /* Info.plist */,
 				AD034AFB23EBE8EE00415E9A /* Preview Content */,
 			);
-			path = TimePicker;
+			path = FreeTimePicker;
 			sourceTree = "<group>";
 		};
 		AD034AFB23EBE8EE00415E9A /* Preview Content */ = {
@@ -211,22 +263,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AD034B0923EBE8EE00415E9A /* TimePickerTests */ = {
+		AD034B0923EBE8EE00415E9A /* FreeTimePickerTests */ = {
 			isa = PBXGroup;
 			children = (
 				AD034B0A23EBE8EE00415E9A /* TimePickerTests.swift */,
 				AD034B0C23EBE8EE00415E9A /* Info.plist */,
 			);
-			path = TimePickerTests;
+			path = FreeTimePickerTests;
 			sourceTree = "<group>";
 		};
-		AD034B1423EBE8EE00415E9A /* TimePickerUITests */ = {
+		AD034B1423EBE8EE00415E9A /* FreeTimePickerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				AD034B1523EBE8EE00415E9A /* TimePickerUITests.swift */,
 				AD034B1723EBE8EE00415E9A /* Info.plist */,
 			);
-			path = TimePickerUITests;
+			path = FreeTimePickerUITests;
 			sourceTree = "<group>";
 		};
 		AD034B2423EBEE1C00415E9A /* Views */ = {
@@ -273,10 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				AD90749D23F42CD700E07C31 /* Siri */,
-				AD1332EE23F29E4500755C9D /* Event */,
-				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
-				AD70587023F3817000C88099 /* EventDateCalculator.swift */,
-				AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -353,6 +401,29 @@
 			path = DatePicker;
 			sourceTree = "<group>";
 		};
+		ADBE60EE23F53C8F009A7FE5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
+				AD70587023F3817000C88099 /* EventDateCalculator.swift */,
+				AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */,
+				AD1332EE23F29E4500755C9D /* Event */,
+				AD2D159E23F4DD0400422C64 /* Extensions */,
+				ADBE60EF23F53C8F009A7FE5 /* Core.h */,
+				ADBE60F023F53C8F009A7FE5 /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ADBE60FB23F53C8F009A7FE5 /* CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */,
+				ADBE60FE23F53C8F009A7FE5 /* Info.plist */,
+			);
+			path = CoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -364,12 +435,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADBE60E823F53C8F009A7FE5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBE60FF23F53C8F009A7FE5 /* Core.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AD034AEF23EBE8ED00415E9A /* TimePicker */ = {
+		AD034AEF23EBE8ED00415E9A /* FreeTimePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD034B1A23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePicker" */;
+			buildConfigurationList = AD034B1A23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePicker" */;
 			buildPhases = (
 				AD034AEC23EBE8ED00415E9A /* Sources */,
 				AD034AED23EBE8ED00415E9A /* Frameworks */,
@@ -380,15 +459,16 @@
 			);
 			dependencies = (
 				AD97445C23EFE5B600EACECB /* PBXTargetDependency */,
+				ADBE610123F53C8F009A7FE5 /* PBXTargetDependency */,
 			);
-			name = TimePicker;
+			name = FreeTimePicker;
 			productName = TimePicker;
-			productReference = AD034AF023EBE8ED00415E9A /* TimePicker.app */;
+			productReference = AD034AF023EBE8ED00415E9A /* FreeFreeTimePicker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AD034B0523EBE8EE00415E9A /* TimePickerTests */ = {
+		AD034B0523EBE8EE00415E9A /* FreeTimePickerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD034B1D23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePickerTests" */;
+			buildConfigurationList = AD034B1D23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePickerTests" */;
 			buildPhases = (
 				AD034B0223EBE8EE00415E9A /* Sources */,
 				AD034B0323EBE8EE00415E9A /* Frameworks */,
@@ -399,14 +479,14 @@
 			dependencies = (
 				AD034B0823EBE8EE00415E9A /* PBXTargetDependency */,
 			);
-			name = TimePickerTests;
+			name = FreeTimePickerTests;
 			productName = TimePickerTests;
-			productReference = AD034B0623EBE8EE00415E9A /* TimePickerTests.xctest */;
+			productReference = AD034B0623EBE8EE00415E9A /* FreeTimePickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AD034B1023EBE8EE00415E9A /* TimePickerUITests */ = {
+		AD034B1023EBE8EE00415E9A /* FreeTimePickerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD034B2023EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePickerUITests" */;
+			buildConfigurationList = AD034B2023EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePickerUITests" */;
 			buildPhases = (
 				AD034B0D23EBE8EE00415E9A /* Sources */,
 				AD034B0E23EBE8EE00415E9A /* Frameworks */,
@@ -417,9 +497,9 @@
 			dependencies = (
 				AD034B1323EBE8EE00415E9A /* PBXTargetDependency */,
 			);
-			name = TimePickerUITests;
+			name = FreeTimePickerUITests;
 			productName = TimePickerUITests;
-			productReference = AD034B1123EBE8EE00415E9A /* TimePickerUITests.xctest */;
+			productReference = AD034B1123EBE8EE00415E9A /* FreeTimePickerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		AD97445523EFE5B600EACECB /* UI */ = {
@@ -439,6 +519,43 @@
 			productName = UI;
 			productReference = AD97445623EFE5B600EACECB /* UI.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		ADBE60EC23F53C8F009A7FE5 /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADBE610423F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				ADBE60E823F53C8F009A7FE5 /* Headers */,
+				ADBE60E923F53C8F009A7FE5 /* Sources */,
+				ADBE60EA23F53C8F009A7FE5 /* Frameworks */,
+				ADBE60EB23F53C8F009A7FE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Core;
+			productName = Core;
+			productReference = ADBE60ED23F53C8F009A7FE5 /* Core.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ADBE60F423F53C8F009A7FE5 /* CoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADBE610723F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "CoreTests" */;
+			buildPhases = (
+				ADBE60F123F53C8F009A7FE5 /* Sources */,
+				ADBE60F223F53C8F009A7FE5 /* Frameworks */,
+				ADBE60F323F53C8F009A7FE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADBE60F823F53C8F009A7FE5 /* PBXTargetDependency */,
+				ADBE60FA23F53C8F009A7FE5 /* PBXTargetDependency */,
+			);
+			name = CoreTests;
+			productName = CoreTests;
+			productReference = ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -465,9 +582,16 @@
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
+					ADBE60EC23F53C8F009A7FE5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					ADBE60F423F53C8F009A7FE5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = AD034AEF23EBE8ED00415E9A;
+					};
 				};
 			};
-			buildConfigurationList = AD034AEB23EBE8ED00415E9A /* Build configuration list for PBXProject "TimePicker" */;
+			buildConfigurationList = AD034AEB23EBE8ED00415E9A /* Build configuration list for PBXProject "FreeTimePicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -481,10 +605,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD034AEF23EBE8ED00415E9A /* TimePicker */,
-				AD034B0523EBE8EE00415E9A /* TimePickerTests */,
-				AD034B1023EBE8EE00415E9A /* TimePickerUITests */,
+				AD034AEF23EBE8ED00415E9A /* FreeTimePicker */,
+				AD034B0523EBE8EE00415E9A /* FreeTimePickerTests */,
+				AD034B1023EBE8EE00415E9A /* FreeTimePickerUITests */,
 				AD97445523EFE5B600EACECB /* UI */,
+				ADBE60EC23F53C8F009A7FE5 /* Core */,
+				ADBE60F423F53C8F009A7FE5 /* CoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -524,6 +650,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADBE60EB23F53C8F009A7FE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBE60F323F53C8F009A7FE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -536,18 +676,12 @@
 				AD90749623F42ABF00E07C31 /* Intents.intentdefinition in Sources */,
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
 				AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */,
-				AD1332F023F29E5100755C9D /* EventRepository.swift in Sources */,
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
 				AD9074A323F42E9A00E07C31 /* SearchDateType.swift in Sources */,
 				AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */,
-				AD034B3423EBFBDF00415E9A /* CalendarPermissionViewModel.swift in Sources */,
-				AD70587123F3817000C88099 /* EventDateCalculator.swift in Sources */,
-				AD1332ED23F29D9500755C9D /* EventEntity.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
-				AD2D15A023F4DE0900422C64 /* Date+extension.swift in Sources */,
 				AD9074A523F42EB100E07C31 /* SearchDateType+Intents.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
-				AD70587E23F3F68000C88099 /* FreeTimeFinder.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
 				AD70587A23F3E48300C88099 /* DetailView.swift in Sources */,
 				AD034AF823EBE8ED00415E9A /* ContentView.swift in Sources */,
@@ -580,23 +714,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADBE60E923F53C8F009A7FE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBE610D23F53D14009A7FE5 /* FreeTimeFinder.swift in Sources */,
+				ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */,
+				ADBE610C23F53CE7009A7FE5 /* CalendarPermissionViewModel.swift in Sources */,
+				ADBE610E23F53D14009A7FE5 /* EventDateCalculator.swift in Sources */,
+				ADBE610B23F53CD0009A7FE5 /* EventRepository.swift in Sources */,
+				ADBE610A23F53CB2009A7FE5 /* EventEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBE60F123F53C8F009A7FE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBE60FD23F53C8F009A7FE5 /* CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		AD034B0823EBE8EE00415E9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AD034AEF23EBE8ED00415E9A /* TimePicker */;
+			target = AD034AEF23EBE8ED00415E9A /* FreeTimePicker */;
 			targetProxy = AD034B0723EBE8EE00415E9A /* PBXContainerItemProxy */;
 		};
 		AD034B1323EBE8EE00415E9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AD034AEF23EBE8ED00415E9A /* TimePicker */;
+			target = AD034AEF23EBE8ED00415E9A /* FreeTimePicker */;
 			targetProxy = AD034B1223EBE8EE00415E9A /* PBXContainerItemProxy */;
 		};
 		AD97445C23EFE5B600EACECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AD97445523EFE5B600EACECB /* UI */;
 			targetProxy = AD97445B23EFE5B600EACECB /* PBXContainerItemProxy */;
+		};
+		ADBE60F823F53C8F009A7FE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADBE60EC23F53C8F009A7FE5 /* Core */;
+			targetProxy = ADBE60F723F53C8F009A7FE5 /* PBXContainerItemProxy */;
+		};
+		ADBE60FA23F53C8F009A7FE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD034AEF23EBE8ED00415E9A /* FreeTimePicker */;
+			targetProxy = ADBE60F923F53C8F009A7FE5 /* PBXContainerItemProxy */;
+		};
+		ADBE610123F53C8F009A7FE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADBE60EC23F53C8F009A7FE5 /* Core */;
+			targetProxy = ADBE610023F53C8F009A7FE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -751,20 +921,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TimePicker/TimePicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FreeTimePicker/FreeTimePicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TimePicker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TimePicker/Info.plist;
+				INFOPLIST_FILE = FreeTimePicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
+				PRODUCT_NAME = FreeFreeTimePicker;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -776,20 +946,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TimePicker/TimePicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FreeTimePicker/FreeTimePicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TimePicker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TimePicker/Info.plist;
+				INFOPLIST_FILE = FreeTimePicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
+				PRODUCT_NAME = FreeFreeTimePicker;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -803,18 +973,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = TimePickerTests/Info.plist;
+				INFOPLIST_FILE = FreeTimePickerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePickerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimePicker.app/TimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeFreeTimePicker.app/FreeFreeTimePicker";
 			};
 			name = Debug;
 		};
@@ -825,18 +995,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = TimePickerTests/Info.plist;
+				INFOPLIST_FILE = FreeTimePickerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePickerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimePicker.app/TimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeFreeTimePicker.app/FreeFreeTimePicker";
 			};
 			name = Release;
 		};
@@ -846,17 +1016,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = TimePickerUITests/Info.plist;
+				INFOPLIST_FILE = FreeTimePickerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePickerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TimePicker;
+				TEST_TARGET_NAME = FreeTimePicker;
 			};
 			name = Debug;
 		};
@@ -866,17 +1036,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
-				INFOPLIST_FILE = TimePickerUITests/Info.plist;
+				INFOPLIST_FILE = FreeTimePickerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimePickerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TimePicker;
+				TEST_TARGET_NAME = FreeTimePicker;
 			};
 			name = Release;
 		};
@@ -887,7 +1057,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -917,7 +1087,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -939,10 +1109,108 @@
 			};
 			name = Release;
 		};
+		ADBE610523F53C8F009A7FE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADBE610623F53C8F009A7FE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ADBE610823F53C8F009A7FE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+			};
+			name = Debug;
+		};
+		ADBE610923F53C8F009A7FE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = CoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.CoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD034AEB23EBE8ED00415E9A /* Build configuration list for PBXProject "TimePicker" */ = {
+		AD034AEB23EBE8ED00415E9A /* Build configuration list for PBXProject "FreeTimePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD034B1823EBE8EE00415E9A /* Debug */,
@@ -951,7 +1219,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD034B1A23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePicker" */ = {
+		AD034B1A23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD034B1B23EBE8EE00415E9A /* Debug */,
@@ -960,7 +1228,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD034B1D23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePickerTests" */ = {
+		AD034B1D23EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePickerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD034B1E23EBE8EE00415E9A /* Debug */,
@@ -969,7 +1237,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD034B2023EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "TimePickerUITests" */ = {
+		AD034B2023EBE8EE00415E9A /* Build configuration list for PBXNativeTarget "FreeTimePickerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD034B2123EBE8EE00415E9A /* Debug */,
@@ -983,6 +1251,24 @@
 			buildConfigurations = (
 				AD97446023EFE5B600EACECB /* Debug */,
 				AD97446123EFE5B600EACECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADBE610423F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADBE610523F53C8F009A7FE5 /* Debug */,
+				ADBE610623F53C8F009A7FE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADBE610723F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "CoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADBE610823F53C8F009A7FE5 /* Debug */,
+				ADBE610923F53C8F009A7FE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,22 +8,24 @@
 
 import Foundation
 
-final class EventDateCalculator {
-    func isContains(source sourceEventEntity: EventEntity, dist distEventEntity: EventEntity) -> Bool {
+public final class EventDateCalculator {
+    public init() {}
+
+    public func isContains(source sourceEventEntity: EventEntity, dist distEventEntity: EventEntity) -> Bool {
         return isContains(source: sourceEventEntity, at: distEventEntity.startDate)
         && isContains(source: sourceEventEntity, at: distEventEntity.endDate)
     }
 
-    func isIntersects(source sourceEventEntity: EventEntity, dist distEventEntity: EventEntity) -> Bool {
+    public func isIntersects(source sourceEventEntity: EventEntity, dist distEventEntity: EventEntity) -> Bool {
         return isContains(source: sourceEventEntity, at: distEventEntity.startDate)
             || isContains(source: sourceEventEntity, at: distEventEntity.endDate)
     }
 
-    func isContains(source eventEntity: EventEntity, at date: Date) -> Bool {
+    public func isContains(source eventEntity: EventEntity, at date: Date) -> Bool {
         return eventEntity.startDate <= date && eventEntity.endDate >= date
     }
 
-    func timeInterval(from fromEventEntity: EventEntity, to toEventEntity: EventEntity) -> TimeInterval {
+    public func timeInterval(from fromEventEntity: EventEntity, to toEventEntity: EventEntity) -> TimeInterval {
         if fromEventEntity.endDate <= toEventEntity.startDate {
             return fromEventEntity.endDate.distance(to: toEventEntity.startDate)
         } else {
@@ -31,15 +33,15 @@ final class EventDateCalculator {
         }
     }
 
-    func startTimeInterval(at date: Date, for eventEntity: EventEntity) -> TimeInterval {
+    public func startTimeInterval(at date: Date, for eventEntity: EventEntity) -> TimeInterval {
         return date.distance(to: eventEntity.startDate)
     }
 
-    func endTimeInterval(at date: Date, for eventEntity: EventEntity) -> TimeInterval {
+    public func endTimeInterval(at date: Date, for eventEntity: EventEntity) -> TimeInterval {
         return eventEntity.endDate.distance(to: date)
     }
     
-    func convert(_ date: Date, to today: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Date {
+    public func convert(_ date: Date, to today: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Date {
         var calendar = calendar
         calendar.timeZone = timeZone
         var dateComponentsSrc = calendar.dateComponents([.hour, .minute], from: date)
@@ -57,7 +59,7 @@ final class EventDateCalculator {
         return calendar.date(from: dateComponentsDist)!
     }
     
-    func split(from fromDate: Date, to toDate: Date, startDate: Date, endDate: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> [(Date, Date)] {
+    public func split(from fromDate: Date, to toDate: Date, startDate: Date, endDate: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> [(Date, Date)] {
         var calendar = calendar
         calendar.timeZone = timeZone
         var fromDateComponents = calendar.dateComponents([.year, .month, .day], from: fromDate)

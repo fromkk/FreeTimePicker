@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import Core
 
 final class SearchViewModel: ObservableObject {
     @Published var isValid: Bool = false

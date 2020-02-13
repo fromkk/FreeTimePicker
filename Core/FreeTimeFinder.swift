@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class FreeTimeFinder {
-    typealias Result = [(Date, Date)]
-    static func find(with calculator: EventDateCalculator, in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) -> Result {
+public final class FreeTimeFinder {
+    public typealias Result = [(Date, Date)]
+    public static func find(with calculator: EventDateCalculator, in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) -> Result {
         let dates = calculator.split(from: from, to: to, startDate: startDate, endDate: endDate)
         let minFreeTime = freeTime + transitTime * 2
 
