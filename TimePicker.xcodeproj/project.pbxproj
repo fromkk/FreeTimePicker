@@ -125,7 +125,7 @@
 		AD97446623EFE5E800EACECB /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		ADBB0E2E23F406AC00258A88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		ADBE60E123F513BD009A7FE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		ADBE60E523F51B1D009A7FE5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,7 +622,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD90749723F42ABF00E07C31 /* en */,
-				ADBE60E123F513BD009A7FE5 /* ja */,
+				ADBE60E523F51B1D009A7FE5 /* ja */,
 			);
 			name = Intents.intentdefinition;
 			sourceTree = "<group>";

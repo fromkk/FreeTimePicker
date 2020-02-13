@@ -1,24 +1,34 @@
-"CXsiIP" = "${dateType}空き時間ある？";
+"AHTvW2" = "空き時間が見つかりませんでした";
+
+"CXsiIP" = "${dateType}の空き時間を探す";
+
+"Ek0zNy" = "カレンダーから空き時間を探します";
 
 "J84E41" = "空き時間";
 
 "U4p93D" = "今日";
 
+"ZM7AFP" = "空き時間が見つかりませんでした";
+
 "ZuraeV" = "今週";
 
-"bajqC5-U4p93D" = "今日空き時間ある？";
+"bajqC5-U4p93D" = "今日の空き時間を探す";
 
-"bajqC5-ZuraeV" = "今週空き時間ある？";
+"bajqC5-ZuraeV" = "今週の空き時間を探す";
 
-"bajqC5-d8wDay" = "来月空き時間ある？";
+"bajqC5-d8wDay" = "来月の空き時間を探す";
 
-"bajqC5-g2zivO" = "今月空き時間ある？";
+"bajqC5-g2zivO" = "今月の空き時間を探す";
 
-"bajqC5-oD5wpv" = "明日空き時間ある？";
+"bajqC5-oD5wpv" = "明日の空き時間を探す";
 
-"bajqC5-pcrhPF" = "来週空き時間ある？";
+"bajqC5-pcrhPF" = "来週の空き時間を探す";
+
+"cOFdWu" = "空き時間は\n${result}\nです";
 
 "d8wDay" = "来月";
+
+"dD2t1w" = "空き時間は\n${result}です";
 
 "dGyHI3" = "いつ";
 
@@ -26,19 +36,17 @@
 
 "g2zivO" = "今月";
 
-"Ek0zNy" = "カレンダーから空き時間を検索します";
+"h76VsB-U4p93D" = "明日でいいですか？";
 
-"h76VsB-U4p93D" = "確認ですが今日でいいですか？";
+"h76VsB-ZuraeV" = "今週でいいですか？";
 
-"h76VsB-ZuraeV" = "確認ですが今週でいいですか？";
+"h76VsB-d8wDay" = "来月でいいですか？";
 
-"h76VsB-d8wDay" = "確認ですが来月でいいですか？";
+"h76VsB-g2zivO" = "今月でいいですか？";
 
-"h76VsB-g2zivO" = "確認ですが今月でいいですか？";
+"h76VsB-oD5wpv" = "明日でいいですか？";
 
-"h76VsB-oD5wpv" = "確認ですが明日でいいですか？";
-
-"h76VsB-pcrhPF" = "確認ですが来週でいいですか？";
+"h76VsB-pcrhPF" = "来週でいいですか？";
 
 "kYkjSu" = "結果";
 
@@ -46,16 +54,16 @@
 
 "oD5wpv" = "明日";
 
-"oxRZ7l-U4p93D" = "今日空き時間ある？";
+"oxRZ7l-U4p93D" = "今日の空き時間は？";
 
-"oxRZ7l-ZuraeV" = "今週空き時間ある？";
+"oxRZ7l-ZuraeV" = "今週の空き時間は？";
 
-"oxRZ7l-d8wDay" = "来月空き時間ある？";
+"oxRZ7l-d8wDay" = "来月の空き時間は？";
 
-"oxRZ7l-g2zivO" = "今月空き時間ある？";
+"oxRZ7l-g2zivO" = "今月の空き時間は？";
 
-"oxRZ7l-oD5wpv" = "明日空き時間ある？";
+"oxRZ7l-oD5wpv" = "明日の空き時間は？";
 
-"oxRZ7l-pcrhPF" = "来週空き時間ある？";
+"oxRZ7l-pcrhPF" = "来週の空き時間は？";
 
 "pcrhPF" = "来週";
