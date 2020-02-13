@@ -8,10 +8,11 @@
 
 import Foundation
 import Intents
+import Core
 
 final class SiriRegister {
     static func register(with dateType: SearchDateType) {
-        let intents = FreeTimeIntent()
+        let intents = FreeTimePickerIntent()
         intents.dateType = dateType.toDateType()
         let interaction = INInteraction(intent: intents, response: nil)
         interaction.donate { error in

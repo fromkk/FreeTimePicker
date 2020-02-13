@@ -11,7 +11,7 @@ import SwiftUI
 import Combine
 
 extension UIDatePicker.Mode {
-    func dateFormat(locale: Locale = .current) -> String? {
+    func dateFormat(locale: Locale = Locale(identifier: "ja_JP")) -> String? {
         switch self {
         case .time, .countDownTimer:
             return DateFormatter.dateFormat(fromTemplate: "jm", options: 0, locale: locale)
@@ -116,7 +116,7 @@ final class DatePicker: UITextField {
         let picker = UIDatePicker(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 216)))
         picker.calendar = Calendar(identifier: .gregorian)
         picker.timeZone = .current
-        picker.locale = .current
+        picker.locale = Locale(identifier: "ja_JP")
         picker.addTarget(self, action: #selector(datePickerDidChange(_:)), for: .valueChanged)
         return picker
     }()
@@ -130,7 +130,7 @@ final class DatePicker: UITextField {
     
     private func setUpDateFormatter(
         calendar: Calendar = .init(identifier: .gregorian),
-        locale: Locale = .current,
+        locale: Locale = Locale(identifier: "ja_JP"),
         timeZone: TimeZone = .current) {
         var calendar = calendar
         calendar.locale = locale
@@ -140,14 +140,14 @@ final class DatePicker: UITextField {
         dateFormatter.locale = locale
     }
 
-    private func convertToString(_ date: Date, locale: Locale = .current) -> String? {
+    private func convertToString(_ date: Date, locale: Locale = Locale(identifier: "ja_JP")) -> String? {
         guard let dateFormat = datePicker.datePickerMode.dateFormat(locale: locale) else { return nil }
         setUpDateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: date)
     }
 
-    private func convertToDate(_ string: String, locale: Locale = .current) -> Date? {
+    private func convertToDate(_ string: String, locale: Locale = Locale(identifier: "ja_JP")) -> Date? {
         guard let dateFormat = datePicker.datePickerMode.dateFormat(locale: locale) else { return nil }
         setUpDateFormatter()
         dateFormatter.dateFormat = dateFormat

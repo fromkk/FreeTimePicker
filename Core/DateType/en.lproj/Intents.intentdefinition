@@ -130,7 +130,7 @@
 				</dict>
 			</dict>
 			<key>INIntentName</key>
-			<string>FreeTime</string>
+			<string>FreeTimePicker</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
 				<key>dateType</key>
@@ -179,7 +179,7 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Are there free time in ${dateType}?</string>
+							<string>Are there any free time in ${dateType}?</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
 							<string>oxRZ7l</string>
 							<key>INIntentParameterPromptDialogType</key>
@@ -266,7 +266,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Free Time</string>
+			<string>Free Time Picker</string>
 			<key>INIntentTitleID</key>
 			<string>J84E41</string>
 			<key>INIntentType</key>

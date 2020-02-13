@@ -9,7 +9,7 @@
 import Foundation
 import Intents
 
-extension SearchDateType {
+public extension SearchDateType {
     func toDateType() -> DateType {
         switch self {
         case .today:
@@ -28,7 +28,7 @@ extension SearchDateType {
     }
 }
 
-extension DateType {
+public extension DateType {
     func toSearchDateType() -> SearchDateType? {
         switch self {
         case .today:

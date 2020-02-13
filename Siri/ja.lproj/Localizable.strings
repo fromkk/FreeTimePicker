@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  FreeTimePicker
+
+  Created by Kazuya Ueoka on 2020/02/13.
+  Copyright © 2020 fromKK. All rights reserved.
+*/
+
+"No permissions" = "カレンダーへのアクセスを許可してください";
+
+" - " = "〜";

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SearchDateType: CaseIterable, Identifiable, Equatable {
+public enum SearchDateType: CaseIterable, Identifiable, Equatable {
     case today
     case tomorrow
     case thisWeek
@@ -16,7 +16,7 @@ enum SearchDateType: CaseIterable, Identifiable, Equatable {
     case thisMonth
     case nextMonth
 
-    var title: String {
+    public var title: String {
         let key: String
         switch self {
         case .today:
@@ -35,9 +35,9 @@ enum SearchDateType: CaseIterable, Identifiable, Equatable {
         return NSLocalizedString(key, comment: key)
     }
     
-    typealias Dates = (startDate: Date, endDate: Date)
+    public typealias Dates = (startDate: Date, endDate: Date)
     
-    func dates(with date: Date = Date(), calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current, locale: Locale = .current) -> Dates {
+    public func dates(with date: Date = Date(), calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current, locale: Locale = .current) -> Dates {
         var calendar = calendar
         calendar.timeZone = timeZone
         calendar.locale = locale
@@ -141,5 +141,5 @@ enum SearchDateType: CaseIterable, Identifiable, Equatable {
         return (startDate, endDate)
     }
 
-    var id: String { return title }
+    public var id: String { return title }
 }

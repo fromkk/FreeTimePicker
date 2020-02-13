@@ -10,6 +10,7 @@ import SwiftUI
 import UIKit
 import Combine
 import UI
+import Core
 
 final class SearchDateButton: UIButton {
     let dateType: SearchDateType

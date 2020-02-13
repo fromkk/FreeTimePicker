@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TimePicker
+@testable import FreeTimePicker
 
 class TimePickerTests: XCTestCase {
 
