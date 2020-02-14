@@ -126,7 +126,7 @@ final class SearchDate: UIView {
         ])
     }
     
-    private var buttons: [SearchDateButton] = []
+    var buttons: [SearchDateButton] = []
 
     private func addDateTypes() {
         SearchDateType.allCases.forEach { searchDateType in
@@ -137,7 +137,7 @@ final class SearchDate: UIView {
         }
     }
 
-    @objc private func tap(button: SearchDateButton) {
+    @objc func tap(button: SearchDateButton) {
         delegate?.searchDate(self, didSelect: button.dateType)
         handleSelected(with: button.dateType)
     }

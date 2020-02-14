@@ -24,6 +24,9 @@
 		AD33A45623F6314A003DEE2C /* UserDefaults+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */; };
 		AD33A45923F63704003DEE2C /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */; };
 		AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */; };
+		AD33A54B23F6A941003DEE2C /* ToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54A23F6A941003DEE2C /* ToolbarTests.swift */; };
+		AD33A54D23F6AA30003DEE2C /* SearchDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54C23F6AA30003DEE2C /* SearchDateTests.swift */; };
+		AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
@@ -189,6 +192,9 @@
 		AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+extension.swift"; sourceTree = "<group>"; };
 		AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParametersStore.swift; sourceTree = "<group>"; };
+		AD33A54A23F6A941003DEE2C /* ToolbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarTests.swift; sourceTree = "<group>"; };
+		AD33A54C23F6AA30003DEE2C /* SearchDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTests.swift; sourceTree = "<group>"; };
+		AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateDelegateSpy.swift; sourceTree = "<group>"; };
 		AD70587023F3817000C88099 /* EventDateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculator.swift; sourceTree = "<group>"; };
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 		AD034B0923EBE8EE00415E9A /* FreeTimePickerTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD33A54923F6A92E003DEE2C /* Views */,
 				AD034B0A23EBE8EE00415E9A /* TimePickerTests.swift */,
 				AD034B0C23EBE8EE00415E9A /* Info.plist */,
 			);
@@ -448,6 +455,24 @@
 				AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		AD33A54923F6A92E003DEE2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD33A54E23F6AA40003DEE2C /* Mocks */,
+				AD33A54A23F6A941003DEE2C /* ToolbarTests.swift */,
+				AD33A54C23F6AA30003DEE2C /* SearchDateTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD33A54E23F6AA40003DEE2C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		AD70587823F3E47200C88099 /* Detail */ = {
@@ -849,6 +874,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD034B0B23EBE8EE00415E9A /* TimePickerTests.swift in Sources */,
+				AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */,
+				AD33A54B23F6A941003DEE2C /* ToolbarTests.swift in Sources */,
+				AD33A54D23F6AA30003DEE2C /* SearchDateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
