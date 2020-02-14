@@ -11,15 +11,27 @@ import Combine
 import Core
 
 final class SearchViewModel: ObservableObject {
+    private static func defaultDate(
+        for date: Date = Date(),
+        with calendar: Calendar = .init(identifier: .gregorian),
+        timeZone: TimeZone = .current,
+        hour: Int,
+        minute: Int
+    ) -> Date {
+        var calendar = calendar
+        calendar.timeZone = timeZone
+        return calendar.startOfDay(for: date).addingTimeInterval(TimeInterval(hour) * 60 * 60 + TimeInterval(minute) * 60)
+    }
+
     @Published var isValid: Bool = false
     @Published var searchDateType: SearchDateType? = nil
-    @Published var minFreeTimeDate: Date? = nil
+    @Published var minFreeTimeDate: Date? = SearchViewModel.defaultDate(hour: 1, minute: 0)
     @Published var minFreeTimeText: String? = nil
-    @Published var fromTime: Date? = nil
+    @Published var fromTime: Date? = SearchViewModel.defaultDate(hour: 9, minute: 0)
     @Published var fromText: String? = nil
-    @Published var toTime: Date? = nil
+    @Published var toTime: Date? = SearchViewModel.defaultDate(hour: 22, minute: 0)
     @Published var toText: String? = nil
-    @Published var transitTimeDate: Date? = nil
+    @Published var transitTimeDate: Date? = SearchViewModel.defaultDate(hour: 0, minute: 30)
     @Published var transitTimeText: String? = nil
     @Published var ignoreAllDays: Bool = true
     @Published var ignoreHolidays: Bool = true

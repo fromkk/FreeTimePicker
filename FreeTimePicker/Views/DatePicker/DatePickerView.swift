@@ -11,10 +11,10 @@ import SwiftUI
 import Combine
 
 extension UIDatePicker.Mode {
-    func dateFormat(locale: Locale = Locale(identifier: "ja_JP")) -> String? {
+    func dateFormat(locale: Locale = .current) -> String? {
         switch self {
         case .time, .countDownTimer:
-            return DateFormatter.dateFormat(fromTemplate: "jm", options: 0, locale: locale)
+            return DateFormatter.dateFormat(fromTemplate: "H:mm", options: 0, locale: locale)
         case .date:
             return DateFormatter.dateFormat(fromTemplate: "MMM d, yyyy", options: 0, locale: locale)
         case .dateAndTime:
@@ -116,7 +116,7 @@ final class DatePicker: UITextField {
         let picker = UIDatePicker(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 216)))
         picker.calendar = Calendar(identifier: .gregorian)
         picker.timeZone = .current
-        picker.locale = Locale(identifier: "ja_JP")
+        picker.locale = .current
         picker.addTarget(self, action: #selector(datePickerDidChange(_:)), for: .valueChanged)
         return picker
     }()
@@ -130,7 +130,7 @@ final class DatePicker: UITextField {
     
     private func setUpDateFormatter(
         calendar: Calendar = .init(identifier: .gregorian),
-        locale: Locale = Locale(identifier: "ja_JP"),
+        locale: Locale = .current,
         timeZone: TimeZone = .current) {
         var calendar = calendar
         calendar.locale = locale
@@ -140,14 +140,14 @@ final class DatePicker: UITextField {
         dateFormatter.locale = locale
     }
 
-    private func convertToString(_ date: Date, locale: Locale = Locale(identifier: "ja_JP")) -> String? {
+    private func convertToString(_ date: Date, locale: Locale = .current) -> String? {
         guard let dateFormat = datePicker.datePickerMode.dateFormat(locale: locale) else { return nil }
         setUpDateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: date)
     }
 
-    private func convertToDate(_ string: String, locale: Locale = Locale(identifier: "ja_JP")) -> Date? {
+    private func convertToDate(_ string: String, locale: Locale = .current) -> Date? {
         guard let dateFormat = datePicker.datePickerMode.dateFormat(locale: locale) else { return nil }
         setUpDateFormatter()
         dateFormatter.dateFormat = dateFormat
@@ -185,7 +185,13 @@ struct DatePickerView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: DatePicker, context: UIViewRepresentableContext<DatePickerView>) {
-        // nothing todo
+        if let text = text, uiView.text != text {
+            uiView.text = text
+        }
+
+        if let date = date, uiView.date != date {
+            uiView.date = date
+        }
     }
 }
 

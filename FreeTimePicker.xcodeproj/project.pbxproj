@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		AD034B2E23EBF4C000415E9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD034B3023EBF4C000415E9A /* Localizable.strings */; };
 		AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3623EC083600415E9A /* SearchViewModel.swift */; };
 		AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3923EC090700415E9A /* DateTypeView.swift */; };
+		AD33A45423F62E6F003DEE2C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45323F62E6F003DEE2C /* Constants.swift */; };
+		AD33A45623F6314A003DEE2C /* UserDefaults+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */; };
+		AD33A45923F63704003DEE2C /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
@@ -46,7 +49,7 @@
 		ADBE610E23F53D14009A7FE5 /* EventDateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587023F3817000C88099 /* EventDateCalculator.swift */; };
 		ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
 		ADD5209523F543D000715473 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209423F543D000715473 /* IntentHandler.swift */; };
-		ADD5209923F543D000715473 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADD5209223F543D000715473 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ADD5209923F543D000715473 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADD5209223F543D000715473 /* Siri.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ADD520A023F544E500715473 /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209F23F544E500715473 /* SiriTests.swift */; };
 		ADD520A223F54BD100715473 /* FreeTimeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */; };
 		ADD520A423F54C2E00715473 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
@@ -180,6 +183,10 @@
 		AD1332EC23F29D9500755C9D /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		AD1332EF23F29E5100755C9D /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
 		AD2D159F23F4DE0900422C64 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		AD33A45123F62E49003DEE2C /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
+		AD33A45323F62E6F003DEE2C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+extension.swift"; sourceTree = "<group>"; };
+		AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		AD70587023F3817000C88099 /* EventDateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculator.swift; sourceTree = "<group>"; };
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -415,8 +422,29 @@
 			isa = PBXGroup;
 			children = (
 				AD2D159F23F4DE0900422C64 /* Date+extension.swift */,
+				AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD33A45223F62E5F003DEE2C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AD33A45323F62E6F003DEE2C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AD33A45723F636C7003DEE2C /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
+				AD70587023F3817000C88099 /* EventDateCalculator.swift */,
+				AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */,
+				ADD520B323F552A600715473 /* FreeTimeConverter.swift */,
+				AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 		AD70587823F3E47200C88099 /* Detail */ = {
@@ -467,15 +495,13 @@
 		ADBE60EE23F53C8F009A7FE5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AD034B3323EBFBDF00415E9A /* CalendarPermissionViewModel.swift */,
-				AD70587023F3817000C88099 /* EventDateCalculator.swift */,
-				AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */,
+				AD33A45723F636C7003DEE2C /* Supports */,
+				AD33A45223F62E5F003DEE2C /* Constants */,
 				ADD520A923F54DCF00715473 /* DateType */,
 				AD1332EE23F29E4500755C9D /* Event */,
 				AD2D159E23F4DD0400422C64 /* Extensions */,
 				ADBE60EF23F53C8F009A7FE5 /* Core.h */,
 				ADBE60F023F53C8F009A7FE5 /* Info.plist */,
-				ADD520B323F552A600715473 /* FreeTimeConverter.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -492,6 +518,7 @@
 		ADD5209323F543D000715473 /* Siri */ = {
 			isa = PBXGroup;
 			children = (
+				AD33A45123F62E49003DEE2C /* Siri.entitlements */,
 				ADD5209423F543D000715473 /* IntentHandler.swift */,
 				ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */,
 				ADD5209623F543D000715473 /* Info.plist */,
@@ -844,14 +871,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD520AA23F54E1E00715473 /* Intents.intentdefinition in Sources */,
+				AD33A45423F62E6F003DEE2C /* Constants.swift in Sources */,
 				ADBE610D23F53D14009A7FE5 /* FreeTimeFinder.swift in Sources */,
 				ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */,
 				ADBE610C23F53CE7009A7FE5 /* CalendarPermissionViewModel.swift in Sources */,
 				ADBE610E23F53D14009A7FE5 /* EventDateCalculator.swift in Sources */,
 				ADD520AB23F54E6500715473 /* SearchDateType+Intents.swift in Sources */,
 				ADD520AC23F54E6F00715473 /* SearchDateType.swift in Sources */,
+				AD33A45623F6314A003DEE2C /* UserDefaults+extension.swift in Sources */,
 				ADD520B423F552A600715473 /* FreeTimeConverter.swift in Sources */,
 				ADBE610B23F53CD0009A7FE5 /* EventRepository.swift in Sources */,
+				AD33A45923F63704003DEE2C /* UserDefaultsWrapper.swift in Sources */,
 				ADBE610A23F53CB2009A7FE5 /* EventEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +939,7 @@
 		};
 		ADD5209823F543D000715473 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = ADD5209123F543D000715473 /* Siri */;
 			targetProxy = ADD5209723F543D000715473 /* PBXContainerItemProxy */;
 		};
@@ -1368,6 +1399,7 @@
 		ADD5209B23F543D000715473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Siri/Info.plist;
@@ -1388,6 +1420,7 @@
 		ADD5209C23F543D000715473 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Siri/Info.plist;
