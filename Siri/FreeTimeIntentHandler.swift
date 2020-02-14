@@ -14,14 +14,20 @@ import Combine
 final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling {
     private var cancellables: [AnyCancellable] = []
     private let calculator = EventDateCalculator()
-    private var ignoreAllDay: Bool = true
-    private var ignoreHolidays: Bool = false
-    private var transitTime: TimeInterval = 60.0 * 60.0
-    private var minFreeTime: TimeInterval = 60.0 * 60.0
-    private lazy var startTime: Date = self.makeTime(hour: 9, minutes: 0)
-    private lazy var endTime: Date = self.makeTime(hour: 22, minutes: 0)
+    @UserDefaultsWrapper<Bool, Constants.SearchParameterKeys>(key: .ignoreAllDays, userDefaults: .grouped, defaultValue: true)
+    private var ignoreAllDay: Bool
+    @UserDefaultsWrapper<Bool, Constants.SearchParameterKeys>(key: .ignoreHolidays, userDefaults: .grouped, defaultValue: true)
+    private var ignoreHolidays: Bool
+    @UserDefaultsWrapper<Date, Constants.SearchParameterKeys>(key: .transitTimeDate, userDefaults: .grouped, defaultValue: FreeTimePickerIntentHandler.makeTime(hour: 0, minutes: 30))
+    private var transitTime: Date
+    @UserDefaultsWrapper<Date, Constants.SearchParameterKeys>(key: .minFreeTimeDate, userDefaults: .grouped, defaultValue: FreeTimePickerIntentHandler.makeTime(hour: 1, minutes: 0))
+    private var minFreeTime: Date
+    @UserDefaultsWrapper<Date, Constants.SearchParameterKeys>(key: .fromTime, userDefaults: .grouped, defaultValue: FreeTimePickerIntentHandler.makeTime(hour: 9, minutes: 0))
+    private var startTime: Date
+    @UserDefaultsWrapper<Date, Constants.SearchParameterKeys>(key: .toTime, userDefaults: .grouped, defaultValue: FreeTimePickerIntentHandler.makeTime(hour: 22, minutes: 0))
+    private var endTime: Date
 
-    private func makeTime(hour: Int, minutes: Int, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Date {
+    private static func makeTime(hour: Int, minutes: Int, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> Date {
         var calendar = calendar
         calendar.timeZone = timeZone
         let startDate = calendar.startOfDay(for: Date())
@@ -29,6 +35,15 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
         dateComponents.hour = hour
         dateComponents.minute = minutes
         return calendar.date(byAdding: dateComponents, to: startDate)!
+    }
+    
+    private static func timeInterval(of date: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> TimeInterval {
+        var calendar = calendar
+        calendar.timeZone = timeZone
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: date)
+        let minute: TimeInterval = 60.0
+        let hour: TimeInterval = 60.0 * 60.0
+        return TimeInterval(dateComponents.hour!) * hour + TimeInterval(dateComponents.minute!) * minute
     }
 
     private func performSearchFreeTime(in searchDateType: SearchDateType, with completion: @escaping (FreeTimePickerIntentResponse) -> Void) {
@@ -48,8 +63,8 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
                     to: toDate,
                     startDate: self.startTime,
                     endDate: self.endTime,
-                    freeTime: self.minFreeTime,
-                    transitTime: self.transitTime,
+                    freeTime: Self.timeInterval(of: self.minFreeTime),
+                    transitTime: Self.timeInterval(of: self.transitTime),
                     ignoreHolidays: self.ignoreHolidays
                 )
                 completion(.success(result: FreeTimeConverter(dates: result).toString()))
