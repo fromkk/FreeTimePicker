@@ -29,6 +29,10 @@
 		AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */; };
 		AD33A55223F6ABF0003DEE2C /* DatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */; };
 		AD33A55423F6AC8A003DEE2C /* DatePickerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */; };
+		AD5FFCAD23F6C754006D1F0D /* EventDateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */; };
+		AD5FFCAF23F6C764006D1F0D /* FreeTimeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */; };
+		AD5FFCB123F6C772006D1F0D /* FreeTimeConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */; };
+		AD5FFCB323F6C78A006D1F0D /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCB223F6C78A006D1F0D /* DateTests.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
@@ -199,6 +203,10 @@
 		AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateDelegateSpy.swift; sourceTree = "<group>"; };
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
+		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
+		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
+		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
+		AD5FFCB223F6C78A006D1F0D /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		AD70587023F3817000C88099 /* EventDateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculator.swift; sourceTree = "<group>"; };
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -545,6 +553,10 @@
 			children = (
 				ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */,
 				ADBE60FE23F53C8F009A7FE5 /* Info.plist */,
+				AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */,
+				AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */,
+				AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */,
+				AD5FFCB223F6C78A006D1F0D /* DateTests.swift */,
 			);
 			path = CoreTests;
 			sourceTree = "<group>";
@@ -930,7 +942,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5FFCAD23F6C754006D1F0D /* EventDateCalculatorTests.swift in Sources */,
 				ADBE60FD23F53C8F009A7FE5 /* CoreTests.swift in Sources */,
+				AD5FFCAF23F6C764006D1F0D /* FreeTimeFinderTests.swift in Sources */,
+				AD5FFCB123F6C772006D1F0D /* FreeTimeConverterTests.swift in Sources */,
+				AD5FFCB323F6C78A006D1F0D /* DateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
