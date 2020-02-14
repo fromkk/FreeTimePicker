@@ -23,6 +23,7 @@
 		AD33A45423F62E6F003DEE2C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45323F62E6F003DEE2C /* Constants.swift */; };
 		AD33A45623F6314A003DEE2C /* UserDefaults+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */; };
 		AD33A45923F63704003DEE2C /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */; };
+		AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */; };
 		AD70587A23F3E48300C88099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587923F3E48300C88099 /* DetailView.swift */; };
 		AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70587B23F3E66500C88099 /* DetailViewModel.swift */; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
@@ -187,6 +188,7 @@
 		AD33A45323F62E6F003DEE2C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD33A45523F6314A003DEE2C /* UserDefaults+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+extension.swift"; sourceTree = "<group>"; };
 		AD33A45823F63704003DEE2C /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParametersStore.swift; sourceTree = "<group>"; };
 		AD70587023F3817000C88099 /* EventDateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculator.swift; sourceTree = "<group>"; };
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				AD034B2623EBEE3200415E9A /* SearchView.swift */,
 				AD034B3623EC083600415E9A /* SearchViewModel.swift */,
+				AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
 				AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
+				AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
 				AD70587A23F3E48300C88099 /* DetailView.swift in Sources */,

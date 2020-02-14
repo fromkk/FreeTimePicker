@@ -11,28 +11,16 @@ import Combine
 import Core
 
 final class SearchViewModel: ObservableObject {
-    private static func defaultDate(
-        for date: Date = Date(),
-        with calendar: Calendar = .init(identifier: .gregorian),
-        timeZone: TimeZone = .current,
-        hour: Int,
-        minute: Int
-    ) -> Date {
-        var calendar = calendar
-        calendar.timeZone = timeZone
-        return calendar.startOfDay(for: date).addingTimeInterval(TimeInterval(hour) * 60 * 60 + TimeInterval(minute) * 60)
-    }
-
     @Published var isValid: Bool = false
-    @Published var searchDateType: SearchDateType? = nil
-    @Published var minFreeTimeDate: Date? = SearchViewModel.defaultDate(hour: 1, minute: 0)
-    @Published var minFreeTimeText: String? = nil
-    @Published var fromTime: Date? = SearchViewModel.defaultDate(hour: 9, minute: 0)
-    @Published var fromText: String? = nil
-    @Published var toTime: Date? = SearchViewModel.defaultDate(hour: 22, minute: 0)
-    @Published var toText: String? = nil
-    @Published var transitTimeDate: Date? = SearchViewModel.defaultDate(hour: 0, minute: 30)
-    @Published var transitTimeText: String? = nil
+    @Published var searchDateType: SearchDateType?
+    @Published var minFreeTimeDate: Date?
+    @Published var minFreeTimeText: String?
+    @Published var fromTime: Date?
+    @Published var fromText: String?
+    @Published var toTime: Date?
+    @Published var toText: String?
+    @Published var transitTimeDate: Date?
+    @Published var transitTimeText: String?
     @Published var ignoreAllDays: Bool = true
     @Published var ignoreHolidays: Bool = true
     private var _search: PassthroughSubject<Void?, Never> = .init()
@@ -46,10 +34,12 @@ final class SearchViewModel: ObservableObject {
     @Published var noResults: Bool = false
 
     let eventRepository: EventRepositoryProtocol
+    let parametersStore: SearchParametersStore = .init()
     private let calculator: EventDateCalculator = .init()
 
     init(eventRepository: EventRepositoryProtocol) {
         self.eventRepository = eventRepository
+        parametersStore.restore(with: self)
         bind()
     }
 
@@ -122,6 +112,7 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) {
+        parametersStore.save(with: self)
         self.result = FreeTimeFinder.find(
             with: calculator,
             in: events,

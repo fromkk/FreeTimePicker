@@ -142,11 +142,14 @@ final class SearchDate: UIView {
         handleSelected(with: button.dateType)
     }
     
+    private var selectedIndex: Int?
+    
     private func handleSelected(with searchDateType: SearchDateType) {
-        buttons.forEach { button in
+        buttons.enumerated().forEach { offset, button in
             if button.dateType == searchDateType {
                 button.backgroundColor = Colors.link
                 button.setTitleColor(.systemBackground, for: .normal)
+                selectedIndex = offset
             } else {
                 button.backgroundColor = .systemBackground
                 button.setTitleColor(Colors.link, for: .normal)
@@ -157,6 +160,23 @@ final class SearchDate: UIView {
     override var intrinsicContentSize: CGSize {
         let superSize = super.intrinsicContentSize
         return CGSize(width: superSize.width, height: 48)
+    }
+
+    var selectedSearchDateType: SearchDateType? {
+        get {
+            guard let selectedIndex = selectedIndex else {
+                return nil
+            }
+            return SearchDateType.allCases[selectedIndex]
+        }
+        set {
+            guard let searchDateType = newValue, let index = SearchDateType.allCases.firstIndex(of: searchDateType) else {
+                selectedIndex = nil
+                return
+            }
+            selectedIndex = index
+            handleSelected(with: searchDateType)
+        }
     }
 }
 
@@ -185,7 +205,9 @@ struct SearchDateView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: SearchDate, context: UIViewRepresentableContext<SearchDateView>) {
-        // nothing todo
+        if let searchDateType = selectedSearchDateType, uiView.selectedSearchDateType != searchDateType {
+            uiView.selectedSearchDateType = searchDateType
+        }
     }
 }
 

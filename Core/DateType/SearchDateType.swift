@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum SearchDateType: CaseIterable, Identifiable, Equatable {
+public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
     case today
     case tomorrow
     case thisWeek
@@ -141,5 +141,5 @@ public enum SearchDateType: CaseIterable, Identifiable, Equatable {
         return (startDate, endDate)
     }
 
-    public var id: String { return title }
+    public var id: Int { return rawValue }
 }
