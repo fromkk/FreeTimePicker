@@ -6,7 +6,7 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-@testable import FreeTimePicker
+@testable import Core
 import XCTest
 
 final class FreeTimeConverterTests: XCTestCase {

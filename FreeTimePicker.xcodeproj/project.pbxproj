@@ -29,6 +29,7 @@
 		AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */; };
 		AD33A55223F6ABF0003DEE2C /* DatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */; };
 		AD33A55423F6AC8A003DEE2C /* DatePickerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */; };
+		AD3CC64323F768F4006B6569 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CC64223F768F4006B6569 /* DateCreator.swift */; };
 		AD5FFCAD23F6C754006D1F0D /* EventDateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */; };
 		AD5FFCAF23F6C764006D1F0D /* FreeTimeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */; };
 		AD5FFCB123F6C772006D1F0D /* FreeTimeConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */; };
@@ -48,7 +49,6 @@
 		AD9F00E823F58E2900D69640 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */; };
 		ADBE60F623F53C8F009A7FE5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
-		ADBE60FD23F53C8F009A7FE5 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */; };
 		ADBE60FF23F53C8F009A7FE5 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBE60EF23F53C8F009A7FE5 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADBE610223F53C8F009A7FE5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
 		ADBE610323F53C8F009A7FE5 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -203,6 +203,7 @@
 		AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateDelegateSpy.swift; sourceTree = "<group>"; };
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
+		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
 		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
 		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
@@ -230,7 +231,6 @@
 		ADBE60EF23F53C8F009A7FE5 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		ADBE60F023F53C8F009A7FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		ADBE60FE23F53C8F009A7FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD5209223F543D000715473 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD5209423F543D000715473 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -498,6 +498,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		AD8C820A23F768D000E82A0C /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				AD3CC64223F768F4006B6569 /* DateCreator.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
 		AD90749D23F42CD700E07C31 /* Siri */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,7 +559,7 @@
 		ADBE60FB23F53C8F009A7FE5 /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADBE60FC23F53C8F009A7FE5 /* CoreTests.swift */,
+				AD8C820A23F768D000E82A0C /* Supports */,
 				ADBE60FE23F53C8F009A7FE5 /* Info.plist */,
 				AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */,
 				AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */,
@@ -943,10 +951,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5FFCAD23F6C754006D1F0D /* EventDateCalculatorTests.swift in Sources */,
-				ADBE60FD23F53C8F009A7FE5 /* CoreTests.swift in Sources */,
 				AD5FFCAF23F6C764006D1F0D /* FreeTimeFinderTests.swift in Sources */,
 				AD5FFCB123F6C772006D1F0D /* FreeTimeConverterTests.swift in Sources */,
 				AD5FFCB323F6C78A006D1F0D /* DateTests.swift in Sources */,
+				AD3CC64323F768F4006B6569 /* DateCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
