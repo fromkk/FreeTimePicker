@@ -61,8 +61,8 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
                     in: events,
                     from: fromDate,
                     to: toDate,
-                    startDate: self.startTime,
-                    endDate: self.endTime,
+                    startTime: self.startTime,
+                    endTime: self.endTime,
                     freeTime: Self.timeInterval(of: self.minFreeTime),
                     transitTime: Self.timeInterval(of: self.transitTime),
                     ignoreHolidays: self.ignoreHolidays

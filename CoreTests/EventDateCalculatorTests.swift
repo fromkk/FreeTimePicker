@@ -87,6 +87,13 @@ final class EventDateCalculatorTests: XCTestCase {
         let date = DateCreator.create(year: 2020, month: 2, day: 20, hour: 15, minute: 30)
         XCTAssertEqual(calculator.endTimeInterval(at: date, for: baseEntity), 60 * 60 * 2)
     }
-    func testConvert() {}
-    func testSplit() {}
+    func testConvert() {
+        let date = DateCreator.create(year: 2020, month: 2, day: 1, hour: 9, minute: 0)
+        let today = DateCreator.create(year: 2020, month: 2, day: 20, hour: 15, minute: 0)
+        let result = calculator.convert(date, to: today)
+        XCTAssertEqual(result, DateCreator.create(year: 2020, month: 2, day: 20, hour: 9, minute: 0))
+    }
+    func testSplit() {
+        
+    }
 }

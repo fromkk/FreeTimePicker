@@ -61,7 +61,7 @@ public final class EventDateCalculator {
         return calendar.date(from: dateComponentsDist)!
     }
     
-    public func split(from fromDate: Date, to toDate: Date, startDate: Date, endDate: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> [(Date, Date)] {
+    public func split(from fromDate: Date, to toDate: Date, startTime: Date, endTime: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> [(Date, Date)] {
         var calendar = calendar
         calendar.timeZone = timeZone
         var fromDateComponents = calendar.dateComponents([.year, .month, .day], from: fromDate)
@@ -78,8 +78,8 @@ public final class EventDateCalculator {
         var result: [(Date, Date)] = []
         repeat {
             let date = calendar.date(from: currentDateComponents)!
-            let from = convert(startDate, to: date)
-            let to = convert(endDate, to: date)
+            let from = convert(startTime, to: date)
+            let to = convert(endTime, to: date)
             result.append((from, to))
             
             let nextDate = calendar.date(byAdding: appendDateComponents, to: date)!

@@ -81,7 +81,7 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func performSearch(searchDateType: SearchDateType, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignores: Ignores) {
-        guard let startDate = fromTo.0, let endDate = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
+        guard let startTime = fromTo.0, let endTime = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
             return
         }
 
@@ -93,8 +93,8 @@ final class SearchViewModel: ObservableObject {
                     in: events,
                     from: from,
                     to: to,
-                    startDate: startDate,
-                    endDate: endDate,
+                    startTime: startTime,
+                    endTime: endTime,
                     freeTime: self.timeInterval(of: freeTime),
                     transitTime: self.timeInterval(of: transitTime),
                     ignoreHolidays: ignores.holidays
@@ -111,15 +111,15 @@ final class SearchViewModel: ObservableObject {
         return TimeInterval(dateComponents.hour!) * hour + TimeInterval(dateComponents.minute!) * minute
     }
 
-    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startDate: Date, endDate: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) {
+    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startTime: Date, endTime: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) {
         parametersStore.save(with: self)
         self.result = FreeTimeFinder.find(
             with: calculator,
             in: events,
             from: from,
             to: to,
-            startDate: startDate,
-            endDate: endDate,
+            startTime: startTime,
+            endTime: endTime,
             freeTime: freeTime,
             transitTime: transitTime,
             ignoreHolidays: ignoreHolidays
