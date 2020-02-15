@@ -6,13 +6,17 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Firebase
+#if !targetEnvironment(macCatalyst)
+    import Firebase
+#endif
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
+        #if !targetEnvironment(macCatalyst)
+            FirebaseApp.configure()
+        #endif
         return true
     }
 
