@@ -1,0 +1,52 @@
+{
+  "configurations" : [
+    {
+      "id" : "58349535-7CDD-468F-9A90-860FF0E96B2C",
+      "name" : "ja_JP",
+      "options" : {
+        "language" : "ja",
+        "region" : "JP"
+      }
+    },
+    {
+      "id" : "6FF38BA1-09CC-413A-A567-238B29CD8148",
+      "name" : "en_US",
+      "options" : {
+        "language" : "en",
+        "region" : "US"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FreeTimePicker.xcodeproj",
+      "identifier" : "AD034AEF23EBE8ED00415E9A",
+      "name" : "FreeTimePicker"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FreeTimePicker.xcodeproj",
+        "identifier" : "AD034B0523EBE8EE00415E9A",
+        "name" : "FreeTimePickerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FreeTimePicker.xcodeproj",
+        "identifier" : "AD034B1023EBE8EE00415E9A",
+        "name" : "FreeTimePickerUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FreeTimePicker.xcodeproj",
+        "identifier" : "ADBE60F423F53C8F009A7FE5",
+        "name" : "CoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}

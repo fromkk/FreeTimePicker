@@ -204,6 +204,7 @@
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
 		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
+		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
 		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
 		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
 		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
@@ -358,6 +359,7 @@
 		AD034B0923EBE8EE00415E9A /* FreeTimePickerTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */,
 				AD33A54923F6A92E003DEE2C /* Views */,
 				AD034B0A23EBE8EE00415E9A /* TimePickerTests.swift */,
 				AD034B0C23EBE8EE00415E9A /* Info.plist */,
