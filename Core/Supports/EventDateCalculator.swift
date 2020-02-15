@@ -62,6 +62,8 @@ public final class EventDateCalculator {
     }
     
     public func split(from fromDate: Date, to toDate: Date, startTime: Date, endTime: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> [(Date, Date)] {
+        assert(fromDate <= toDate, "toDate must large than fromDate")
+        
         var calendar = calendar
         calendar.timeZone = timeZone
         var fromDateComponents = calendar.dateComponents([.year, .month, .day], from: fromDate)

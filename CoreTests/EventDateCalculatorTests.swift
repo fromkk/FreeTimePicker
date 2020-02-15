@@ -94,6 +94,27 @@ final class EventDateCalculatorTests: XCTestCase {
         XCTAssertEqual(result, DateCreator.create(year: 2020, month: 2, day: 20, hour: 9, minute: 0))
     }
     func testSplit() {
+        XCTContext.runActivity(named: "same day") { (_) in
+            let from = DateCreator.create(year: 2020, month: 2, day: 20, hour: 0, minute: 0)
+            let to = DateCreator.create(year: 2020, month: 2, day: 20, hour: 23, minute: 59)
+            let start = DateCreator.create(year: 2020, month: 2, day: 20, hour: 10, minute: 0)
+            let end = DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 0)
+            let ((resultFrom, resultTo)) = calculator.split(from: from, to: to, startTime: start, endTime: end).first!
+            XCTAssertEqual(resultFrom, start)
+            XCTAssertEqual(resultTo, end)
+        }
         
+        XCTContext.runActivity(named: "difference day") { (_) in
+            let from = DateCreator.create(year: 2020, month: 2, day: 1, hour: 0, minute: 0)
+            let to = DateCreator.create(year: 2020, month: 2, day: 29, hour: 23, minute: 59)
+            let start = DateCreator.create(year: 2020, month: 2, day: 20, hour: 10, minute: 0)
+            let end = DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 0)
+            let result = calculator.split(from: from, to: to, startTime: start, endTime: end)
+            XCTAssertEqual(result.count, 29)
+            XCTAssertEqual(result.first!.0, DateCreator.create(year: 2020, month: 2, day: 1, hour: 10, minute: 0))
+            XCTAssertEqual(result.first!.1, DateCreator.create(year: 2020, month: 2, day: 1, hour: 19, minute: 0))
+            XCTAssertEqual(result.last!.0, DateCreator.create(year: 2020, month: 2, day: 29, hour: 10, minute: 0))
+            XCTAssertEqual(result.last!.1, DateCreator.create(year: 2020, month: 2, day: 29, hour: 19, minute: 0))
+        }
     }
 }
