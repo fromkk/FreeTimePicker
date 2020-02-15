@@ -130,5 +130,6 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 GoogleService-Info.plist
+.firebaserc
 
 # End of https://www.gitignore.io/api/xcode,macos,swift
