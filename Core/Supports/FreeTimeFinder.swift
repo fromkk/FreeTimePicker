@@ -16,6 +16,10 @@ public final class FreeTimeFinder {
 
         var result: Result = []
         dates.forEach { (start, end) in
+            if ignoreHolidays, start.isHoliday() {
+                return
+            }
+
             var todaysResult: Result = []
             defer {
                 if todaysResult.count == 0 {
@@ -23,11 +27,6 @@ public final class FreeTimeFinder {
                 }
                 result.append(contentsOf: todaysResult)
             }
-            
-            if ignoreHolidays, start.isHoliday() {
-                return
-            }
-
             let eventsOfTheDay = events.search(in: start, and: end)
             if 0 == eventsOfTheDay.count {
                 let timeInterval = abs(start.distance(to: end))

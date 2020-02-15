@@ -89,5 +89,16 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[0].0, from)
             XCTAssertEqual(result[0].1, to)
         }
+        
+        XCTContext.runActivity(named: "ignoreHoliday") { (_) in
+            let calculator = EventDateCalculator()
+            let entities: [EventEntity] = [
+                .init(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 22, hour: 15, minute: 0), endDate: DateCreator.create(year: 2020, month: 2, day: 22, hour: 16, minute: 0), isAllDay: true)
+            ]
+            let from = DateCreator.create(year: 2020, month: 2, day: 22, hour: 10, minute: 0)
+            let to = DateCreator.create(year: 2020, month: 2, day: 22, hour: 20, minute: 0)
+            let result = FreeTimeFinder.find(with: calculator, in: entities, from: from, to: to, startTime: from, endTime: to, freeTime: 60 * 60, transitTime: 0, ignoreAllDay: true, ignoreHolidays: true)
+            XCTAssertEqual(result.count, 0)
+        }
     }
 }
