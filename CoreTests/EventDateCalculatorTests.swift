@@ -39,7 +39,31 @@ final class EventDateCalculatorTests: XCTestCase {
             XCTAssertFalse(calculator.isContains(source: baseEntity, at: date2))
         }
     }
-    func testIsIntersects() {}
+    func testIsIntersects() {
+        XCTContext.runActivity(named: "isIntersects1") { (_) in
+            let baseEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 10, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 30), isAllDay: false)
+            let distEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 11, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 18, minute: 30), isAllDay: false)
+            XCTAssertTrue(calculator.isIntersects(source: baseEntity, dist: distEntity))
+        }
+        
+        XCTContext.runActivity(named: "isIntersects2") { (_) in
+            let baseEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 10, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 30), isAllDay: false)
+            let distEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 11, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 20, minute: 30), isAllDay: false)
+            XCTAssertTrue(calculator.isIntersects(source: baseEntity, dist: distEntity))
+        }
+        
+        XCTContext.runActivity(named: "isIntersects3") { (_) in
+            let baseEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 11, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 18, minute: 30), isAllDay: false)
+            let distEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 10, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 30), isAllDay: false)
+            XCTAssertTrue(calculator.isIntersects(source: baseEntity, dist: distEntity))
+        }
+        
+        XCTContext.runActivity(named: "!isIntersects") { (_) in
+            let baseEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 11, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 18, minute: 30), isAllDay: false)
+            let distEntity = EventEntity(title: "hoge", startDate: DateCreator.create(year: 2020, month: 2, day: 21, hour: 10, minute: 30), endDate: DateCreator.create(year: 2020, month: 2, day: 20, hour: 19, minute: 30), isAllDay: false)
+            XCTAssertFalse(calculator.isIntersects(source: baseEntity, dist: distEntity))
+        }
+    }
     func testTimeInterval() {}
     func testStartTimeInterval() {}
     func testEndTimeInterval() {}

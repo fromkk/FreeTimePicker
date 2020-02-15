@@ -19,6 +19,8 @@ public final class EventDateCalculator {
     public func isIntersects(source sourceEventEntity: EventEntity, dist distEventEntity: EventEntity) -> Bool {
         return isContains(source: sourceEventEntity, at: distEventEntity.startDate)
             || isContains(source: sourceEventEntity, at: distEventEntity.endDate)
+            || isContains(source: sourceEventEntity, dist: distEventEntity)
+            || isContains(source: distEventEntity, dist: sourceEventEntity)
     }
 
     public func isContains(source eventEntity: EventEntity, at date: Date) -> Bool {
