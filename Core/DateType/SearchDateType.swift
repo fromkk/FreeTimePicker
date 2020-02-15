@@ -34,9 +34,9 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         }
         return NSLocalizedString(key, comment: key)
     }
-    
+
     public typealias Dates = (startDate: Date, endDate: Date)
-    
+
     public func dates(with date: Date = Date(), calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current, locale: Locale = .current) -> Dates {
         var calendar = calendar
         calendar.timeZone = timeZone
@@ -58,7 +58,7 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         }
     }
 
-    private func today(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+    private func today(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         let startDate = calendar.startOfDay(for: date)
         var dateComponents = DateComponents()
         dateComponents.calendar = calendar
@@ -69,7 +69,7 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         return (startDate, endDate)
     }
 
-    private func tomorrow(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+    private func tomorrow(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         var dateComponents = DateComponents()
         dateComponents.calendar = calendar
         dateComponents.timeZone = timeZone
@@ -80,8 +80,8 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
         return (startDate, endDate)
     }
-    
-    private func thisWeek(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+
+    private func thisWeek(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         var dateComponents = calendar.dateComponents([.year, .month, .weekOfMonth], from: date)
         dateComponents.weekday = 1
         dateComponents.calendar = calendar
@@ -95,8 +95,8 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
         return (calendar.startOfDay(for: date), endDate)
     }
-    
-    private func nextWeek(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+
+    private func nextWeek(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         var dateComponents = calendar.dateComponents([.year, .month, .weekOfMonth], from: date)
         dateComponents.weekday = 1
         dateComponents.weekOfMonth! += 1
@@ -111,8 +111,8 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
         return (startDate, endDate)
     }
-    
-    private func thisMonth(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+
+    private func thisMonth(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         var dateComponents = calendar.dateComponents([.year, .month], from: date)
         dateComponents.calendar = calendar
         dateComponents.timeZone = timeZone
@@ -125,8 +125,8 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         let endDate = calendar.date(byAdding: dateComponents, to: startDate)!
         return (calendar.startOfDay(for: date), endDate)
     }
-    
-    private func nextMonth(with date: Date, calendar: Calendar, timeZone: TimeZone, locale: Locale) -> Dates {
+
+    private func nextMonth(with date: Date, calendar: Calendar, timeZone: TimeZone, locale _: Locale) -> Dates {
         var dateComponents = calendar.dateComponents([.year, .month], from: date)
         dateComponents.calendar = calendar
         dateComponents.timeZone = timeZone
@@ -141,5 +141,5 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
         return (startDate, endDate)
     }
 
-    public var id: Int { return rawValue }
+    public var id: Int { rawValue }
 }

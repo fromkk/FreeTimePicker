@@ -13,8 +13,8 @@ final class SiriTests: XCTestCase {
     func testActive() {
         XCUIDevice.shared.siriService.activate(voiceRecognitionText: "Free Time Pickerで明日を探す")
     }
-    
+
     func testInactive() {
-        
+
     }
 }

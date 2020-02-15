@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import SwiftUI
 import Combine
 import Core
+import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel
@@ -56,8 +56,8 @@ struct SearchView: View {
                     .disabled(!self.viewModel.isValid)
             }
         }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .padding(16)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .padding(16)
         .sheet(isPresented: $viewModel.hasResults) {
             DetailView(viewModel: .init(dates: self.viewModel.result))
         }

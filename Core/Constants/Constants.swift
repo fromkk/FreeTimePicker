@@ -15,6 +15,7 @@ public enum Constants {
         public init(rawValue: String) {
             self.rawValue = "me.fromkk.FreeTimePicker." + rawValue
         }
+
         public static let searchDateType = SearchParameterKeys(rawValue: "searchDateType")
         public static let minFreeTimeDate = SearchParameterKeys(rawValue: "minFreeTimeDate")
         public static let fromTime = SearchParameterKeys(rawValue: "fromTime")

@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Foundation
 import Combine
 import Core
+import Foundation
 
 final class SearchViewModel: ObservableObject {
     @Published var isValid: Bool = false
@@ -48,18 +48,18 @@ final class SearchViewModel: ObservableObject {
         let freeTimeAndTransitTime = Publishers.CombineLatest($minFreeTimeDate, $transitTimeDate)
         let ignores = Publishers.CombineLatest($ignoreAllDays, $ignoreHolidays)
         let combine = Publishers.CombineLatest4($searchDateType, fromTo, freeTimeAndTransitTime, ignores).share()
-        combine.sink { [weak self] (arg) in
+        combine.sink { [weak self] arg in
             let (searchDateType, fromTo, freeTimeAndTransitTime, ignores) = arg
             self?.handleIsValid(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignores: ignores)
-            }.store(in: &cancellables)
+        }.store(in: &cancellables)
 
         _search
             .combineLatest(combine)
             .filter { $0.0 != nil }
             .map { $0.1 }
-                .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignores in
-                    guard let searchDateType = searchDateType else { return }
-                    self?.performSearch(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignores: ignores)
+            .sink { [weak self] searchDateType, fromTo, freeTimeAndTransitTime, ignores in
+                guard let searchDateType = searchDateType else { return }
+                self?.performSearch(searchDateType: searchDateType, fromTo: fromTo, freeTimeAndTransitTime: freeTimeAndTransitTime, ignores: ignores)
             }.store(in: &cancellables)
     }
 
@@ -68,7 +68,7 @@ final class SearchViewModel: ObservableObject {
         _search.send(nil)
     }
 
-    private func handleIsValid(searchDateType: SearchDateType?, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignores: Ignores) {
+    private func handleIsValid(searchDateType: SearchDateType?, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignores _: Ignores) {
         let isValidFromTo: Bool = {
             if let from = fromTo.0, let to = fromTo.1 {
                 return from < to
@@ -100,7 +100,7 @@ final class SearchViewModel: ObservableObject {
                     ignoreAllDay: ignores.allDay,
                     ignoreHolidays: ignores.holidays
                 )
-        }.store(in: &cancellables)
+            }.store(in: &cancellables)
     }
 
     private func timeInterval(of date: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> TimeInterval {
@@ -112,9 +112,9 @@ final class SearchViewModel: ObservableObject {
         return TimeInterval(dateComponents.hour!) * hour + TimeInterval(dateComponents.minute!) * minute
     }
 
-    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startTime: Date, endTime: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreAllDay: Bool, ignoreHolidays: Bool) {
+    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startTime: Date, endTime: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreAllDay _: Bool, ignoreHolidays: Bool) {
         parametersStore.save(with: self)
-        self.result = FreeTimeFinder.find(
+        result = FreeTimeFinder.find(
             with: calculator,
             in: events,
             from: from,
@@ -126,7 +126,7 @@ final class SearchViewModel: ObservableObject {
             ignoreAllDay: ignoreAllDays,
             ignoreHolidays: ignoreHolidays
         )
-        self.hasResults = result.count > 0
-        self.noResults = result.count == 0
+        hasResults = result.count > 0
+        noResults = result.count == 0
     }
 }

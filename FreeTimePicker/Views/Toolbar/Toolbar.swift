@@ -6,8 +6,8 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 final class Toolbar: UIToolbar {
     override init(frame: CGRect) {
@@ -28,7 +28,7 @@ final class Toolbar: UIToolbar {
 
     let completion: PassthroughSubject<Void, Never> = .init()
     lazy var completionButton: UIBarButtonItem = .init(barButtonSystemItem: .done, target: self, action: #selector(tap(completionButton:)))
-    @objc func tap(completionButton: UIBarButtonItem) {
+    @objc func tap(completionButton _: UIBarButtonItem) {
         completion.send(())
     }
 }

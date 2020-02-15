@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
+import Core
 import Foundation
 import Intents
-import Core
 
 final class SiriRegister {
     static func register(with dateType: SearchDateType) {

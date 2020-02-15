@@ -16,7 +16,7 @@ final class SearchDateTests: XCTestCase {
         let searchDate = SearchDate()
         searchDate.delegate = spy
         let button = searchDate.buttons[1]
-        
+
         XCTAssertNil(searchDate.selectedSearchDateType)
         XCTAssertFalse(spy.invokedSearchDate)
         searchDate.tap(button: button)

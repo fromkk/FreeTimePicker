@@ -6,8 +6,8 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 final class DetailViewController: UIViewController {
     @Published var text: String = ""
@@ -40,7 +40,7 @@ final class DetailViewController: UIViewController {
         textView.accessibilityIdentifier = "textView"
         return textView
     }()
-    
+
     private func addTextView() {
         textView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textView)
@@ -51,13 +51,13 @@ final class DetailViewController: UIViewController {
             view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: textView.bottomAnchor)
         ])
     }
-    
+
     @objc private func share() {
-        let activityViewController = UIActivityViewController(activityItems: [self.text], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         activityViewController.popoverPresentationController?.barButtonItem = shareBarButtonItem
         present(activityViewController, animated: true, completion: nil)
     }
-    
+
     @objc private func close() {
         dismiss(animated: true, completion: nil)
     }
@@ -65,14 +65,14 @@ final class DetailViewController: UIViewController {
 
 struct DetailView: UIViewControllerRepresentable {
     var viewModel: DetailViewModel
-    func makeUIViewController(context: UIViewControllerRepresentableContext<DetailView>) -> UINavigationController {
-        let detailVC =  DetailViewController()
+    func makeUIViewController(context _: UIViewControllerRepresentableContext<DetailView>) -> UINavigationController {
+        let detailVC = DetailViewController()
         detailVC.text = viewModel.text
         let navigationController = UINavigationController(rootViewController: detailVC)
         return navigationController
     }
 
-    func updateUIViewController(_ uiViewController: UINavigationController, context: UIViewControllerRepresentableContext<DetailView>) {
+    func updateUIViewController(_: UINavigationController, context _: UIViewControllerRepresentableContext<DetailView>) {
         // nothin todo
     }
 }

@@ -6,31 +6,30 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Foundation
 import Core
+import Foundation
 
 final class SearchParametersStore {
-
     static var userDefaults: UserDefaults = .grouped
 
     @UserDefaultsOptionalWrapper<Int, Constants.SearchParameterKeys>(key: .searchDateType, userDefaults: SearchParametersStore.userDefaults)
     var searchDateType: Int?
-    
+
     @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .minFreeTimeDate, userDefaults: SearchParametersStore.userDefaults)
     var minFreeTimeDate: Date?
-    
+
     @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .fromTime, userDefaults: SearchParametersStore.userDefaults)
     var fromTime: Date?
-    
+
     @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .toTime, userDefaults: SearchParametersStore.userDefaults)
     var toTime: Date?
-    
+
     @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .transitTimeDate, userDefaults: SearchParametersStore.userDefaults)
     var transitTimeDate: Date?
-    
+
     @UserDefaultsOptionalWrapper<Bool, Constants.SearchParameterKeys>(key: .ignoreAllDays, userDefaults: SearchParametersStore.userDefaults)
     var ignoreAllDays: Bool?
-    
+
     @UserDefaultsOptionalWrapper<Bool, Constants.SearchParameterKeys>(key: .ignoreHolidays, userDefaults: SearchParametersStore.userDefaults)
     var ignoreHolidays: Bool?
 

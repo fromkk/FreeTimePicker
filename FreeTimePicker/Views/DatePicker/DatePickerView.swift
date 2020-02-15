@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import UIKit
-import SwiftUI
 import Combine
+import SwiftUI
+import UIKit
 
 extension UIDatePicker.Mode {
     func dateFormat(locale: Locale = .current) -> String? {
@@ -24,8 +24,8 @@ extension UIDatePicker.Mode {
         }
     }
 
-    func placeholder(locale: Locale = .current) -> String? {
-        return dateFormat()
+    func placeholder(locale _: Locale = .current) -> String? {
+        dateFormat()
     }
 }
 
@@ -36,7 +36,7 @@ protocol DatePickerDelegate: AnyObject {
 final class DatePicker: UITextField {
     weak var datePickerDelegate: DatePickerDelegate?
     private var cancellables: [AnyCancellable] = []
-    
+
     convenience init(datePickerMode: UIDatePicker.Mode) {
         self.init()
         setUp(datePickerMode: datePickerMode)
@@ -52,10 +52,10 @@ final class DatePicker: UITextField {
         super.init(coder: coder)
         setUp()
     }
-    
+
     private lazy var toolbar: Toolbar = {
         let toolbar = Toolbar(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 44)))
-        toolbar.completion.sink { [weak self] (_) in
+        toolbar.completion.sink { [weak self] _ in
             guard let self = self else { return }
             self.datePickerDidChange(self.datePicker)
             self.datePickerDelegate?.datePickerDidChanged(self)
@@ -86,7 +86,7 @@ final class DatePicker: UITextField {
             .publisher(for: UITextField.textDidChangeNotification, object: self)
             .sink { [weak self] _ in
                 self?.setText(self?.text)
-        }.store(in: &cancellables)
+            }.store(in: &cancellables)
     }
 
     override var text: String? {
@@ -94,7 +94,7 @@ final class DatePicker: UITextField {
             setText(text)
         }
     }
-    
+
     private func setText(_ text: String?) {
         guard let text = text, let date = convertToDate(text) else { return }
         datePicker.date = date
@@ -127,11 +127,12 @@ final class DatePicker: UITextField {
         super.text = convertToString(picker.date)
         datePickerDelegate?.datePickerDidChanged(self)
     }
-    
+
     private func setUpDateFormatter(
         calendar: Calendar = .init(identifier: .gregorian),
         locale: Locale = .current,
-        timeZone: TimeZone = .current) {
+        timeZone: TimeZone = .current
+    ) {
         var calendar = calendar
         calendar.locale = locale
         calendar.timeZone = timeZone
@@ -157,7 +158,7 @@ final class DatePicker: UITextField {
 
 struct DatePickerView: UIViewRepresentable {
     func makeCoordinator() -> DatePickerView.Coordinator {
-        return Coordinator(date: $date, text: $text)
+        Coordinator(date: $date, text: $text)
     }
 
     let datePickerModel: UIDatePicker.Mode
@@ -173,8 +174,8 @@ struct DatePickerView: UIViewRepresentable {
         }
 
         func datePickerDidChanged(_ datePicker: DatePicker) {
-            self.date = datePicker.date
-            self.text = datePicker.text
+            date = datePicker.date
+            text = datePicker.text
         }
     }
 
@@ -184,7 +185,7 @@ struct DatePickerView: UIViewRepresentable {
         return datePicker
     }
 
-    func updateUIView(_ uiView: DatePicker, context: UIViewRepresentableContext<DatePickerView>) {
+    func updateUIView(_ uiView: DatePicker, context _: UIViewRepresentableContext<DatePickerView>) {
         if let text = text, uiView.text != text {
             uiView.text = text
         }

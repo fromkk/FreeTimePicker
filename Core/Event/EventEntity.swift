@@ -17,7 +17,7 @@ public struct EventEntity {
 
 extension Collection where Element == EventEntity {
     public func search(in startDate: Date, and endDate: Date) -> [EventEntity] {
-        return filter { entity in
+        filter { entity in
             if startDate <= entity.startDate, endDate >= entity.endDate {
                 return true
             } else if startDate >= entity.startDate, endDate <= entity.endDate {

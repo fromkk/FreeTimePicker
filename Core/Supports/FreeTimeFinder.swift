@@ -15,7 +15,7 @@ public final class FreeTimeFinder {
         let minFreeTime = freeTime + transitTime * 2
 
         var result: Result = []
-        dates.forEach { (start, end) in
+        dates.forEach { start, end in
             if ignoreHolidays, start.isHoliday() {
                 return
             }
@@ -28,12 +28,12 @@ public final class FreeTimeFinder {
                 result.append(contentsOf: todaysResult)
             }
             let eventsOfTheDay = events.search(in: start, and: end)
-            if 0 == eventsOfTheDay.count {
+            if eventsOfTheDay.count == 0 {
                 let timeInterval = abs(start.distance(to: end))
                 if timeInterval >= minFreeTime {
                     todaysResult.append((start, end))
                 }
-            } else if 1 == eventsOfTheDay.count, let first = eventsOfTheDay.first {
+            } else if eventsOfTheDay.count == 1, let first = eventsOfTheDay.first {
                 if ignoreAllDay, first.isAllDay {
                     return
                 }

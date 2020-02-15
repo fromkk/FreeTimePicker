@@ -9,7 +9,7 @@
 import Intents
 import Core
 
-class IntentHandler: INExtension {    
+class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
         if intent is FreeTimePickerIntent {
             return FreeTimePickerIntentHandler()
@@ -18,5 +18,3 @@ class IntentHandler: INExtension {
         }
     }
 }
-
-

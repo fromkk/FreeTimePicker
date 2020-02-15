@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Foundation
-import EventKit
 import Combine
+import EventKit
+import Foundation
 
 public protocol CalendarPermissionRepositoryProtocol {
     func request(_ callback: @escaping (Bool) -> Void)
@@ -16,7 +16,7 @@ public protocol CalendarPermissionRepositoryProtocol {
 
 public final class CalendarPermissionRepository: CalendarPermissionRepositoryProtocol {
     public init() {}
-    
+
     public func request(_ callback: @escaping (Bool) -> Void) {
         let status = EKEventStore.authorizationStatus(for: .event)
         handleAuthorizationStatus(status, callback: callback)
@@ -27,7 +27,7 @@ public final class CalendarPermissionRepository: CalendarPermissionRepositoryPro
         case .authorized:
             callback(true)
         case .notDetermined:
-            EKEventStore().requestAccess(to: .event) { (granted, error) in
+            EKEventStore().requestAccess(to: .event) { _, _ in
                 let status = EKEventStore.authorizationStatus(for: .event)
                 DispatchQueue.main.async {
                     self.handleAuthorizationStatus(status, callback: callback)
@@ -40,16 +40,16 @@ public final class CalendarPermissionRepository: CalendarPermissionRepositoryPro
 }
 
 #if DEBUG
-public final class CalendarPermissionRepositoryStub: CalendarPermissionRepositoryProtocol {
-    public var stubbedIsGranted: Bool
-    public init(stubbedIsGranted: Bool) {
-        self.stubbedIsGranted = stubbedIsGranted
+    public final class CalendarPermissionRepositoryStub: CalendarPermissionRepositoryProtocol {
+        public var stubbedIsGranted: Bool
+        public init(stubbedIsGranted: Bool) {
+            self.stubbedIsGranted = stubbedIsGranted
+        }
+
+        public func request(_ callback: @escaping (Bool) -> Void) {
+            callback(stubbedIsGranted)
+        }
     }
-    
-    public func request(_ callback: @escaping (Bool) -> Void) {
-        callback(self.stubbedIsGranted)
-    }
-}
 #endif
 
 public final class CalendarPermissionViewModel: ObservableObject {
@@ -57,11 +57,11 @@ public final class CalendarPermissionViewModel: ObservableObject {
     public init(repository: CalendarPermissionRepositoryProtocol) {
         self.repository = repository
     }
-    
+
     @Published public var isGranted: Bool = false
-    
+
     public func request() {
-        repository.request { [weak self] (isGranted) in
+        repository.request { [weak self] isGranted in
             self?.isGranted = isGranted
         }
     }

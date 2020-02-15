@@ -6,9 +6,9 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Foundation
 import Combine
 import EventKit
+import Foundation
 
 public protocol EventRepositoryProtocol {
     func fetch(startDate: Date, endDate: Date, ignoreAllDay: Bool) -> AnyPublisher<[EventEntity], Never>
@@ -18,7 +18,7 @@ public final class EventRepository: EventRepositoryProtocol {
     public init() {}
 
     public func fetch(startDate: Date, endDate: Date, ignoreAllDay: Bool) -> AnyPublisher<[EventEntity], Never> {
-        return Deferred {
+        Deferred {
             Future<[EventEntity], Never> { promise in
                 DispatchQueue.global(qos: .userInitiated).async {
                     let store = EKEventStore()

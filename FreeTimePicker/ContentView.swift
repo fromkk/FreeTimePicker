@@ -6,18 +6,18 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import SwiftUI
-import EventKit
 import Core
+import EventKit
+import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
-    
+
     var body: some View {
         NavigationView {
             if self.calendarPermissionViewModel.isGranted {
                 SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
-                .navigationBarTitle("Search free time")
+                    .navigationBarTitle("Search free time")
             } else {
                 NoPermissionView()
             }
@@ -30,12 +30,12 @@ struct ContentView: View {
 }
 
 #if DEBUG
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: false)))
-            ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: true)))
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Group {
+                ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: false)))
+                ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: true)))
+            }
         }
     }
-}
 #endif

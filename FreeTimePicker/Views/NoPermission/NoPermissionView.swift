@@ -19,7 +19,7 @@ struct NoPermissionView: View {
             })
         }
     }
-    
+
     func openSettings() {
         let url = URL(string: UIApplication.openSettingsURLString)!
         guard UIApplication.shared.canOpenURL(url) else { return }

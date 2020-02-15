@@ -25,7 +25,7 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[1].0, entities[0].endDate)
             XCTAssertEqual(result[1].1, to)
         }
-        
+
         XCTContext.runActivity(named: "two events one day, no transit time") { (_) in
             let calculator = EventDateCalculator()
             let entities: [EventEntity] = [
@@ -43,7 +43,7 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[2].0, entities[1].endDate)
             XCTAssertEqual(result[2].1, to)
         }
-        
+
         XCTContext.runActivity(named: "one event one day, has transit time") { (_) in
             let calculator = EventDateCalculator()
             let entities: [EventEntity] = [
@@ -59,7 +59,7 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[1].0, entities[0].endDate.addingTimeInterval(transitTime))
             XCTAssertEqual(result[1].1, to.addingTimeInterval(-transitTime))
         }
-        
+
         XCTContext.runActivity(named: "two events one day, has transit time") { (_) in
             let calculator = EventDateCalculator()
             let entities: [EventEntity] = [
@@ -76,7 +76,7 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[1].0, entities[1].endDate.addingTimeInterval(transitTime))
             XCTAssertEqual(result[1].1, to.addingTimeInterval(-transitTime))
         }
-        
+
         XCTContext.runActivity(named: "ignoreAllDay") { (_) in
             let calculator = EventDateCalculator()
             let entities: [EventEntity] = [
@@ -89,7 +89,7 @@ final class FreeTimeFinderTests: XCTestCase {
             XCTAssertEqual(result[0].0, from)
             XCTAssertEqual(result[0].1, to)
         }
-        
+
         XCTContext.runActivity(named: "ignoreHoliday") { (_) in
             let calculator = EventDateCalculator()
             let entities: [EventEntity] = [

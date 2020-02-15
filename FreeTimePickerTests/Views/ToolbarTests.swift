@@ -12,7 +12,7 @@ import Combine
 
 final class ToolbarTests: XCTestCase {
     private var cancellables: [AnyCancellable] = []
-    
+
     func testCompletion() {
         let toolbar = Toolbar()
         let expectation = self.expectation(description: "wait completion")

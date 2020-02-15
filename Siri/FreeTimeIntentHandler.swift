@@ -36,7 +36,7 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
         dateComponents.minute = minutes
         return calendar.date(byAdding: dateComponents, to: startDate)!
     }
-    
+
     private static func timeInterval(of date: Date, calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current) -> TimeInterval {
         var calendar = calendar
         calendar.timeZone = timeZone

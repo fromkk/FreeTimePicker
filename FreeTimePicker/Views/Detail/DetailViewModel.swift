@@ -6,14 +6,14 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import Foundation
 import Core
+import Foundation
 
 final class DetailViewModel: ObservableObject {
     var dates: [(Date, Date)]
     init(dates: [(Date, Date)]) {
         self.dates = dates
-        self.text = FreeTimeConverter(dates: dates).toString()
+        text = FreeTimeConverter(dates: dates).toString()
     }
 
     @Published var text: String = ""

@@ -6,11 +6,11 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-import SwiftUI
-import UIKit
 import Combine
-import UI
 import Core
+import SwiftUI
+import UI
+import UIKit
 
 final class SearchDateButton: UIButton {
     let dateType: SearchDateType
@@ -19,8 +19,8 @@ final class SearchDateButton: UIButton {
         super.init(frame: .zero)
         setUp()
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -41,12 +41,12 @@ final class SearchDateButton: UIButton {
 
 struct SearchDateButtonView: UIViewRepresentable {
     let dateType: SearchDateType
-    
-    func makeUIView(context: UIViewRepresentableContext<SearchDateButtonView>) -> SearchDateButton {
-        return SearchDateButton(dateType: dateType)
+
+    func makeUIView(context _: UIViewRepresentableContext<SearchDateButtonView>) -> SearchDateButton {
+        SearchDateButton(dateType: dateType)
     }
-    
-    func updateUIView(_ uiView: SearchDateButton, context: UIViewRepresentableContext<SearchDateButtonView>) {
+
+    func updateUIView(_: SearchDateButton, context _: UIViewRepresentableContext<SearchDateButtonView>) {
         // nothing todo
     }
 }
@@ -67,17 +67,17 @@ protocol SearchDateDelegate: AnyObject {
 final class SearchDate: UIView {
     private var cancellables: [AnyCancellable] = []
     weak var delegate: SearchDateDelegate?
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
     }
-    
+
     private lazy var setUp: () -> Void = {
         addScrollView()
         addStackView()
@@ -85,7 +85,7 @@ final class SearchDate: UIView {
         setContentHuggingPriority(.defaultHigh, for: .vertical)
         return {}
     }()
-    
+
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.accessibilityIdentifier = "scrollView"
@@ -103,7 +103,7 @@ final class SearchDate: UIView {
             bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
-    
+
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .center
@@ -113,7 +113,7 @@ final class SearchDate: UIView {
         stackView.accessibilityIdentifier = "stackView"
         return stackView
     }()
-    
+
     private func addStackView() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(stackView)
@@ -125,7 +125,7 @@ final class SearchDate: UIView {
             scrollView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
         ])
     }
-    
+
     var buttons: [SearchDateButton] = []
 
     private func addDateTypes() {
@@ -141,9 +141,9 @@ final class SearchDate: UIView {
         delegate?.searchDate(self, didSelect: button.dateType)
         handleSelected(with: button.dateType)
     }
-    
+
     private var selectedIndex: Int?
-    
+
     private func handleSelected(with searchDateType: SearchDateType) {
         buttons.enumerated().forEach { offset, button in
             if button.dateType == searchDateType {
@@ -156,7 +156,7 @@ final class SearchDate: UIView {
             }
         }
     }
-    
+
     override var intrinsicContentSize: CGSize {
         let superSize = super.intrinsicContentSize
         return CGSize(width: superSize.width, height: 48)
@@ -182,29 +182,29 @@ final class SearchDate: UIView {
 
 struct SearchDateView: UIViewRepresentable {
     @Binding var selectedSearchDateType: SearchDateType?
-    
+
     func makeUIView(context: UIViewRepresentableContext<SearchDateView>) -> SearchDate {
         let searchDate = SearchDate()
         searchDate.delegate = context.coordinator
         return searchDate
     }
-    
+
     final class Coordinator: SearchDateDelegate {
         @Binding var selectedSearchDateType: SearchDateType?
         init(selectedSearchDateType: Binding<SearchDateType?>) {
             _selectedSearchDateType = selectedSearchDateType
         }
-        
-        func searchDate(_ searchDate: SearchDate, didSelect dateType: SearchDateType) {
+
+        func searchDate(_: SearchDate, didSelect dateType: SearchDateType) {
             selectedSearchDateType = dateType
         }
     }
-    
+
     func makeCoordinator() -> Coordinator {
-        return Coordinator(selectedSearchDateType: $selectedSearchDateType)
+        Coordinator(selectedSearchDateType: $selectedSearchDateType)
     }
-    
-    func updateUIView(_ uiView: SearchDate, context: UIViewRepresentableContext<SearchDateView>) {
+
+    func updateUIView(_ uiView: SearchDate, context _: UIViewRepresentableContext<SearchDateView>) {
         if let searchDateType = selectedSearchDateType, uiView.selectedSearchDateType != searchDateType {
             uiView.selectedSearchDateType = searchDateType
         }
@@ -213,7 +213,7 @@ struct SearchDateView: UIViewRepresentable {
 
 struct SearchDateView_Preview: PreviewProvider {
     @State static var selectedSearchDateType: SearchDateType?
-    
+
     static var previews: some View {
         SearchDateView(selectedSearchDateType: $selectedSearchDateType)
             .previewLayout(.sizeThatFits)
