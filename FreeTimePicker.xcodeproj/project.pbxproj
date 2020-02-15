@@ -63,7 +63,6 @@
 		ADD520A023F544E500715473 /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209F23F544E500715473 /* SiriTests.swift */; };
 		ADD520A223F54BD100715473 /* FreeTimeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */; };
 		ADD520A423F54C2E00715473 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
-		ADD520A523F54C2E00715473 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ADD520AA23F54E1E00715473 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; };
 		ADD520AB23F54E6500715473 /* SearchDateType+Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */; };
 		ADD520AC23F54E6F00715473 /* SearchDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A223F42E9A00E07C31 /* SearchDateType.swift */; };
@@ -154,17 +153,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADD520A823F54C2E00715473 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				ADD520A523F54C2E00715473 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -204,7 +192,7 @@
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
 		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
-		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
+		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
 		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
 		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
 		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
@@ -742,7 +730,6 @@
 				ADD5208E23F543D000715473 /* Sources */,
 				ADD5208F23F543D000715473 /* Frameworks */,
 				ADD5209023F543D000715473 /* Resources */,
-				ADD520A823F54C2E00715473 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

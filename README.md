@@ -13,4 +13,4 @@ Search | Detail
 
 ## Using
 
-EventKit, SwiftUI, Combine
+EventKit, SwiftUI, Combine, Intents Extension
