@@ -21,13 +21,13 @@ public final class FreeTimeFinder {
             }
 
             var todaysResult: Result = []
+            let eventsOfTheDay = events.search(in: start, and: end)
             defer {
-                if todaysResult.count == 0 {
+                if eventsOfTheDay.count == 0, todaysResult.count == 0 {
                     todaysResult.append((start, end))
                 }
                 result.append(contentsOf: todaysResult)
             }
-            let eventsOfTheDay = events.search(in: start, and: end)
             if eventsOfTheDay.count == 0 {
                 let timeInterval = abs(start.distance(to: end))
                 if timeInterval >= minFreeTime {
