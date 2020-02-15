@@ -65,6 +65,7 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
                     endTime: self.endTime,
                     freeTime: Self.timeInterval(of: self.minFreeTime),
                     transitTime: Self.timeInterval(of: self.transitTime),
+                    ignoreAllDay: self.ignoreAllDay,
                     ignoreHolidays: self.ignoreHolidays
                 )
                 completion(.success(result: FreeTimeConverter(dates: result).toString()))

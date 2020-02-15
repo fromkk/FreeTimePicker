@@ -97,6 +97,7 @@ final class SearchViewModel: ObservableObject {
                     endTime: endTime,
                     freeTime: self.timeInterval(of: freeTime),
                     transitTime: self.timeInterval(of: transitTime),
+                    ignoreAllDay: ignores.allDay,
                     ignoreHolidays: ignores.holidays
                 )
         }.store(in: &cancellables)
@@ -111,7 +112,7 @@ final class SearchViewModel: ObservableObject {
         return TimeInterval(dateComponents.hour!) * hour + TimeInterval(dateComponents.minute!) * minute
     }
 
-    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startTime: Date, endTime: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreHolidays: Bool) {
+    private func searchFreeTime(in events: [EventEntity], from: Date, to: Date, startTime: Date, endTime: Date, freeTime: TimeInterval, transitTime: TimeInterval, ignoreAllDay: Bool, ignoreHolidays: Bool) {
         parametersStore.save(with: self)
         self.result = FreeTimeFinder.find(
             with: calculator,
@@ -122,6 +123,7 @@ final class SearchViewModel: ObservableObject {
             endTime: endTime,
             freeTime: freeTime,
             transitTime: transitTime,
+            ignoreAllDay: ignoreAllDays,
             ignoreHolidays: ignoreHolidays
         )
         self.hasResults = result.count > 0
