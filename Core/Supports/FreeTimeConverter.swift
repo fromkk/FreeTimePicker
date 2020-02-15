@@ -16,7 +16,7 @@ public final class FreeTimeConverter {
 
     let separator = NSLocalizedString(" - ", comment: " - ")
     var dateFormat: String = {
-        let defaultDateFormat = "EEE, d MMM yyyy, HH:mm"
+        let defaultDateFormat = "EEE, d MMM yyyy, jm"
         let userDefaultsFormat = UserDefaults.standard.string(forKey: "date_format")
         return DateFormatter.dateFormat(fromTemplate: userDefaultsFormat ?? defaultDateFormat, options: 0, locale: .current) ?? defaultDateFormat
     }()
