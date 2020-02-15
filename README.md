@@ -13,6 +13,15 @@ Search | Detail
 - macOS Catalina 10.15.3（19D76）
 - Xcode Version 11.3.1 (11C504)
 
+## Ready
+
+```sh
+cp FreeTimePicker/Config/Config-Debug.xcconfig.sample FreeTimePicker/Config/Config-Debug.xcconfig
+cp FreeTimePicker/Config/Config-Release.xcconfig.sample FreeTimePicker/Config/Config-Release.xcconfig
+```
+
+and replace `[YOUR_ADMOB_APP_ID]` to your Admob App ID in xcconfig.
+
 ## Using
 
 EventKit, SwiftUI, Combine, Intents Extension

@@ -286,6 +286,8 @@
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
 		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
+		AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
+		AD5E7B8223F81DD300FA6111 /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
 		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
 		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
 		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 		AD034AF223EBE8ED00415E9A /* FreeTimePicker */ = {
 			isa = PBXGroup;
 			children = (
+				AD5E7B8123F81DC400FA6111 /* Config */,
 				AD034B3223EBFBB800415E9A /* Support */,
 				AD034B2B23EBEF8600415E9A /* Resources */,
 				AD034B2423EBEE1C00415E9A /* Views */,
@@ -621,6 +624,15 @@
 				AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AD5E7B8123F81DC400FA6111 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */,
+				AD5E7B8223F81DD300FA6111 /* Config-Release.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		AD70587823F3E47200C88099 /* Detail */ = {
@@ -1508,6 +1520,7 @@
 		AD034B1823EBE8EE00415E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADMOB_APP_ID = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1569,6 +1582,7 @@
 		AD034B1923EBE8EE00415E9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADMOB_APP_ID = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1623,7 +1637,7 @@
 		};
 		AD034B1B23EBE8EE00415E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDABE829E3416967C5669991 /* Pods-FreeTimePicker.debug.xcconfig */;
+			baseConfigurationReference = AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1648,7 +1662,7 @@
 		};
 		AD034B1C23EBE8EE00415E9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 406EEAD0246379A5C120F186 /* Pods-FreeTimePicker.release.xcconfig */;
+			baseConfigurationReference = AD5E7B8223F81DD300FA6111 /* Config-Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

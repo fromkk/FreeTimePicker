@@ -22,6 +22,7 @@ target 'FreeTimePicker' do
   # add the Firebase pod for Google Analytics
   pod 'FirebaseCore'
   pod 'Firebase/Analytics'
+  pod 'Firebase/AdMob'
   pod 'Fabric'
   pod 'Crashlytics'
   # add pods for any other desired Firebase products

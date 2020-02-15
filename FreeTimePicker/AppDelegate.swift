@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if !targetEnvironment(macCatalyst)
             FirebaseApp.configure()
+            GADMobileAds.sharedInstance().start(completionHandler: nil)
         #endif
         return true
     }
