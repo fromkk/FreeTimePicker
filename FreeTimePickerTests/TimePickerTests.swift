@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FreeTimePicker
+@testable import Piem
 
 class TimePickerTests: XCTestCase {
 

@@ -6,7 +6,7 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-@testable import FreeTimePicker
+@testable import Piem
 
 final class DatePickerDelegateSpy: DatePickerDelegate {
     var invokedDatePickerDidChanged = false

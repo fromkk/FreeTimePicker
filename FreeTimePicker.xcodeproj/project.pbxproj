@@ -1612,7 +1612,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
 			};
 			name = Debug;
 		};
@@ -1635,7 +1635,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
 			};
 			name = Release;
 		};
@@ -1863,7 +1863,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
 			};
 			name = Debug;
 		};
@@ -1884,7 +1884,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTimePicker.app/FreeTimePicker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
 			};
 			name = Release;
 		};
