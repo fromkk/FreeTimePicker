@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  FreeTimePicker
+
+  Created by Kazuya Ueoka on 2020/02/16.
+  Copyright © 2020 fromKK. All rights reserved.
+*/
+
+"NSCalendarsUsageDescription" = "空き時間を探すためにカレンダーにアクセスします。";

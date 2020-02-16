@@ -6,8 +6,6 @@
 	<string>${ADMOB_APP_ID}</string>
 	<key>GADBannerUnitIdentifier</key>
 	<string>${ADMOB_BANNER_UNIT_ID}</string>
-	<key>NSSiriUsageDescription</key>
-	<string>Use siri for check free time.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
