@@ -12,14 +12,16 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    private let siriHandler = SiriHandler()
 
-    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options: UIScene.ConnectionOptions) {
         let bannerUnitID = Bundle.main.infoDictionary?["GADBannerUnitIdentifier"] as? String
 
         let contentView = ContentView(
             calendarPermissionViewModel: .init(repository: CalendarPermissionRepository()),
             bannerUnitID: bannerUnitID
         )
+        .environmentObject(siriHandler)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -27,6 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
+        }
+
+        if let userActivity = options.userActivities.first {
+            handle(userActivity)
         }
     }
 
@@ -56,5 +62,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    func scene(_: UIScene, continue userActivity: NSUserActivity) {
+        handle(userActivity)
+    }
+
+    private func handle(_ userActivity: NSUserActivity) {
+        if let freeTimePickerIntent = userActivity.interaction?.intent as? FreeTimePickerIntent {
+            siriHandler.searchDateType = freeTimePickerIntent.dateType.toSearchDateType()
+        }
     }
 }

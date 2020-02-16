@@ -12,13 +12,17 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
+    @EnvironmentObject var siriHandler: SiriHandler
+
+    let searchViewModel = SearchViewModel(eventRepository: EventRepository())
+
     let bannerUnitID: String?
 
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
                 if self.calendarPermissionViewModel.isGranted {
-                    SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
+                    SearchView(viewModel: self.searchViewModel)
                         .navigationBarTitle("Search free time")
                 } else {
                     NoPermissionView()
@@ -30,6 +34,7 @@ struct ContentView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             self.calendarPermissionViewModel.request()
+            self.siriHandler.searchViewModel = self.searchViewModel
         }
     }
 }
