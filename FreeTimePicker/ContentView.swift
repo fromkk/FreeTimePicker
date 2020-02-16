@@ -12,14 +12,19 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
+    let bannerUnitID: String?
 
     var body: some View {
         NavigationView {
-            if self.calendarPermissionViewModel.isGranted {
-                SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
-                    .navigationBarTitle("Search free time")
-            } else {
-                NoPermissionView()
+            ZStack(alignment: .bottom) {
+                if self.calendarPermissionViewModel.isGranted {
+                    SearchView(viewModel: SearchViewModel(eventRepository: EventRepository()))
+                        .navigationBarTitle("Search free time")
+                } else {
+                    NoPermissionView()
+                }
+                AdBannerView(adUnitID: bannerUnitID)
+                    .frame(height: 50, alignment: .center)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -33,8 +38,14 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             Group {
-                ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: false)))
-                ContentView(calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: true)))
+                ContentView(
+                    calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: false)),
+                    bannerUnitID: "ca-app-pub-3940256099942544/2934735716"
+                )
+                ContentView(
+                    calendarPermissionViewModel: .init(repository: CalendarPermissionRepositoryStub(stubbedIsGranted: true)),
+                    bannerUnitID: "ca-app-pub-3940256099942544/2934735716"
+                )
             }
         }
     }

@@ -15,12 +15,20 @@ Search | Detail
 
 ## Ready
 
+### Firebase
+
+```sh
+cp $YOUR_GOOGLE_SERVICE_INFO_PLIST FreeTimePicker/Resources/GoogleService-Info.plist
+```
+
+### AdMob
+
 ```sh
 cp FreeTimePicker/Config/Config-Debug.xcconfig.sample FreeTimePicker/Config/Config-Debug.xcconfig
 cp FreeTimePicker/Config/Config-Release.xcconfig.sample FreeTimePicker/Config/Config-Release.xcconfig
 ```
 
-and replace `[YOUR_ADMOB_APP_ID]` to your Admob App ID in xcconfig.
+and replace `[YOUR_ADMOB_APP_ID]` to your AdMob App ID and replace `[YOUR_ADMOB_UNIT_ID]` to your AdMob unit ID in xcconfig.
 
 ## Using
 

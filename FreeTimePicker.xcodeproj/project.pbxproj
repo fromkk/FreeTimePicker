@@ -37,6 +37,8 @@
 		AD33A55223F6ABF0003DEE2C /* DatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */; };
 		AD33A55423F6AC8A003DEE2C /* DatePickerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */; };
 		AD3CC64323F768F4006B6569 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CC64223F768F4006B6569 /* DateCreator.swift */; };
+		AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
+		AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
 		AD5FFCAD23F6C754006D1F0D /* EventDateCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */; };
 		AD5FFCAF23F6C764006D1F0D /* FreeTimeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */; };
 		AD5FFCB123F6C772006D1F0D /* FreeTimeConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */; };
@@ -288,6 +290,7 @@
 		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
 		AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
 		AD5E7B8223F81DD300FA6111 /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
+		AD5FA12423F8D4F3002AE074 /* AdBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBanner.swift; sourceTree = "<group>"; };
 		AD5FFCAC23F6C754006D1F0D /* EventDateCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCalculatorTests.swift; sourceTree = "<group>"; };
 		AD5FFCAE23F6C764006D1F0D /* FreeTimeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinderTests.swift; sourceTree = "<group>"; };
 		AD5FFCB023F6C772006D1F0D /* FreeTimeConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverterTests.swift; sourceTree = "<group>"; };
@@ -520,6 +523,7 @@
 				AD034B2523EBEE2100415E9A /* Search */,
 				ADB3C5DE23EF99710008ED01 /* DatePicker */,
 				AD70587823F3E47200C88099 /* Detail */,
+				AD5FA12323F8D4DF002AE074 /* AdBanner */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -633,6 +637,14 @@
 				AD5E7B8223F81DD300FA6111 /* Config-Release.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		AD5FA12323F8D4DF002AE074 /* AdBanner */ = {
+			isa = PBXGroup;
+			children = (
+				AD5FA12423F8D4F3002AE074 /* AdBanner.swift */,
+			);
+			path = AdBanner;
 			sourceTree = "<group>";
 		};
 		AD70587823F3E47200C88099 /* Detail */ = {
@@ -1312,6 +1324,7 @@
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
 				AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
+				AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */,
 				AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
@@ -1355,6 +1368,7 @@
 				AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */,
 				AD71BA8023F7E3680076EC84 /* SiriRegister.swift in Sources */,
 				AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */,
+				AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */,
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,
 				AD71BA8323F7E3680076EC84 /* AppDelegate.swift in Sources */,
 				AD71BA8423F7E3680076EC84 /* SceneDelegate.swift in Sources */,
@@ -1520,7 +1534,6 @@
 		AD034B1823EBE8EE00415E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADMOB_APP_ID = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1582,7 +1595,6 @@
 		AD034B1923EBE8EE00415E9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ADMOB_APP_ID = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;

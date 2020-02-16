@@ -1,2 +1,3 @@
 #include "Pods/Target Support Files/Pods-FreeTimePicker/Pods-FreeTimePicker.release.xcconfig"
 ADMOB_APP_ID=[YOUR_ADMOB_APP_ID]
+ADMOB_BANNER_UNIT_ID=[YOUR_ADMOB_UNIT_ID]
