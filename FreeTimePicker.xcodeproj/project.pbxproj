@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16537D3F5294836D8B98F1F6 /* Pods_FreeTimePickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */; };
-		35924BA2A04AC92A56BF01DA /* Pods_Core_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE39BFF3E78F610B984DEA1A /* Pods_Core_CoreTests.framework */; };
-		3C57683EDFCB46763344C5D4 /* Pods_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB5602D975234932B33378A /* Pods_UI.framework */; };
-		51BD92F7745F860302375AF1 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A09B36148492BB058A7E40 /* Pods_Core.framework */; };
-		7A369E20DE3A89D8AE2C84E0 /* Pods_FreeTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */; };
 		82DE2EC122DA9808BB6866A5 /* Pods_FreeTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */; };
 		AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF323EBE8ED00415E9A /* AppDelegate.swift */; };
 		AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */; };
@@ -103,7 +99,6 @@
 		ADD520AF23F5502A00715473 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADD520B123F5502A00715473 /* Localizable.strings */; };
 		ADD520B423F552A600715473 /* FreeTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520B323F552A600715473 /* FreeTimeConverter.swift */; };
 		CDD021BFF8538E40501AC744 /* Pods_FreeTimePicker_FreeTimePickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */; };
-		E40BC8614F667D9FF4730904 /* Pods_Siri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8BD6E5CB9142970E5EB2BD /* Pods_Siri.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,20 +231,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02A09B36148492BB058A7E40 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F02DFFCBF46162A6B131F4A /* Pods-Core-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
-		1D0A91E0329EE62BA3CD7599 /* Pods-Siri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siri.debug.xcconfig"; path = "Target Support Files/Pods-Siri/Pods-Siri.debug.xcconfig"; sourceTree = "<group>"; };
 		25E87D2799D8AE1881C393FF /* Pods-FreeTimePicker-FreeTimePickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker-FreeTimePickerUITests.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		31163F5EAEFF1D929C6F7355 /* Pods-UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.debug.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.debug.xcconfig"; sourceTree = "<group>"; };
-		3F30570ABFCC3401EA0DA92E /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		406EEAD0246379A5C120F186 /* Pods-FreeTimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker/Pods-FreeTimePicker.release.xcconfig"; sourceTree = "<group>"; };
 		446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A78B258AF155B826CC055D /* Pods-Siri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siri.release.xcconfig"; path = "Target Support Files/Pods-Siri/Pods-Siri.release.xcconfig"; sourceTree = "<group>"; };
-		5B8BD6E5CB9142970E5EB2BD /* Pods_Siri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker_FreeTimePickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAB5602D975234932B33378A /* Pods_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC5803A7A0C4975BFBCE78BD /* Pods-Core-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD034AF023EBE8ED00415E9A /* FreeTimePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTimePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034AF323EBE8ED00415E9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,11 +316,8 @@
 		ADD520B223F5502B00715473 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADD520B323F552A600715473 /* FreeTimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverter.swift; sourceTree = "<group>"; };
 		C585CC9C31F635894A37B6F8 /* Pods-FreeTimePickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D5599F7C59ED034AB922FCCF /* Pods-UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.release.xcconfig"; path = "Target Support Files/Pods-UI/Pods-UI.release.xcconfig"; sourceTree = "<group>"; };
 		D72B53753BE543FABC3A830D /* Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E191C25D9467BC1A22EBBB8E /* Pods-FreeTimePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EACCA107B03160DC4A72FD29 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
-		EE39BFF3E78F610B984DEA1A /* Pods_Core_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDABE829E3416967C5669991 /* Pods-FreeTimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker/Pods-FreeTimePicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -346,7 +329,6 @@
 				AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */,
 				ADBE610223F53C8F009A7FE5 /* Core.framework in Frameworks */,
 				82DE2EC122DA9808BB6866A5 /* Pods_FreeTimePicker.framework in Frameworks */,
-				7A369E20DE3A89D8AE2C84E0 /* Pods_FreeTimePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +361,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C57683EDFCB46763344C5D4 /* Pods_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +368,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BD92F7745F860302375AF1 /* Pods_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADBE60F623F53C8F009A7FE5 /* Core.framework in Frameworks */,
-				35924BA2A04AC92A56BF01DA /* Pods_Core_CoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD520A423F54C2E00715473 /* Core.framework in Frameworks */,
-				E40BC8614F667D9FF4730904 /* Pods_Siri.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,18 +393,10 @@
 		7620C16DA86860A5ECA630A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EACCA107B03160DC4A72FD29 /* Pods-Core.debug.xcconfig */,
-				3F30570ABFCC3401EA0DA92E /* Pods-Core.release.xcconfig */,
-				AC5803A7A0C4975BFBCE78BD /* Pods-Core-CoreTests.debug.xcconfig */,
-				0F02DFFCBF46162A6B131F4A /* Pods-Core-CoreTests.release.xcconfig */,
 				D72B53753BE543FABC3A830D /* Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig */,
 				25E87D2799D8AE1881C393FF /* Pods-FreeTimePicker-FreeTimePickerUITests.release.xcconfig */,
 				E191C25D9467BC1A22EBBB8E /* Pods-FreeTimePickerTests.debug.xcconfig */,
 				C585CC9C31F635894A37B6F8 /* Pods-FreeTimePickerTests.release.xcconfig */,
-				1D0A91E0329EE62BA3CD7599 /* Pods-Siri.debug.xcconfig */,
-				49A78B258AF155B826CC055D /* Pods-Siri.release.xcconfig */,
-				31163F5EAEFF1D929C6F7355 /* Pods-UI.debug.xcconfig */,
-				D5599F7C59ED034AB922FCCF /* Pods-UI.release.xcconfig */,
 				FDABE829E3416967C5669991 /* Pods-FreeTimePicker.debug.xcconfig */,
 				406EEAD0246379A5C120F186 /* Pods-FreeTimePicker.release.xcconfig */,
 			);
@@ -742,13 +712,9 @@
 		ADD520A323F54C2E00715473 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02A09B36148492BB058A7E40 /* Pods_Core.framework */,
-				EE39BFF3E78F610B984DEA1A /* Pods_Core_CoreTests.framework */,
 				446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */,
 				8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */,
 				609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */,
-				5B8BD6E5CB9142970E5EB2BD /* Pods_Siri.framework */,
-				AAB5602D975234932B33378A /* Pods_UI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -876,7 +842,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD97445F23EFE5B600EACECB /* Build configuration list for PBXNativeTarget "UI" */;
 			buildPhases = (
-				4D08FD0DA9BAA541B7279AFF /* [CP] Check Pods Manifest.lock */,
 				AD97445123EFE5B600EACECB /* Headers */,
 				AD97445223EFE5B600EACECB /* Sources */,
 				AD97445323EFE5B600EACECB /* Frameworks */,
@@ -895,7 +860,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADBE610423F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "Core" */;
 			buildPhases = (
-				C07DB5C5ED5819A5CFAC67F5 /* [CP] Check Pods Manifest.lock */,
 				ADBE60E823F53C8F009A7FE5 /* Headers */,
 				ADBE60E923F53C8F009A7FE5 /* Sources */,
 				ADBE60EA23F53C8F009A7FE5 /* Frameworks */,
@@ -914,7 +878,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADBE610723F53C8F009A7FE5 /* Build configuration list for PBXNativeTarget "CoreTests" */;
 			buildPhases = (
-				45254FB94AF3C61F7503B22C /* [CP] Check Pods Manifest.lock */,
 				ADBE60F123F53C8F009A7FE5 /* Sources */,
 				ADBE60F223F53C8F009A7FE5 /* Frameworks */,
 				ADBE60F323F53C8F009A7FE5 /* Resources */,
@@ -934,7 +897,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD5209A23F543D000715473 /* Build configuration list for PBXNativeTarget "Siri" */;
 			buildPhases = (
-				BF0377D12D06B99967DECD51 /* [CP] Check Pods Manifest.lock */,
 				ADD5208E23F543D000715473 /* Sources */,
 				ADD5208F23F543D000715473 /* Frameworks */,
 				ADD5209023F543D000715473 /* Resources */,
@@ -1147,50 +1109,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		45254FB94AF3C61F7503B22C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Core-CoreTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D08FD0DA9BAA541B7279AFF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		77CC66DF19D40C3A79F20F52 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1243,50 +1161,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" \"autocorrect\"\n";
-		};
-		BF0377D12D06B99967DECD51 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Siri-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C07DB5C5ED5819A5CFAC67F5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Core-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		FA9D72931D4889EAAEF931E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1837,7 +1711,6 @@
 		};
 		AD97446023EFE5B600EACECB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31163F5EAEFF1D929C6F7355 /* Pods-UI.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1868,7 +1741,6 @@
 		};
 		AD97446123EFE5B600EACECB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5599F7C59ED034AB922FCCF /* Pods-UI.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1898,7 +1770,6 @@
 		};
 		ADBE610523F53C8F009A7FE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EACCA107B03160DC4A72FD29 /* Pods-Core.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1927,7 +1798,6 @@
 		};
 		ADBE610623F53C8F009A7FE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F30570ABFCC3401EA0DA92E /* Pods-Core.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1956,7 +1826,6 @@
 		};
 		ADBE610823F53C8F009A7FE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC5803A7A0C4975BFBCE78BD /* Pods-Core-CoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1978,7 +1847,6 @@
 		};
 		ADBE610923F53C8F009A7FE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F02DFFCBF46162A6B131F4A /* Pods-Core-CoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2000,7 +1868,6 @@
 		};
 		ADD5209B23F543D000715473 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0A91E0329EE62BA3CD7599 /* Pods-Siri.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -2023,7 +1890,6 @@
 		};
 		ADD5209C23F543D000715473 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49A78B258AF155B826CC055D /* Pods-Siri.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
