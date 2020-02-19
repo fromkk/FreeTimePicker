@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD71BA7023F7E3680076EC84"
-               BuildableName = "Piem.app"
+               BuildableName = "Pity.app"
                BlueprintName = "FreeTimePickerCatalys"
                ReferencedContainer = "container:FreeTimePicker.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD71BA7023F7E3680076EC84"
-            BuildableName = "Piem.app"
+            BuildableName = "Pity.app"
             BlueprintName = "FreeTimePickerCatalys"
             ReferencedContainer = "container:FreeTimePicker.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD71BA7023F7E3680076EC84"
-            BuildableName = "Piem.app"
+            BuildableName = "Pity.app"
             BlueprintName = "FreeTimePickerCatalys"
             ReferencedContainer = "container:FreeTimePicker.xcodeproj">
          </BuildableReference>

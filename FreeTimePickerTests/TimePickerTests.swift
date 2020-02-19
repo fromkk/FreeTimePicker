@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Piem
+@testable import Pity
 
 class TimePickerTests: XCTestCase {
 

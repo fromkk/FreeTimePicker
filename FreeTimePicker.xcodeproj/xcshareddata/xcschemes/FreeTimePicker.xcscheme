@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD034AEF23EBE8ED00415E9A"
-               BuildableName = "Piem.app"
+               BuildableName = "Pity.app"
                BlueprintName = "FreeTimePicker"
                ReferencedContainer = "container:FreeTimePicker.xcodeproj">
             </BuildableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD034AEF23EBE8ED00415E9A"
-            BuildableName = "Piem.app"
+            BuildableName = "Pity.app"
             BlueprintName = "FreeTimePicker"
             ReferencedContainer = "container:FreeTimePicker.xcodeproj">
          </BuildableReference>
@@ -98,7 +98,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD034AEF23EBE8ED00415E9A"
-            BuildableName = "Piem.app"
+            BuildableName = "Pity.app"
             BlueprintName = "FreeTimePicker"
             ReferencedContainer = "container:FreeTimePicker.xcodeproj">
          </BuildableReference>

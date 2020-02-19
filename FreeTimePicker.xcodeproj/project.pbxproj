@@ -240,7 +240,7 @@
 		446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker_FreeTimePickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD034AF023EBE8ED00415E9A /* Piem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD034AF023EBE8ED00415E9A /* Pity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034AF323EBE8ED00415E9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD034AF723EBE8ED00415E9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -289,7 +289,7 @@
 		AD70587923F3E48300C88099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
-		AD71BA9D23F7E3680076EC84 /* Piem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD71BA9D23F7E3680076EC84 /* Pity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/TimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
@@ -430,14 +430,14 @@
 		AD034AF123EBE8ED00415E9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD034AF023EBE8ED00415E9A /* Piem.app */,
+				AD034AF023EBE8ED00415E9A /* Pity.app */,
 				AD034B0623EBE8EE00415E9A /* FreeTimePickerTests.xctest */,
 				AD034B1123EBE8EE00415E9A /* FreeTimePickerUITests.xctest */,
 				AD97445623EFE5B600EACECB /* UI.framework */,
 				ADBE60ED23F53C8F009A7FE5 /* Core.framework */,
 				ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */,
 				ADD5209223F543D000715473 /* Siri.appex */,
-				AD71BA9D23F7E3680076EC84 /* Piem.app */,
+				AD71BA9D23F7E3680076EC84 /* Pity.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -783,7 +783,7 @@
 			);
 			name = FreeTimePicker;
 			productName = TimePicker;
-			productReference = AD034AF023EBE8ED00415E9A /* Piem.app */;
+			productReference = AD034AF023EBE8ED00415E9A /* Pity.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD034B0523EBE8EE00415E9A /* FreeTimePickerTests */ = {
@@ -844,7 +844,7 @@
 			);
 			name = FreeTimePickerCatalys;
 			productName = TimePicker;
-			productReference = AD71BA9D23F7E3680076EC84 /* Piem.app */;
+			productReference = AD71BA9D23F7E3680076EC84 /* Pity.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD97445523EFE5B600EACECB /* UI */ = {
@@ -1561,7 +1561,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
-				PRODUCT_NAME = Piem;
+				PRODUCT_NAME = Pity;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1586,7 +1586,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
-				PRODUCT_NAME = Piem;
+				PRODUCT_NAME = Pity;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1612,7 +1612,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pity.app/Pity";
 			};
 			name = Debug;
 		};
@@ -1635,7 +1635,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pity.app/Pity";
 			};
 			name = Release;
 		};
@@ -1699,7 +1699,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
-				PRODUCT_NAME = Piem;
+				PRODUCT_NAME = Pity;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1724,7 +1724,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
-				PRODUCT_NAME = Piem;
+				PRODUCT_NAME = Pity;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1863,7 +1863,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pity.app/Pity";
 			};
 			name = Debug;
 		};
@@ -1884,7 +1884,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Piem.app/Piem";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pity.app/Pity";
 			};
 			name = Release;
 		};

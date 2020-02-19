@@ -6,7 +6,7 @@
 //  Copyright © 2020 fromKK. All rights reserved.
 //
 
-@testable import Piem
+@testable import Pity
 
 final class DatePickerDelegateSpy: DatePickerDelegate {
     var invokedDatePickerDidChanged = false
