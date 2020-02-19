@@ -102,6 +102,7 @@
 		ADF2CDEF23F9115800A41DD4 /* SiriHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */; };
 		ADF2CDF323F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADF2CDF423F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
+		ADFE3C2623FCF504000D670C /* AddToSiriButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */; };
 		CDD021BFF8538E40501AC744 /* Pods_FreeTimePicker_FreeTimePickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -322,6 +323,7 @@
 		ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriHandler.swift; sourceTree = "<group>"; };
 		ADF2CDF523F9218800A41DD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADF2CDF723F9218B00A41DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSiriButton.swift; sourceTree = "<group>"; };
 		C585CC9C31F635894A37B6F8 /* Pods-FreeTimePickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		D72B53753BE543FABC3A830D /* Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E191C25D9467BC1A22EBBB8E /* Pods-FreeTimePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 		AD034B2423EBEE1C00415E9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADFE3C2423FCF4F3000D670C /* AddToSiriButton */,
 				AD97444C23EFAA3700EACECB /* Toolbar */,
 				AD034B3823EC08FB00415E9A /* DateTypeView */,
 				AD034B2823EBEEA300415E9A /* NoPermission */,
@@ -736,6 +739,14 @@
 				AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */,
 			);
 			path = DateType;
+			sourceTree = "<group>";
+		};
+		ADFE3C2423FCF4F3000D670C /* AddToSiriButton */ = {
+			isa = PBXGroup;
+			children = (
+				ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */,
+			);
+			path = AddToSiriButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1218,6 +1229,7 @@
 				AD034AF823EBE8ED00415E9A /* ContentView.swift in Sources */,
 				AD9F00E723F58E2800D69640 /* Intents.intentdefinition in Sources */,
 				AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */,
+				ADFE3C2623FCF504000D670C /* AddToSiriButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

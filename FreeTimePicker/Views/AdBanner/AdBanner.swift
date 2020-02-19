@@ -14,9 +14,12 @@ import UIKit
 
 #if !targetEnvironment(macCatalyst)
     final class AdBannerViewController: UIViewController {
+        private lazy var request = GADRequest()
+
         var adUnitID: String? {
             didSet {
                 bannerView.adUnitID = adUnitID
+                bannerView.load(request)
             }
         }
 
@@ -28,7 +31,9 @@ import UIKit
                 bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             ])
-            bannerView.load(GADRequest())
+            if adUnitID != nil {
+                bannerView.load(request)
+            }
         }
 
         lazy var bannerView: GADBannerView = {
