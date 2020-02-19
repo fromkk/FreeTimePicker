@@ -54,9 +54,6 @@ struct SearchView: View {
                     .background(self.viewModel.isValid ? Color.blue : Color.gray)
                     .cornerRadius(24)
                     .disabled(!self.viewModel.isValid)
-                Spacer(minLength: 16)
-                AddToSiriButton()
-                    .frame(minWidth: 320, minHeight: 48, alignment: .center)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
@@ -71,9 +68,6 @@ struct SearchView: View {
 
     private func search() {
         viewModel.search()
-        if let searchDateType = viewModel.searchDateType {
-            SiriRegister.register(with: searchDateType)
-        }
     }
 }
 

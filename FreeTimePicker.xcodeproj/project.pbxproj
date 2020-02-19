@@ -46,7 +46,6 @@
 		AD71BA7D23F7E3680076EC84 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B2623EBEE3200415E9A /* SearchView.swift */; };
 		AD71BA7E23F7E3680076EC84 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B3623EC083600415E9A /* SearchViewModel.swift */; };
 		AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3C5DC23EF996C0008ED01 /* DatePickerView.swift */; };
-		AD71BA8023F7E3680076EC84 /* SiriRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A023F42D8F00E07C31 /* SiriRegister.swift */; };
 		AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034B2923EBEEAE00415E9A /* NoPermissionView.swift */; };
 		AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A50223F667CD003DEE2C /* SearchParametersStore.swift */; };
 		AD71BA8323F7E3680076EC84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF323EBE8ED00415E9A /* AppDelegate.swift */; };
@@ -67,7 +66,6 @@
 		AD71BA9623F7E3680076EC84 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD71BA9823F7E3680076EC84 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADD5209223F543D000715473 /* Siri.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AD90749323F427D200E07C31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD90749223F427D200E07C31 /* Settings.bundle */; };
-		AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A023F42D8F00E07C31 /* SiriRegister.swift */; };
 		AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97444D23EFAA4700EACECB /* Toolbar.swift */; };
 		AD97445A23EFE5B600EACECB /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97445823EFE5B600EACECB /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD97445D23EFE5B600EACECB /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97445623EFE5B600EACECB /* UI.framework */; };
@@ -102,7 +100,6 @@
 		ADF2CDEF23F9115800A41DD4 /* SiriHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */; };
 		ADF2CDF323F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADF2CDF423F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
-		ADFE3C2623FCF504000D670C /* AddToSiriButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */; };
 		CDD021BFF8538E40501AC744 /* Pods_FreeTimePicker_FreeTimePickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -294,7 +291,6 @@
 		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/TimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
-		AD9074A023F42D8F00E07C31 /* SiriRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriRegister.swift; sourceTree = "<group>"; };
 		AD9074A223F42E9A00E07C31 /* SearchDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateType.swift; sourceTree = "<group>"; };
 		AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDateType+Intents.swift"; sourceTree = "<group>"; };
 		AD97444D23EFAA4700EACECB /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
@@ -323,7 +319,6 @@
 		ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriHandler.swift; sourceTree = "<group>"; };
 		ADF2CDF523F9218800A41DD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADF2CDF723F9218B00A41DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSiriButton.swift; sourceTree = "<group>"; };
 		C585CC9C31F635894A37B6F8 /* Pods-FreeTimePickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		D72B53753BE543FABC3A830D /* Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E191C25D9467BC1A22EBBB8E /* Pods-FreeTimePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -496,7 +491,6 @@
 		AD034B2423EBEE1C00415E9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ADFE3C2423FCF4F3000D670C /* AddToSiriButton */,
 				AD97444C23EFAA3700EACECB /* Toolbar */,
 				AD034B3823EC08FB00415E9A /* DateTypeView */,
 				AD034B2823EBEEA300415E9A /* NoPermission */,
@@ -648,7 +642,6 @@
 		AD90749D23F42CD700E07C31 /* Siri */ = {
 			isa = PBXGroup;
 			children = (
-				AD9074A023F42D8F00E07C31 /* SiriRegister.swift */,
 				ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */,
 			);
 			path = Siri;
@@ -739,14 +732,6 @@
 				AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */,
 			);
 			path = DateType;
-			sourceTree = "<group>";
-		};
-		ADFE3C2423FCF4F3000D670C /* AddToSiriButton */ = {
-			isa = PBXGroup;
-			children = (
-				ADFE3C2523FCF504000D670C /* AddToSiriButton.swift */,
-			);
-			path = AddToSiriButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1219,7 +1204,6 @@
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
 				AD034B3723EC083600415E9A /* SearchViewModel.swift in Sources */,
 				ADB3C5DD23EF996C0008ED01 /* DatePickerView.swift in Sources */,
-				AD9074A123F42D8F00E07C31 /* SiriRegister.swift in Sources */,
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
 				AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */,
 				AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */,
@@ -1229,7 +1213,6 @@
 				AD034AF823EBE8ED00415E9A /* ContentView.swift in Sources */,
 				AD9F00E723F58E2800D69640 /* Intents.intentdefinition in Sources */,
 				AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */,
-				ADFE3C2623FCF504000D670C /* AddToSiriButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,7 +1248,6 @@
 				AD71BA7D23F7E3680076EC84 /* SearchView.swift in Sources */,
 				AD71BA7E23F7E3680076EC84 /* SearchViewModel.swift in Sources */,
 				AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */,
-				AD71BA8023F7E3680076EC84 /* SiriRegister.swift in Sources */,
 				AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */,
 				AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */,
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,
