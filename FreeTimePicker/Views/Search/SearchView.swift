@@ -20,27 +20,8 @@ struct SearchView: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
+            SearchFormView(viewModel: viewModel)
             VStack(alignment: .leading) {
-                Group {
-                    Text("Date").bold()
-                    SearchDateView(selectedSearchDateType: $viewModel.searchDateType)
-                    Text("Min free time").bold()
-                    DatePickerView(datePickerModel: .time, date: $viewModel.minFreeTimeDate, text: $viewModel.minFreeTimeText)
-                    Text("Search range").bold()
-                    HStack {
-                        DatePickerView(datePickerModel: .time, date: $viewModel.fromTime, text: $viewModel.fromText)
-                        Text(" - ")
-                        DatePickerView(datePickerModel: .time, date: $viewModel.toTime, text: $viewModel.toText)
-                    }
-                    Text("Transit time").bold()
-                    DatePickerView(datePickerModel: .time, date: $viewModel.transitTimeDate, text: $viewModel.transitTimeText)
-                    Toggle(isOn: $viewModel.ignoreAllDays, label: {
-                        Text("Ignore all days").bold()
-                    }).padding([.trailing], 8)
-                    Toggle(isOn: $viewModel.ignoreHolidays, label: {
-                        Text("Ignore holidays").bold()
-                    }).padding([.top, .trailing], 8)
-                }
                 Spacer(minLength: 32)
                 Button(action: {
                     self.search()

@@ -20,7 +20,11 @@ extension Collection where Element == EventEntity {
         filter { entity in
             if startDate <= entity.startDate, endDate >= entity.endDate {
                 return true
-            } else if startDate >= entity.startDate, endDate <= entity.endDate {
+            } else if entity.startDate <= startDate, entity.endDate >= endDate {
+                return true
+            } else if startDate <= entity.startDate, endDate >= entity.startDate {
+                return true
+            } else if startDate <= entity.endDate, endDate >= entity.endDate {
                 return true
             } else {
                 return false

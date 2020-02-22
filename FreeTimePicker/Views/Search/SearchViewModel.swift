@@ -13,6 +13,10 @@ import Foundation
 final class SearchViewModel: ObservableObject {
     @Published var isValid: Bool = false
     @Published var searchDateType: SearchDateType?
+    @Published var customStartDate: Date?
+    @Published var customEndDate: Date?
+    @Published var customStartText: String?
+    @Published var customEndText: String?
     @Published var minFreeTimeDate: Date?
     @Published var minFreeTimeText: String?
     @Published var fromTime: Date?
@@ -27,6 +31,7 @@ final class SearchViewModel: ObservableObject {
 
     private var cancellables: [AnyCancellable] = []
 
+    typealias FromTo = (Date?, Date?, Date?, Date?)
     typealias RangeOfDates = (Date?, Date?)
     typealias Ignores = (allDay: Bool, holidays: Bool)
     @Published var result: [(Date, Date)] = []
@@ -44,7 +49,7 @@ final class SearchViewModel: ObservableObject {
     }
 
     private func bind() {
-        let fromTo = Publishers.CombineLatest($fromTime, $toTime)
+        let fromTo = Publishers.CombineLatest4($fromTime, $toTime, $customStartDate, $customEndDate)
         let freeTimeAndTransitTime = Publishers.CombineLatest($minFreeTimeDate, $transitTimeDate)
         let ignores = Publishers.CombineLatest($ignoreAllDays, $ignoreHolidays)
         let combine = Publishers.CombineLatest4($searchDateType, fromTo, freeTimeAndTransitTime, ignores).share()
@@ -68,24 +73,51 @@ final class SearchViewModel: ObservableObject {
         _search.send(nil)
     }
 
-    private func handleIsValid(searchDateType: SearchDateType?, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignores _: Ignores) {
+    private func handleIsValid(searchDateType: SearchDateType?, fromTo: FromTo, freeTimeAndTransitTime: RangeOfDates, ignores _: Ignores) {
+        let isValidCustom: Bool = {
+            if case .custom = searchDateType {
+                if let startDate = fromTo.2?.startOfDay(), let endDate = fromTo.3?.endOfDay() {
+                    return startDate <= endDate
+                } else {
+                    return false
+                }
+            } else {
+                return true
+            }
+        }()
+
         let isValidFromTo: Bool = {
             if let from = fromTo.0, let to = fromTo.1 {
-                return from < to
+                return from <= to
             } else {
                 return false
             }
         }()
 
-        isValid = searchDateType != nil && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
+        isValid = searchDateType != nil && isValidCustom && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
-    private func performSearch(searchDateType: SearchDateType, fromTo: RangeOfDates, freeTimeAndTransitTime: RangeOfDates, ignores: Ignores) {
+    private func performSearch(searchDateType: SearchDateType, fromTo: FromTo, freeTimeAndTransitTime: RangeOfDates, ignores: Ignores) {
         guard let startTime = fromTo.0, let endTime = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
             return
         }
 
-        let (from, to) = searchDateType.dates()
+        let from: Date, to: Date
+        if case .custom = searchDateType {
+            if let start = fromTo.2?.startOfDay(), let end = fromTo.3?.endOfDay() {
+                from = start
+                to = end
+            } else {
+                return
+            }
+        } else {
+            guard let (start, end) = searchDateType.dates() else {
+                return
+            }
+            from = start
+            to = end
+        }
+
         eventRepository.fetch(startDate: from, endDate: to, ignoreAllDay: ignores.allDay)
             .sink { [weak self] events in
                 guard let self = self else { return }

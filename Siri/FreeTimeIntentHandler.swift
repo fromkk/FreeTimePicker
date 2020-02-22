@@ -53,7 +53,9 @@ final class FreeTimePickerIntentHandler: NSObject, FreeTimePickerIntentHandling 
                 completion(.success(result: NSLocalizedString("No permissions", comment: "No permissions")))
                 return
             }
-            let (fromDate, toDate) = searchDateType.dates()
+            guard let (fromDate, toDate) = searchDateType.dates() else {
+                return
+            }
             EventRepository().fetch(startDate: fromDate, endDate: toDate, ignoreAllDay: self.ignoreAllDay).sink { [weak self] (events) in
                 guard let self = self else { return }
                 let result = FreeTimeFinder.find(

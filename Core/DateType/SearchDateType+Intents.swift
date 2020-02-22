@@ -10,7 +10,7 @@ import Foundation
 import Intents
 
 public extension SearchDateType {
-    func toDateType() -> DateType {
+    func toDateType() -> DateType? {
         switch self {
         case .today:
             return .today
@@ -24,6 +24,8 @@ public extension SearchDateType {
             return .thisMonth
         case .nextMonth:
             return .nextMonth
+        case .custom:
+            return nil
         }
     }
 }

@@ -15,6 +15,7 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
     case nextWeek
     case thisMonth
     case nextMonth
+    case custom
 
     public var title: String {
         let key: String
@@ -31,13 +32,15 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
             key = "Search date this month"
         case .nextMonth:
             key = "Search date next month"
+        case .custom:
+            key = "Search date custom"
         }
         return NSLocalizedString(key, comment: key)
     }
 
     public typealias Dates = (startDate: Date, endDate: Date)
 
-    public func dates(with date: Date = Date(), calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current, locale: Locale = .current) -> Dates {
+    public func dates(with date: Date = Date(), calendar: Calendar = .init(identifier: .gregorian), timeZone: TimeZone = .current, locale: Locale = .current) -> Dates? {
         var calendar = calendar
         calendar.timeZone = timeZone
         calendar.locale = locale
@@ -55,6 +58,8 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
             return thisMonth(with: date, calendar: calendar, timeZone: timeZone, locale: locale)
         case .nextMonth:
             return nextMonth(with: date, calendar: calendar, timeZone: timeZone, locale: locale)
+        case .custom:
+            return nil
         }
     }
 
