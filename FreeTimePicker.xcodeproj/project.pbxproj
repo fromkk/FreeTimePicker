@@ -2063,6 +2063,7 @@
 		ADFF51FA2403BE9B00768C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Today/Info.plist;
@@ -2074,6 +2075,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2083,6 +2085,7 @@
 		ADFF51FB2403BE9B00768C36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Today/Info.plist;
@@ -2094,6 +2097,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
