@@ -12,7 +12,6 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel: SearchViewModel
-    private var cancellables: [AnyCancellable] = []
 
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
