@@ -65,7 +65,6 @@ protocol SearchDateDelegate: AnyObject {
 }
 
 final class SearchDate: UIView {
-    private var cancellables: [AnyCancellable] = []
     weak var delegate: SearchDateDelegate?
 
     override init(frame: CGRect) {
@@ -211,11 +210,13 @@ struct SearchDateView: UIViewRepresentable {
     }
 }
 
-struct SearchDateView_Preview: PreviewProvider {
-    @State static var selectedSearchDateType: SearchDateType?
+#if DEBUG
+    struct SearchDateView_Preview: PreviewProvider {
+        @State static var selectedSearchDateType: SearchDateType?
 
-    static var previews: some View {
-        SearchDateView(selectedSearchDateType: $selectedSearchDateType)
-            .previewLayout(.sizeThatFits)
+        static var previews: some View {
+            SearchDateView(selectedSearchDateType: $selectedSearchDateType)
+                .previewLayout(.sizeThatFits)
+        }
     }
-}
+#endif
