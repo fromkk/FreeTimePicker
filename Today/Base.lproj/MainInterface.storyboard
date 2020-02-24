@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b0X-25-ylT">
+                                <rect key="frame" x="16" y="44" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTO-Vw-SlV" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1q-b9-Yls" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-cC-VBW" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Osg-fT-gND">
+                                <rect key="frame" x="16" y="82" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-2q-zAr" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eJ-rf-Ksg" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-Sy-VdH" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Osg-fT-gND" secondAttribute="bottom" id="DIA-wx-XR6"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="b0X-25-ylT" secondAttribute="trailing" constant="16" id="EG4-Ej-Ka6"/>
+                            <constraint firstItem="b0X-25-ylT" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="EyB-mA-7cL"/>
+                            <constraint firstItem="Osg-fT-gND" firstAttribute="top" secondItem="b0X-25-ylT" secondAttribute="bottom" constant="8" id="LGE-B0-rKQ"/>
+                            <constraint firstItem="b0X-25-ylT" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="MJo-fg-q4u"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Osg-fT-gND" secondAttribute="trailing" constant="16" id="VFT-0K-aPd"/>
+                            <constraint firstItem="Osg-fT-gND" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="p9h-LA-ZQX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="128"/>
+                    <connections>
+                        <outlet property="nextMonthButton" destination="Cdp-Sy-VdH" id="k3s-C1-XXz"/>
+                        <outlet property="nextWeekButton" destination="E5S-2q-zAr" id="UD6-hK-UHo"/>
+                        <outlet property="thisMonthButton" destination="2eJ-rf-Ksg" id="dff-Rg-43K"/>
+                        <outlet property="thisWeekButton" destination="yqW-cC-VBW" id="orf-ol-4mN"/>
+                        <outlet property="todayButton" destination="xTO-Vw-SlV" id="LUz-m7-bsR"/>
+                        <outlet property="tomorrowButton" destination="T1q-b9-Yls" id="TaK-bJ-mfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.51339285714285"/>
+        </scene>
+    </scenes>
+</document>

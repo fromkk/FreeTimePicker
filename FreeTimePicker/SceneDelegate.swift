@@ -46,6 +46,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let userActivity = options.userActivities.first {
             handle(userActivity)
+        } else if let urlContext = options.urlContexts.first {
+            handle(urlContext.url)
         }
     }
 
@@ -75,6 +77,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    func scene(_: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let urlContext = URLContexts.first else { return }
+        let url = urlContext.url
+        handle(url)
+    }
+
+    private func handle(_ url: URL) {
+        guard let urlType = URLHandler.handle(url) else { return }
+        switch urlType {
+        case let .searchDateType(searchDateType):
+            searchDateTypeHandler.searchDateType = searchDateType
+        }
     }
 
     func scene(_: UIScene, continue userActivity: NSUserActivity) {

@@ -105,6 +105,16 @@
 		ADFF51DC2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51E72403B37E00768C36 /* SearchDateTypeTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */; };
+		ADFF51EE2403BE9B00768C36 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFF51ED2403BE9B00768C36 /* NotificationCenter.framework */; };
+		ADFF51F12403BE9B00768C36 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51F02403BE9B00768C36 /* TodayViewController.swift */; };
+		ADFF51F42403BE9B00768C36 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFF51F22403BE9B00768C36 /* MainInterface.storyboard */; };
+		ADFF51F82403BE9B00768C36 /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADFF51EC2403BE9B00768C36 /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ADFF51FC2403BEAF00768C36 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
+		ADFF51FD2403C08F00768C36 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97445623EFE5B600EACECB /* UI.framework */; };
+		ADFF52032403C0AB00768C36 /* DateTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF52022403C0AB00768C36 /* DateTypeButton.swift */; };
+		ADFF52042403C56F00768C36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD034B3023EBF4C000415E9A /* Localizable.strings */; };
+		ADFF52062403C8B100768C36 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF52052403C8B100768C36 /* URLHandler.swift */; };
+		ADFF52072403C8B100768C36 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF52052403C8B100768C36 /* URLHandler.swift */; };
 		CDD021BFF8538E40501AC744 /* Pods_FreeTimePicker_FreeTimePickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +196,20 @@
 			remoteGlobalIDString = ADBE60EC23F53C8F009A7FE5;
 			remoteInfo = Core;
 		};
+		ADFF51F62403BE9B00768C36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD034AE823EBE8ED00415E9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADFF51EB2403BE9B00768C36;
+			remoteInfo = Today;
+		};
+		ADFF51FF2403C08F00768C36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD034AE823EBE8ED00415E9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD97445523EFE5B600EACECB;
+			remoteInfo = UI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -230,6 +254,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				ADFF51F82403BE9B00768C36 /* Today.appex in Embed App Extensions */,
 				ADD5209923F543D000715473 /* Siri.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -327,6 +352,13 @@
 		ADFB40C8240127BA00F4C40A /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
 		ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositorySpy.swift; sourceTree = "<group>"; };
 		ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeTouchBar.swift; sourceTree = "<group>"; };
+		ADFF51EC2403BE9B00768C36 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADFF51ED2403BE9B00768C36 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		ADFF51F02403BE9B00768C36 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		ADFF51F32403BE9B00768C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		ADFF51F52403BE9B00768C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADFF52022403C0AB00768C36 /* DateTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTypeButton.swift; sourceTree = "<group>"; };
+		ADFF52052403C8B100768C36 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
 		C585CC9C31F635894A37B6F8 /* Pods-FreeTimePickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.release.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.release.xcconfig"; sourceTree = "<group>"; };
 		D72B53753BE543FABC3A830D /* Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePicker-FreeTimePickerUITests/Pods-FreeTimePicker-FreeTimePickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E191C25D9467BC1A22EBBB8E /* Pods-FreeTimePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTimePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeTimePickerTests/Pods-FreeTimePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +431,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADFF51E92403BE9B00768C36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFF51FD2403C08F00768C36 /* UI.framework in Frameworks */,
+				ADFF51FC2403BEAF00768C36 /* Core.framework in Frameworks */,
+				ADFF51EE2403BE9B00768C36 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -426,6 +468,7 @@
 				ADBE60EE23F53C8F009A7FE5 /* Core */,
 				ADBE60FB23F53C8F009A7FE5 /* CoreTests */,
 				ADD5209323F543D000715473 /* Siri */,
+				ADFF51EF2403BE9B00768C36 /* Today */,
 				AD034AF123EBE8ED00415E9A /* Products */,
 				ADD520A323F54C2E00715473 /* Frameworks */,
 				7620C16DA86860A5ECA630A7 /* Pods */,
@@ -443,6 +486,7 @@
 				ADBE60F523F53C8F009A7FE5 /* CoreTests.xctest */,
 				ADD5209223F543D000715473 /* Siri.appex */,
 				AD71BA9D23F7E3680076EC84 /* Pity.app */,
+				ADFF51EC2403BE9B00768C36 /* Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -546,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */,
+				ADFF52052403C8B100768C36 /* URLHandler.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -723,6 +768,7 @@
 				446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */,
 				8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */,
 				609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */,
+				ADFF51ED2403BE9B00768C36 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -743,6 +789,17 @@
 				ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		ADFF51EF2403BE9B00768C36 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF52022403C0AB00768C36 /* DateTypeButton.swift */,
+				ADFF51F02403BE9B00768C36 /* TodayViewController.swift */,
+				ADFF51F22403BE9B00768C36 /* MainInterface.storyboard */,
+				ADFF51F52403BE9B00768C36 /* Info.plist */,
+			);
+			path = Today;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -787,6 +844,7 @@
 				AD97445C23EFE5B600EACECB /* PBXTargetDependency */,
 				ADBE610123F53C8F009A7FE5 /* PBXTargetDependency */,
 				ADD5209823F543D000715473 /* PBXTargetDependency */,
+				ADFF51F72403BE9B00768C36 /* PBXTargetDependency */,
 			);
 			name = FreeTimePicker;
 			productName = TimePicker;
@@ -927,6 +985,24 @@
 			productReference = ADD5209223F543D000715473 /* Siri.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		ADFF51EB2403BE9B00768C36 /* Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADFF51F92403BE9B00768C36 /* Build configuration list for PBXNativeTarget "Today" */;
+			buildPhases = (
+				ADFF51E82403BE9B00768C36 /* Sources */,
+				ADFF51E92403BE9B00768C36 /* Frameworks */,
+				ADFF51EA2403BE9B00768C36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADFF52002403C08F00768C36 /* PBXTargetDependency */,
+			);
+			name = Today;
+			productName = Today;
+			productReference = ADFF51EC2403BE9B00768C36 /* Today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -962,6 +1038,9 @@
 					ADD5209123F543D000715473 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					ADFF51EB2403BE9B00768C36 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = AD034AEB23EBE8ED00415E9A /* Build configuration list for PBXProject "FreeTimePicker" */;
@@ -986,6 +1065,7 @@
 				ADBE60EC23F53C8F009A7FE5 /* Core */,
 				ADBE60F423F53C8F009A7FE5 /* CoreTests */,
 				ADD5209123F543D000715473 /* Siri */,
+				ADFF51EB2403BE9B00768C36 /* Today */,
 			);
 		};
 /* End PBXProject section */
@@ -1060,6 +1140,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD520AF23F5502A00715473 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADFF51EA2403BE9B00768C36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFF51F42403BE9B00768C36 /* MainInterface.storyboard in Resources */,
+				ADFF52042403C56F00768C36 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,6 +1312,7 @@
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
 				AD70587A23F3E48300C88099 /* DetailView.swift in Sources */,
+				ADFF52062403C8B100768C36 /* URLHandler.swift in Sources */,
 				AD034AF823EBE8ED00415E9A /* ContentView.swift in Sources */,
 				AD9F00E723F58E2800D69640 /* Intents.intentdefinition in Sources */,
 				AD70587C23F3E66500C88099 /* DetailViewModel.swift in Sources */,
@@ -1264,6 +1354,7 @@
 				AD71BA7E23F7E3680076EC84 /* SearchViewModel.swift in Sources */,
 				AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */,
 				AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */,
+				ADFF52072403C8B100768C36 /* URLHandler.swift in Sources */,
 				AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */,
 				ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */,
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,
@@ -1327,6 +1418,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADFF51E82403BE9B00768C36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFF51F12403BE9B00768C36 /* TodayViewController.swift in Sources */,
+				ADFF52032403C0AB00768C36 /* DateTypeButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1387,6 +1487,16 @@
 			target = ADBE60EC23F53C8F009A7FE5 /* Core */;
 			targetProxy = ADD520A623F54C2E00715473 /* PBXContainerItemProxy */;
 		};
+		ADFF51F72403BE9B00768C36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADFF51EB2403BE9B00768C36 /* Today */;
+			targetProxy = ADFF51F62403BE9B00768C36 /* PBXContainerItemProxy */;
+		};
+		ADFF52002403C08F00768C36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD97445523EFE5B600EACECB /* UI */;
+			targetProxy = ADFF51FF2403C08F00768C36 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1432,6 +1542,14 @@
 				ADF2CDF723F9218B00A41DD4 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ADFF51F22403BE9B00768C36 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADFF51F32403BE9B00768C36 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1942,6 +2060,46 @@
 			};
 			name = Release;
 		};
+		ADFF51FA2403BE9B00768C36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADFF51FB2403BE9B00768C36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2022,6 +2180,15 @@
 			buildConfigurations = (
 				ADD5209B23F543D000715473 /* Debug */,
 				ADD5209C23F543D000715473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADFF51F92403BE9B00768C36 /* Build configuration list for PBXNativeTarget "Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADFF51FA2403BE9B00768C36 /* Debug */,
+				ADFF51FB2403BE9B00768C36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
