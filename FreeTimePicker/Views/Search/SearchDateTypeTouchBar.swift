@@ -18,21 +18,31 @@ import Core
         static let searchDateType: NSTouchBar.CustomizationIdentifier = .init("searchDateType")
     }
 
+    extension NSTouchBarItem.Identifier {
+        static let group: NSTouchBarItem.Identifier = .init("group")
+        static let search: NSTouchBarItem.Identifier = .init("search")
+    }
+
     final class SearchDateTypeTouchBar: UIResponder, ObservableObject, NSTouchBarDelegate {
         weak var searchViewModel: SearchViewModel?
         override func makeTouchBar() -> NSTouchBar? {
             let touchBar = NSTouchBar()
             touchBar.customizationIdentifier = .searchDateType
-            touchBar.defaultItemIdentifiers = SearchDateType.allCases.map { NSTouchBarItem.Identifier($0.title) }
-            touchBar.customizationAllowedItemIdentifiers = SearchDateType.allCases.map { NSTouchBarItem.Identifier($0.title) }
+            touchBar.defaultItemIdentifiers = [.group, .search]
+            touchBar.customizationAllowedItemIdentifiers = [.group, .search]
             touchBar.delegate = self
             return touchBar
         }
 
         func touchBar(_: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
-            if let searchDateType = SearchDateType.allCases.first(where: { $0.title == identifier.rawValue }) {
-                return NSButtonTouchBarItem(identifier: identifier, title: searchDateType.title, target: self, action: #selector(handle(_:)))
-            } else {
+            switch identifier {
+            case .group:
+                return NSGroupTouchBarItem(identifier: .group, items: SearchDateType.allCases.map {
+                    NSButtonTouchBarItem(identifier: .init($0.title), title: $0.title, target: self, action: #selector(handle(_:)))
+                })
+            case .search:
+                return NSButtonTouchBarItem(identifier: identifier, image: UIImage(systemName: "magnifyingglass.circle.fill")!, target: self, action: #selector(handle(_:)))
+            default:
                 return nil
             }
         }
@@ -40,6 +50,13 @@ import Core
         @objc private func handle(_ button: NSButtonTouchBarItem) {
             if let searchDateType = SearchDateType.allCases.first(where: { $0.title == button.identifier.rawValue }) {
                 searchViewModel?.searchDateType = searchDateType
+            } else {
+                switch button.identifier {
+                case .search:
+                    searchViewModel?.search()
+                default:
+                    break
+                }
             }
         }
     }
