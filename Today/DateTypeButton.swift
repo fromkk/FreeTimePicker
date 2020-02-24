@@ -32,6 +32,11 @@ final class DateTypeButton: UIButton {
         return {}
     }()
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = frame.size.height / 2
+    }
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setUp()

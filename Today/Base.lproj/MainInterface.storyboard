@@ -16,35 +16,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b0X-25-ylT">
-                                <rect key="frame" x="16" y="44" width="288" height="30"/>
+                                <rect key="frame" x="16" y="44" width="288" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTO-Vw-SlV" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1q-b9-Yls" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="0.0" width="86" height="30"/>
+                                        <rect key="frame" x="93" y="0.0" width="85" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-cC-VBW" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="188" y="0.0" width="100" height="30"/>
+                                        <rect key="frame" x="186" y="0.0" width="102" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Osg-fT-gND">
-                                <rect key="frame" x="16" y="82" width="288" height="30"/>
+                                <rect key="frame" x="16" y="80" width="288" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5S-2q-zAr" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eJ-rf-Ksg" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="0.0" width="86" height="30"/>
+                                        <rect key="frame" x="93" y="0.0" width="85" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-Sy-VdH" customClass="DateTypeButton" customModule="Today" customModuleProvider="target">
-                                        <rect key="frame" x="188" y="0.0" width="100" height="30"/>
+                                        <rect key="frame" x="186" y="0.0" width="102" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
