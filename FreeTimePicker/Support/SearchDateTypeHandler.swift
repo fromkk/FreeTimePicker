@@ -11,7 +11,7 @@ import Core
 import Foundation
 import Intents
 
-final class SiriHandler: ObservableObject {
+final class SearchDateTypeHandler: ObservableObject {
     weak var searchViewModel: SearchViewModel? {
         didSet {
             guard let searchDateType = searchDateType else { return }

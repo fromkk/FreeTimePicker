@@ -96,8 +96,8 @@
 		ADD520AC23F54E6F00715473 /* SearchDateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9074A223F42E9A00E07C31 /* SearchDateType.swift */; };
 		ADD520AF23F5502A00715473 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADD520B123F5502A00715473 /* Localizable.strings */; };
 		ADD520B423F552A600715473 /* FreeTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520B323F552A600715473 /* FreeTimeConverter.swift */; };
-		ADF2CDEE23F9115200A41DD4 /* SiriHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */; };
-		ADF2CDEF23F9115800A41DD4 /* SiriHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */; };
+		ADF2CDEE23F9115200A41DD4 /* SearchDateTypeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */; };
+		ADF2CDEF23F9115800A41DD4 /* SearchDateTypeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */; };
 		ADF2CDF323F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADF2CDF423F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADFB40C9240127BA00F4C40A /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB40C8240127BA00F4C40A /* SearchFormView.swift */; };
@@ -320,7 +320,7 @@
 		ADD520B023F5502A00715473 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADD520B223F5502B00715473 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADD520B323F552A600715473 /* FreeTimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeConverter.swift; sourceTree = "<group>"; };
-		ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriHandler.swift; sourceTree = "<group>"; };
+		ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeHandler.swift; sourceTree = "<group>"; };
 		ADF2CDF523F9218800A41DD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADF2CDF723F9218B00A41DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADFB40C8240127BA00F4C40A /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 		AD034B3223EBFBB800415E9A /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				AD90749D23F42CD700E07C31 /* Siri */,
+				ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -645,14 +645,6 @@
 				AD3CC64223F768F4006B6569 /* DateCreator.swift */,
 			);
 			path = Supports;
-			sourceTree = "<group>";
-		};
-		AD90749D23F42CD700E07C31 /* Siri */ = {
-			isa = PBXGroup;
-			children = (
-				ADF2CDED23F9115200A41DD4 /* SiriHandler.swift */,
-			);
-			path = Siri;
 			sourceTree = "<group>";
 		};
 		AD97444C23EFAA3700EACECB /* Toolbar */ = {
@@ -1215,7 +1207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97444E23EFAA4700EACECB /* Toolbar.swift in Sources */,
-				ADF2CDEE23F9115200A41DD4 /* SiriHandler.swift in Sources */,
+				ADF2CDEE23F9115200A41DD4 /* SearchDateTypeHandler.swift in Sources */,
 				AD034B3A23EC090700415E9A /* DateTypeView.swift in Sources */,
 				AD034B2723EBEE3200415E9A /* SearchView.swift in Sources */,
 				ADFB40C9240127BA00F4C40A /* SearchFormView.swift in Sources */,
@@ -1261,7 +1253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD71BA7B23F7E3680076EC84 /* Toolbar.swift in Sources */,
-				ADF2CDEF23F9115800A41DD4 /* SiriHandler.swift in Sources */,
+				ADF2CDEF23F9115800A41DD4 /* SearchDateTypeHandler.swift in Sources */,
 				AD71BA7C23F7E3680076EC84 /* DateTypeView.swift in Sources */,
 				AD71BA7D23F7E3680076EC84 /* SearchView.swift in Sources */,
 				ADFB40CA240127BA00F4C40A /* SearchFormView.swift in Sources */,

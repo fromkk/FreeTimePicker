@@ -12,7 +12,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
-    @EnvironmentObject var siriHandler: SiriHandler
+    @EnvironmentObject var searchDateTypeHandler: SearchDateTypeHandler
 
     let searchViewModel = SearchViewModel(eventRepository: EventRepository())
 
@@ -34,7 +34,7 @@ struct ContentView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             self.calendarPermissionViewModel.request()
-            self.siriHandler.searchViewModel = self.searchViewModel
+            self.searchDateTypeHandler.searchViewModel = self.searchViewModel
         }
     }
 }

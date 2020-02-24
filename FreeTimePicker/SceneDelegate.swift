@@ -12,7 +12,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    private let siriHandler = SiriHandler()
+    private let searchDateTypeHandler = SearchDateTypeHandler()
 
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options: UIScene.ConnectionOptions) {
         let bannerUnitID = Bundle.main.infoDictionary?["GADBannerUnitIdentifier"] as? String
@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             calendarPermissionViewModel: .init(repository: CalendarPermissionRepository()),
             bannerUnitID: bannerUnitID
         )
-        .environmentObject(siriHandler)
+        .environmentObject(searchDateTypeHandler)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -70,7 +70,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func handle(_ userActivity: NSUserActivity) {
         if let freeTimePickerIntent = userActivity.interaction?.intent as? FreeTimePickerIntent {
-            siriHandler.searchDateType = freeTimePickerIntent.dateType.toSearchDateType()
+            searchDateTypeHandler.searchDateType = freeTimePickerIntent.dateType.toSearchDateType()
         }
     }
 }
