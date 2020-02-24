@@ -13,6 +13,9 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var calendarPermissionViewModel: CalendarPermissionViewModel
     @EnvironmentObject var searchDateTypeHandler: SearchDateTypeHandler
+    #if targetEnvironment(macCatalyst)
+        @EnvironmentObject var searchDateTypeTouchBar: SearchDateTypeTouchBar
+    #endif
 
     let searchViewModel = SearchViewModel(eventRepository: EventRepository())
 
@@ -35,6 +38,9 @@ struct ContentView: View {
         .onAppear {
             self.calendarPermissionViewModel.request()
             self.searchDateTypeHandler.searchViewModel = self.searchViewModel
+            #if targetEnvironment(macCatalyst)
+                self.searchDateTypeTouchBar.searchViewModel = self.searchViewModel
+            #endif
         }
     }
 }

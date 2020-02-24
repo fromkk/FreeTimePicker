@@ -13,18 +13,31 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     private let searchDateTypeHandler = SearchDateTypeHandler()
+    #if targetEnvironment(macCatalyst)
+        private let searchViewModelTouchBar = SearchDateTypeTouchBar()
+    #endif
 
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options: UIScene.ConnectionOptions) {
-        let bannerUnitID = Bundle.main.infoDictionary?["GADBannerUnitIdentifier"] as? String
-
-        let contentView = ContentView(
-            calendarPermissionViewModel: .init(repository: CalendarPermissionRepository()),
-            bannerUnitID: bannerUnitID
-        )
-        .environmentObject(searchDateTypeHandler)
-
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+            let bannerUnitID = Bundle.main.infoDictionary?["GADBannerUnitIdentifier"] as? String
+
+            #if targetEnvironment(macCatalyst)
+                let contentView = ContentView(
+                    calendarPermissionViewModel: .init(repository: CalendarPermissionRepository()),
+                    bannerUnitID: bannerUnitID
+                )
+                .environmentObject(searchDateTypeHandler)
+                .environmentObject(searchViewModelTouchBar)
+                windowScene.touchBar = searchViewModelTouchBar.makeTouchBar()
+            #else
+                let contentView = ContentView(
+                    calendarPermissionViewModel: .init(repository: CalendarPermissionRepository()),
+                    bannerUnitID: bannerUnitID
+                )
+                .environmentObject(searchDateTypeHandler)
+            #endif
+
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
