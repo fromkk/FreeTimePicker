@@ -15,6 +15,12 @@ final class SearchParametersStore {
     @UserDefaultsOptionalWrapper<Int, Constants.SearchParameterKeys>(key: .searchDateType, userDefaults: SearchParametersStore.userDefaults)
     var searchDateType: Int?
 
+    @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .customStartDate, userDefaults: SearchParametersStore.userDefaults)
+    var customStartDate: Date?
+
+    @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .customEndDate, userDefaults: SearchParametersStore.userDefaults)
+    var customEndDate: Date?
+
     @UserDefaultsOptionalWrapper<Date, Constants.SearchParameterKeys>(key: .minFreeTimeDate, userDefaults: SearchParametersStore.userDefaults)
     var minFreeTimeDate: Date?
 
@@ -35,6 +41,8 @@ final class SearchParametersStore {
 
     func restore(with viewModel: SearchViewModel) {
         viewModel.searchDateType = searchDateType.flatMap { SearchDateType(rawValue: $0) }
+        viewModel.customStartDate = customStartDate
+        viewModel.customEndDate = customEndDate
         viewModel.minFreeTimeDate = minFreeTimeDate ?? Self.defaultDate(hour: 1, minute: 0)
         viewModel.fromTime = fromTime ?? Self.defaultDate(hour: 9, minute: 0)
         viewModel.toTime = toTime ?? Self.defaultDate(hour: 22, minute: 0)
@@ -45,6 +53,8 @@ final class SearchParametersStore {
 
     func save(with viewModel: SearchViewModel) {
         searchDateType = viewModel.searchDateType?.rawValue
+        customStartDate = viewModel.customStartDate
+        customEndDate = viewModel.customEndDate
         minFreeTimeDate = viewModel.minFreeTimeDate
         fromTime = viewModel.fromTime
         toTime = viewModel.toTime

@@ -17,6 +17,8 @@ public enum Constants {
         }
 
         public static let searchDateType = SearchParameterKeys(rawValue: "searchDateType")
+        public static let customStartDate = SearchParameterKeys(rawValue: "customStartDate")
+        public static let customEndDate = SearchParameterKeys(rawValue: "customEndDate")
         public static let minFreeTimeDate = SearchParameterKeys(rawValue: "minFreeTimeDate")
         public static let fromTime = SearchParameterKeys(rawValue: "fromTime")
         public static let toTime = SearchParameterKeys(rawValue: "toTime")
