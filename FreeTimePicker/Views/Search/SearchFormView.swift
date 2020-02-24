@@ -24,6 +24,27 @@ struct CustomDates: View {
     }
 }
 
+#if DEBUG
+    struct CustomDates_Preview: PreviewProvider {
+        static var previews: some View {
+            Group {
+                CustomDates(viewModel: {
+                    let viewModel = SearchViewModel(eventRepository: EventRepositorySpy())
+                    viewModel.searchDateType = .custom
+                    return viewModel
+                }())
+                    .previewLayout(.sizeThatFits)
+                CustomDates(viewModel: {
+                    let viewModel = SearchViewModel(eventRepository: EventRepositorySpy())
+                    viewModel.searchDateType = .today
+                    return viewModel
+                }())
+                    .previewLayout(.sizeThatFits)
+            }
+        }
+    }
+#endif
+
 struct ToggleViews: View {
     @ObservedObject var viewModel: SearchViewModel
 
@@ -40,6 +61,20 @@ struct ToggleViews: View {
         }
     }
 }
+
+#if DEBUG
+    struct ToggleViews_Preview: PreviewProvider {
+        static var previews: some View {
+            Group {
+                ToggleViews(viewModel: {
+                    let viewModel = SearchViewModel(eventRepository: EventRepositorySpy())
+                    viewModel.searchDateType = .today
+                    return viewModel
+                }())
+            }.previewLayout(.sizeThatFits)
+        }
+    }
+#endif
 
 struct SearchFormView: View {
     @ObservedObject var viewModel: SearchViewModel
@@ -61,3 +96,17 @@ struct SearchFormView: View {
         }
     }
 }
+
+#if DEBUG
+    struct SearchFormView_Preview: PreviewProvider {
+        static var previews: some View {
+            Group {
+                SearchFormView(viewModel: {
+                    let viewModel = SearchViewModel(eventRepository: EventRepositorySpy())
+                    viewModel.searchDateType = .today
+                    return viewModel
+                }())
+            }.previewLayout(.sizeThatFits)
+        }
+    }
+#endif
