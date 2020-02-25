@@ -24,12 +24,15 @@ public final class FreeTimeFinder {
             let eventsOfTheDay = events.search(in: start, and: end)
             defer {
                 if eventsOfTheDay.count == 0, todaysResult.count == 0 {
-                    todaysResult.append((start, end))
+                    let timeInterval = start.distance(to: end)
+                    if timeInterval >= minFreeTime {
+                        todaysResult.append((start, end))
+                    }
                 }
                 result.append(contentsOf: todaysResult)
             }
             if eventsOfTheDay.count == 0 {
-                let timeInterval = abs(start.distance(to: end))
+                let timeInterval = start.distance(to: end)
                 if timeInterval >= minFreeTime {
                     todaysResult.append((start, end))
                 }
