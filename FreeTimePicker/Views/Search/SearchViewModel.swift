@@ -86,15 +86,16 @@ final class SearchViewModel: ObservableObject {
             }
         }()
 
-        let isValidFromTo: Bool = {
-            if let from = fromTo.0, let to = fromTo.1 {
-                return from <= to
-            } else {
+        let isValidTimeInterval: Bool = {
+            guard let from = fromTo.0, let to = fromTo.1, let freeTime = freeTimeAndTransitTime.0, let transitTime = freeTimeAndTransitTime.1 else {
                 return false
             }
+            let searchTimeInterval = from.distance(to: to)
+            let minTimeInterval = self.timeInterval(of: freeTime) + self.timeInterval(of: transitTime) * 2
+            return from <= to && minTimeInterval <= searchTimeInterval
         }()
 
-        isValid = searchDateType != nil && isValidCustom && isValidFromTo && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
+        isValid = searchDateType != nil && isValidCustom && isValidTimeInterval && freeTimeAndTransitTime.0 != nil && freeTimeAndTransitTime.1 != nil
     }
 
     private func performSearch(searchDateType: SearchDateType, fromTo: FromTo, freeTimeAndTransitTime: RangeOfDates, ignores: Ignores) {
