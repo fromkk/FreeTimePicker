@@ -2,6 +2,8 @@
 
 This is iOS application for search free time in your calendar.
 
+![ogb](images/ogp.png)
+
 [![Build Status](https://app.bitrise.io/app/1e5ee18b31a8c2b1/status.svg?token=A0DCFVC9_LGYtl_d7QhUgQ&branch=master)](https://app.bitrise.io/app/1e5ee18b31a8c2b1)
 
 Search | Detail
