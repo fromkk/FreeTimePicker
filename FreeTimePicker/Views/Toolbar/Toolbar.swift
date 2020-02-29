@@ -27,7 +27,12 @@ final class Toolbar: UIToolbar {
     }()
 
     let completion: PassthroughSubject<Void, Never> = .init()
-    lazy var completionButton: UIBarButtonItem = .init(barButtonSystemItem: .done, target: self, action: #selector(tap(completionButton:)))
+    lazy var completionButton: UIBarButtonItem = {
+        let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tap(completionButton:)))
+        item.accessibilityIdentifier = "completionButton"
+        return item
+    }()
+
     @objc func tap(completionButton _: UIBarButtonItem) {
         completion.send(())
     }

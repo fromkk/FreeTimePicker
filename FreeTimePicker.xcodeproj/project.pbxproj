@@ -88,7 +88,6 @@
 		ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
 		ADD5209523F543D000715473 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209423F543D000715473 /* IntentHandler.swift */; };
 		ADD5209923F543D000715473 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADD5209223F543D000715473 /* Siri.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		ADD520A023F544E500715473 /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209F23F544E500715473 /* SiriTests.swift */; };
 		ADD520A223F54BD100715473 /* FreeTimeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */; };
 		ADD520A423F54C2E00715473 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
 		ADD520AA23F54E1E00715473 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; };
@@ -102,6 +101,10 @@
 		ADF2CDF423F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADFB40C9240127BA00F4C40A /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB40C8240127BA00F4C40A /* SearchFormView.swift */; };
 		ADFB40CA240127BA00F4C40A /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB40C8240127BA00F4C40A /* SearchFormView.swift */; };
+		ADFF21F7240A557400DDCCC8 /* SearchViewPageObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */; };
+		ADFF21FA240A558900DDCCC8 /* PageObjectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */; };
+		ADFF21FF240A614A00DDCCC8 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */; };
+		ADFF2201240A62A700DDCCC8 /* DetailViewPageObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */; };
 		ADFF51DC2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51E72403B37E00768C36 /* SearchDateTypeTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */; };
@@ -341,7 +344,6 @@
 		ADD5209223F543D000715473 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD5209423F543D000715473 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		ADD5209623F543D000715473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADD5209F23F544E500715473 /* SiriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriTests.swift; sourceTree = "<group>"; };
 		ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeIntentHandler.swift; sourceTree = "<group>"; };
 		ADD520B023F5502A00715473 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADD520B223F5502B00715473 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -350,6 +352,10 @@
 		ADF2CDF523F9218800A41DD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADF2CDF723F9218B00A41DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADFB40C8240127BA00F4C40A /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
+		ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewPageObjects.swift; sourceTree = "<group>"; };
+		ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectRepresentable.swift; sourceTree = "<group>"; };
+		ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPageObjects.swift; sourceTree = "<group>"; };
 		ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositorySpy.swift; sourceTree = "<group>"; };
 		ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeTouchBar.swift; sourceTree = "<group>"; };
 		ADFF51EC2403BE9B00768C36 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -533,9 +539,11 @@
 		AD034B1423EBE8EE00415E9A /* FreeTimePickerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF21FB240A592400DDCCC8 /* Extensions */,
+				ADFF21F8240A557800DDCCC8 /* Supports */,
+				ADFF21F5240A54E800DDCCC8 /* PageObjects */,
 				AD034B1523EBE8EE00415E9A /* TimePickerUITests.swift */,
 				AD034B1723EBE8EE00415E9A /* Info.plist */,
-				ADD5209F23F544E500715473 /* SiriTests.swift */,
 			);
 			path = FreeTimePickerUITests;
 			sourceTree = "<group>";
@@ -781,6 +789,31 @@
 				AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */,
 			);
 			path = DateType;
+			sourceTree = "<group>";
+		};
+		ADFF21F5240A54E800DDCCC8 /* PageObjects */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */,
+				ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */,
+			);
+			path = PageObjects;
+			sourceTree = "<group>";
+		};
+		ADFF21F8240A557800DDCCC8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		ADFF21FB240A592400DDCCC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ADFF51DA2403706800768C36 /* Mocks */ = {
@@ -1336,8 +1369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD520A023F544E500715473 /* SiriTests.swift in Sources */,
+				ADFF21FF240A614A00DDCCC8 /* XCTestCase+extensions.swift in Sources */,
+				ADFF21F7240A557400DDCCC8 /* SearchViewPageObjects.swift in Sources */,
+				ADFF2201240A62A700DDCCC8 /* DetailViewPageObjects.swift in Sources */,
 				AD034B1623EBE8EE00415E9A /* TimePickerUITests.swift in Sources */,
+				ADFF21FA240A558900DDCCC8 /* PageObjectRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

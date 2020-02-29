@@ -131,6 +131,7 @@ final class SearchDate: UIView {
         SearchDateType.allCases.forEach { searchDateType in
             let button = SearchDateButton(dateType: searchDateType)
             button.addTarget(self, action: #selector(tap(button:)), for: .touchUpInside)
+            button.accessibilityIdentifier = searchDateType.key + "Button"
             stackView.addArrangedSubview(button)
             buttons.append(button)
         }
