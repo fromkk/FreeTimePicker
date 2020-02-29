@@ -321,7 +321,7 @@
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
 		AD71BA9D23F7E3680076EC84 /* Pity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/TimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
+		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/FreeTimePicker/FreeTimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
 		AD9074A223F42E9A00E07C31 /* SearchDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateType.swift; sourceTree = "<group>"; };
@@ -356,7 +356,7 @@
 		ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectRepresentable.swift; sourceTree = "<group>"; };
 		ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
 		ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPageObjects.swift; sourceTree = "<group>"; };
-		ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = FreeTimePickerUITest.xctestplan; path = FreeTimePickerUITests/FreeTimePickerUITest.xctestplan; sourceTree = SOURCE_ROOT; };
+		ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePickerUITest.xctestplan; path = FreeTimePickerUITests/FreeTimePickerUITest.xctestplan; sourceTree = SOURCE_ROOT; };
 		ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositorySpy.swift; sourceTree = "<group>"; };
 		ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeTouchBar.swift; sourceTree = "<group>"; };
 		ADFF51EC2403BE9B00768C36 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1864,7 +1864,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePickerCatalyst-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePicker/FreeTimePickerCatalyst-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1889,7 +1889,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePickerCatalyst-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePicker/FreeTimePickerCatalyst-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
