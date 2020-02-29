@@ -15,9 +15,13 @@ import UIKit
 #if !targetEnvironment(macCatalyst)
     final class AdBannerViewController: UIViewController {
         private lazy var request = GADRequest()
+        private var isUITest: Bool {
+            ProcessInfo.processInfo.environment["UITest"] == "1"
+        }
 
         var adUnitID: String? {
             didSet {
+                guard !isUITest else { return }
                 bannerView.adUnitID = adUnitID
                 bannerView.load(request)
             }
@@ -25,6 +29,9 @@ import UIKit
 
         override func viewDidLoad() {
             super.viewDidLoad()
+
+            guard !isUITest else { return }
+
             bannerView.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(bannerView)
             NSLayoutConstraint.activate([

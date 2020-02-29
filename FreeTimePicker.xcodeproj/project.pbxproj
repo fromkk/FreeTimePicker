@@ -356,6 +356,7 @@
 		ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectRepresentable.swift; sourceTree = "<group>"; };
 		ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
 		ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPageObjects.swift; sourceTree = "<group>"; };
+		ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = FreeTimePickerUITest.xctestplan; path = FreeTimePickerUITests/FreeTimePickerUITest.xctestplan; sourceTree = SOURCE_ROOT; };
 		ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositorySpy.swift; sourceTree = "<group>"; };
 		ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeTouchBar.swift; sourceTree = "<group>"; };
 		ADFF51EC2403BE9B00768C36 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -539,6 +540,7 @@
 		AD034B1423EBE8EE00415E9A /* FreeTimePickerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */,
 				ADFF21FB240A592400DDCCC8 /* Extensions */,
 				ADFF21F8240A557800DDCCC8 /* Supports */,
 				ADFF21F5240A54E800DDCCC8 /* PageObjects */,

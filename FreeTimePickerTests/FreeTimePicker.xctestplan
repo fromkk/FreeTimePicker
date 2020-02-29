@@ -34,6 +34,7 @@
       }
     },
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:FreeTimePicker.xcodeproj",
         "identifier" : "AD034B1023EBE8EE00415E9A",

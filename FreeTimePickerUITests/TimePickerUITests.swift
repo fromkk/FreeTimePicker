@@ -12,6 +12,7 @@ class TimePickerUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         let app = XCUIApplication()
+        app.launchEnvironment = ["UITest": "1"]
         app.launch()
         handleCalendarPermission()
     }
