@@ -36,16 +36,20 @@ struct DetailViewPageObjects: PageObjectRepresentable {
     }
 
     func closeShareView() {
-        let closeLabel: String = {
-            if Locale.current.languageCode == "ja" {
-                return "閉じる"
-            } else {
-                return "Close"
-            }
-        }()
-        let button: XCUIElement = application.buttons.allElementsBoundByIndex.filter { button in
-            return button.label == closeLabel
-        }.last!
-        button.tap()
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            application.tap()
+        } else {
+            let closeLabel: String = {
+                if Locale.current.languageCode == "ja" {
+                    return "閉じる"
+                } else {
+                    return "Close"
+                }
+            }()
+            let button: XCUIElement = application.buttons.allElementsBoundByIndex.filter { button in
+                return button.label == closeLabel
+            }.last!
+            button.tap()
+        }
     }
 }

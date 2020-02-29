@@ -49,6 +49,7 @@ class TimePickerUITests: XCTestCase {
 
         takeScreenShot("detailView")
         detailView.tapShareButton()
+        sleep(1)
         takeScreenShot("share")
 
         detailView.closeShareView()
