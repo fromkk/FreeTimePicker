@@ -41,10 +41,17 @@ class TimePickerUITests: XCTestCase {
         searchView.tapSearchButton()
 
         let detailView = DetailViewPageObjects(application: application)
+
+        let predicate = NSPredicate(format: "exists == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: detailView.textView)
+        wait(for: [expectation], timeout: 3.0)
+
         takeScreenShot("detailView")
         detailView.tapShareButton()
         takeScreenShot("share")
-        application.tap()
+
+        detailView.closeShareView()
+
         detailView.tapCloseButton()
 
         searchView.tapToday()

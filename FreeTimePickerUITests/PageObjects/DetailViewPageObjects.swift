@@ -34,4 +34,18 @@ struct DetailViewPageObjects: PageObjectRepresentable {
     var textView: XCUIElement {
         return application.textViews["textView"]
     }
+
+    func closeShareView() {
+        let closeLabel: String = {
+            if Locale.current.languageCode == "ja" {
+                return "閉じる"
+            } else {
+                return "Close"
+            }
+        }()
+        let button: XCUIElement = application.buttons.allElementsBoundByIndex.filter { button in
+            return button.label == closeLabel
+        }.last!
+        button.tap()
+    }
 }
