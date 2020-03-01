@@ -17,6 +17,25 @@ public enum SearchDateType: Int, CaseIterable, Identifiable, Equatable {
     case nextMonth
     case custom
 
+    public var key: String {
+        switch self {
+        case .today:
+            return "today"
+        case .tomorrow:
+            return "tomorrow"
+        case .thisWeek:
+            return "thisWeek"
+        case .nextWeek:
+            return "nextWeek"
+        case .thisMonth:
+            return "thisMonth"
+        case .nextMonth:
+            return "nextMonth"
+        case .custom:
+            return "custom"
+        }
+    }
+
     public var title: String {
         let key: String
         switch self {

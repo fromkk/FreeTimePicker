@@ -12,13 +12,22 @@ import SwiftUI
 final class DetailViewController: UIViewController {
     @Published var text: String = ""
     private var cancellables: [AnyCancellable] = []
-    lazy var shareBarButtonItem = UIBarButtonItem(
-        image: UIImage(systemName: "square.and.arrow.up"),
-        style: .done,
-        target: self,
-        action: #selector(share)
-    )
-    lazy var closeBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(close))
+    lazy var shareBarButtonItem: UIBarButtonItem = {
+        let item = UIBarButtonItem(
+            image: UIImage(systemName: "square.and.arrow.up"),
+            style: .done,
+            target: self,
+            action: #selector(share)
+        )
+        item.accessibilityIdentifier = "shareButton"
+        return item
+    }()
+
+    lazy var closeBarButtonItem: UIBarButtonItem = {
+        let item = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(close))
+        item.accessibilityIdentifier = "closeButton"
+        return item
+    }()
 
     override func loadView() {
         super.loadView()

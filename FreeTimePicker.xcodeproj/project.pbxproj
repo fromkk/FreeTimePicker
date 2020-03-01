@@ -32,6 +32,10 @@
 		AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */; };
 		AD33A55223F6ABF0003DEE2C /* DatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */; };
 		AD33A55423F6AC8A003DEE2C /* DatePickerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */; };
+		AD363719240B2B3400384354 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD363718240B2B3400384354 /* CalendarView.swift */; };
+		AD36371B240B2CF300384354 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36371A240B2CF300384354 /* ReusableCell.swift */; };
+		AD36371C240B2CF300384354 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36371A240B2CF300384354 /* ReusableCell.swift */; };
+		AD36371D240B528500384354 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD363718240B2B3400384354 /* CalendarView.swift */; };
 		AD3CC64323F768F4006B6569 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CC64223F768F4006B6569 /* DateCreator.swift */; };
 		AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
 		AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
@@ -88,7 +92,6 @@
 		ADBE610F23F53D45009A7FE5 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D159F23F4DE0900422C64 /* Date+extension.swift */; };
 		ADD5209523F543D000715473 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209423F543D000715473 /* IntentHandler.swift */; };
 		ADD5209923F543D000715473 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ADD5209223F543D000715473 /* Siri.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		ADD520A023F544E500715473 /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5209F23F544E500715473 /* SiriTests.swift */; };
 		ADD520A223F54BD100715473 /* FreeTimeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */; };
 		ADD520A423F54C2E00715473 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBE60ED23F53C8F009A7FE5 /* Core.framework */; };
 		ADD520AA23F54E1E00715473 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AD90749823F42ABF00E07C31 /* Intents.intentdefinition */; };
@@ -102,6 +105,10 @@
 		ADF2CDF423F9218800A41DD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADF2CDF623F9218800A41DD4 /* InfoPlist.strings */; };
 		ADFB40C9240127BA00F4C40A /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB40C8240127BA00F4C40A /* SearchFormView.swift */; };
 		ADFB40CA240127BA00F4C40A /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB40C8240127BA00F4C40A /* SearchFormView.swift */; };
+		ADFF21F7240A557400DDCCC8 /* SearchViewPageObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */; };
+		ADFF21FA240A558900DDCCC8 /* PageObjectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */; };
+		ADFF21FF240A614A00DDCCC8 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */; };
+		ADFF2201240A62A700DDCCC8 /* DetailViewPageObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */; };
 		ADFF51DC2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */; };
 		ADFF51E72403B37E00768C36 /* SearchDateTypeTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */; };
@@ -304,6 +311,8 @@
 		AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateDelegateSpy.swift; sourceTree = "<group>"; };
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
+		AD363718240B2B3400384354 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AD36371A240B2CF300384354 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
 		AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -318,7 +327,7 @@
 		AD70587B23F3E66500C88099 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AD70587D23F3F68000C88099 /* FreeTimeFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeFinder.swift; sourceTree = "<group>"; };
 		AD71BA9D23F7E3680076EC84 /* Pity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/TimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
+		AD71BA9E23F7E3680076EC84 /* FreeTimePickerCatalyst-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FreeTimePickerCatalyst-Info.plist"; path = "/Users/fromkk/Developments/Swift/FreeTimePicker/FreeTimePicker/FreeTimePickerCatalyst-Info.plist"; sourceTree = "<absolute>"; };
 		AD90749223F427D200E07C31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AD90749723F42ABF00E07C31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
 		AD9074A223F42E9A00E07C31 /* SearchDateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateType.swift; sourceTree = "<group>"; };
@@ -341,7 +350,6 @@
 		ADD5209223F543D000715473 /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD5209423F543D000715473 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		ADD5209623F543D000715473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADD5209F23F544E500715473 /* SiriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriTests.swift; sourceTree = "<group>"; };
 		ADD520A123F54BD100715473 /* FreeTimeIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeIntentHandler.swift; sourceTree = "<group>"; };
 		ADD520B023F5502A00715473 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADD520B223F5502B00715473 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -350,6 +358,11 @@
 		ADF2CDF523F9218800A41DD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADF2CDF723F9218B00A41DD4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADFB40C8240127BA00F4C40A /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
+		ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewPageObjects.swift; sourceTree = "<group>"; };
+		ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectRepresentable.swift; sourceTree = "<group>"; };
+		ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPageObjects.swift; sourceTree = "<group>"; };
+		ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePickerUITest.xctestplan; path = FreeTimePickerUITests/FreeTimePickerUITest.xctestplan; sourceTree = SOURCE_ROOT; };
 		ADFF51DB2403709A00768C36 /* EventRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositorySpy.swift; sourceTree = "<group>"; };
 		ADFF51E62403B37E00768C36 /* SearchDateTypeTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateTypeTouchBar.swift; sourceTree = "<group>"; };
 		ADFF51EC2403BE9B00768C36 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -533,9 +546,12 @@
 		AD034B1423EBE8EE00415E9A /* FreeTimePickerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF2202240A731B00DDCCC8 /* FreeTimePickerUITest.xctestplan */,
+				ADFF21FB240A592400DDCCC8 /* Extensions */,
+				ADFF21F8240A557800DDCCC8 /* Supports */,
+				ADFF21F5240A54E800DDCCC8 /* PageObjects */,
 				AD034B1523EBE8EE00415E9A /* TimePickerUITests.swift */,
 				AD034B1723EBE8EE00415E9A /* Info.plist */,
-				ADD5209F23F544E500715473 /* SiriTests.swift */,
 			);
 			path = FreeTimePickerUITests;
 			sourceTree = "<group>";
@@ -543,6 +559,7 @@
 		AD034B2423EBEE1C00415E9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD363717240B2B2400384354 /* CalendarView */,
 				AD97444C23EFAA3700EACECB /* Toolbar */,
 				AD034B3823EC08FB00415E9A /* DateTypeView */,
 				AD034B2823EBEEA300415E9A /* NoPermission */,
@@ -591,6 +608,7 @@
 			children = (
 				ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */,
 				ADFF52052403C8B100768C36 /* URLHandler.swift */,
+				AD36371A240B2CF300384354 /* ReusableCell.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -659,6 +677,14 @@
 				AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AD363717240B2B2400384354 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				AD363718240B2B3400384354 /* CalendarView.swift */,
+			);
+			path = CalendarView;
 			sourceTree = "<group>";
 		};
 		AD5E7B8123F81DC400FA6111 /* Config */ = {
@@ -781,6 +807,31 @@
 				AD9074A423F42EB100E07C31 /* SearchDateType+Intents.swift */,
 			);
 			path = DateType;
+			sourceTree = "<group>";
+		};
+		ADFF21F5240A54E800DDCCC8 /* PageObjects */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21F6240A557400DDCCC8 /* SearchViewPageObjects.swift */,
+				ADFF2200240A62A700DDCCC8 /* DetailViewPageObjects.swift */,
+			);
+			path = PageObjects;
+			sourceTree = "<group>";
+		};
+		ADFF21F8240A557800DDCCC8 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21F9240A558900DDCCC8 /* PageObjectRepresentable.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		ADFF21FB240A592400DDCCC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF21FE240A614A00DDCCC8 /* XCTestCase+extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		ADFF51DA2403706800768C36 /* Mocks */ = {
@@ -1308,8 +1359,10 @@
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
 				AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */,
 				ADFF51DC2403709A00768C36 /* EventRepositorySpy.swift in Sources */,
+				AD36371D240B528500384354 /* CalendarView.swift in Sources */,
 				AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
+				AD36371B240B2CF300384354 /* ReusableCell.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
 				AD70587A23F3E48300C88099 /* DetailView.swift in Sources */,
 				ADFF52062403C8B100768C36 /* URLHandler.swift in Sources */,
@@ -1336,8 +1389,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD520A023F544E500715473 /* SiriTests.swift in Sources */,
+				ADFF21FF240A614A00DDCCC8 /* XCTestCase+extensions.swift in Sources */,
+				ADFF21F7240A557400DDCCC8 /* SearchViewPageObjects.swift in Sources */,
+				ADFF2201240A62A700DDCCC8 /* DetailViewPageObjects.swift in Sources */,
 				AD034B1623EBE8EE00415E9A /* TimePickerUITests.swift in Sources */,
+				ADFF21FA240A558900DDCCC8 /* PageObjectRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,11 +1406,13 @@
 				AD71BA7C23F7E3680076EC84 /* DateTypeView.swift in Sources */,
 				AD71BA7D23F7E3680076EC84 /* SearchView.swift in Sources */,
 				ADFB40CA240127BA00F4C40A /* SearchFormView.swift in Sources */,
+				AD36371C240B2CF300384354 /* ReusableCell.swift in Sources */,
 				ADFF51E72403B37E00768C36 /* SearchDateTypeTouchBar.swift in Sources */,
 				AD71BA7E23F7E3680076EC84 /* SearchViewModel.swift in Sources */,
 				AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */,
 				AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */,
 				ADFF52072403C8B100768C36 /* URLHandler.swift in Sources */,
+				AD363719240B2B3400384354 /* CalendarView.swift in Sources */,
 				AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */,
 				ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */,
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,
@@ -1680,6 +1738,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FreeTimePicker/FreeTimePicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
@@ -1692,6 +1751,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
 				PRODUCT_NAME = Pity;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1705,6 +1765,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FreeTimePicker/FreeTimePicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
@@ -1717,6 +1778,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker;
 				PRODUCT_NAME = Pity;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1822,7 +1884,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePickerCatalyst-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePicker/FreeTimePickerCatalyst-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1847,7 +1909,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FreeTimePicker/Preview Content\"";
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePickerCatalyst-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeTimePicker/FreeTimePickerCatalyst-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2022,6 +2084,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Siri/Info.plist;
@@ -2033,6 +2096,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Siri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -2044,6 +2108,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Siri/Siri.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Siri/Info.plist;
@@ -2055,6 +2120,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.FreeTimePicker.Siri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;

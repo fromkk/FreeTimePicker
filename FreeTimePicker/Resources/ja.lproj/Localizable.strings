@@ -47,3 +47,19 @@
 "Ignore holidays" = "休日を無視";
 
 "No free time" = "空き時間がありませんでした";
+
+"sunday" = "日";
+
+"monday" = "月";
+
+"tuesday" = "火";
+
+"wednesday" = "水";
+
+"thursday" = "木";
+
+"friday" = "金";
+
+"saturday" = "土";
+
+"today" = "今日";

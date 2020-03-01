@@ -32,6 +32,9 @@
             reference = "container:FreeTimePickerTests/FreeTimePicker.xctestplan"
             default = "YES">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:FreeTimePickerUITests/FreeTimePickerUITest.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
