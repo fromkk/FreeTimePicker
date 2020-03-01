@@ -138,6 +138,7 @@ p {
 .images3 .image {
     width: 33%;
     height: auto;
+    text-align: center;
 }
 
 .images2 {
@@ -149,6 +150,7 @@ p {
 .images2 .image {
     width: 50%;
     height: auto;
+    text-align: center;
 }
 
 @media screen and (max-width:768px) {
