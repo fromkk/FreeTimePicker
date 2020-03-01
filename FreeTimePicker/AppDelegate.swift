@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    #if targetEnvironment(macCatalyst)
+    override func buildMenu(with builder: UIMenuBuilder) {
+        MenuProvider.run(with: builder)
+    }
+    #endif
+
     // MARK: UISceneSession Lifecycle
 
     func application(_: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options _: UIScene.ConnectionOptions) -> UISceneConfiguration {

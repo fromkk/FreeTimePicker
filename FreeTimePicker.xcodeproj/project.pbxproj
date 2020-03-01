@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16537D3F5294836D8B98F1F6 /* Pods_FreeTimePickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */; };
 		82DE2EC122DA9808BB6866A5 /* Pods_FreeTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */; };
+		AD001B5B240C70DD0099991C /* MenuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD001B5A240C70DD0099991C /* MenuProvider.swift */; };
 		AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF323EBE8ED00415E9A /* AppDelegate.swift */; };
 		AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */; };
 		AD034AF823EBE8ED00415E9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD034AF723EBE8ED00415E9A /* ContentView.swift */; };
@@ -275,6 +276,7 @@
 		446D33727B87E0B32039A119 /* Pods_FreeTimePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609F699960D6E4607A76C9D1 /* Pods_FreeTimePickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB7DDE30C452CC67E47600B /* Pods_FreeTimePicker_FreeTimePickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeTimePicker_FreeTimePickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD001B5A240C70DD0099991C /* MenuProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProvider.swift; sourceTree = "<group>"; };
 		AD034AF023EBE8ED00415E9A /* Pity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD034AF323EBE8ED00415E9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD034AF523EBE8ED00415E9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -609,6 +611,7 @@
 				ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */,
 				ADFF52052403C8B100768C36 /* URLHandler.swift */,
 				AD36371A240B2CF300384354 /* ReusableCell.swift */,
+				AD001B5A240C70DD0099991C /* MenuProvider.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -1418,6 +1421,7 @@
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,
 				AD71BA8323F7E3680076EC84 /* AppDelegate.swift in Sources */,
 				AD71BA8423F7E3680076EC84 /* SceneDelegate.swift in Sources */,
+				AD001B5B240C70DD0099991C /* MenuProvider.swift in Sources */,
 				AD71BA8523F7E3680076EC84 /* DetailView.swift in Sources */,
 				AD71BA8623F7E3680076EC84 /* ContentView.swift in Sources */,
 				AD71BA8723F7E3680076EC84 /* Intents.intentdefinition in Sources */,
