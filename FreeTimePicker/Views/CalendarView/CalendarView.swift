@@ -32,6 +32,12 @@ extension Date {
         return calendar.date(from: dateComponents)!
     }
 
+    func isSameDay(with date: Date, calendar: Calendar = .init(identifier: .gregorian)) -> Bool {
+        let dateComponents1 = calendar.dateComponents([.year, .month, .day], from: self)
+        let dateComponents2 = calendar.dateComponents([.year, .month, .day], from: date)
+        return dateComponents1 == dateComponents2
+    }
+
     func numberOfWeeks(calendar: Calendar = .init(identifier: .gregorian), timeZone _: TimeZone = .current) -> Int {
         calendar.range(of: .weekOfMonth, in: .month, for: self)!.count
     }
@@ -39,6 +45,7 @@ extension Date {
 
 final class CalendarViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private var cancellables: [AnyCancellable] = []
+    private let now: Date = Date()
 
     @Binding var date: Date?
     init(date: Binding<Date?>) {
@@ -145,7 +152,9 @@ final class CalendarViewController: UICollectionViewController, UICollectionView
             return cell
         } else {
             let cell = DayCell.reuse(collectionView, at: indexPath)
-            cell.update(with: date(at: indexPath.item), and: yearMonth, calendar: calendar)
+            let date = self.date(at: indexPath.item)
+            cell.update(with: date, and: yearMonth, calendar: calendar)
+            cell.isToday = date.isSameDay(with: now)
             return cell
         }
     }
@@ -389,6 +398,9 @@ final class CalendarViewController: UICollectionViewController, UICollectionView
     }
 
     final class DayCell: UICollectionViewCell, Reusable {
+        @Published var isToday: Bool = false
+        private var cancellables: [AnyCancellable] = []
+
         override init(frame: CGRect) {
             super.init(frame: frame)
             setUp()
@@ -406,6 +418,13 @@ final class CalendarViewController: UICollectionViewController, UICollectionView
                 dayLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
                 dayLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             ])
+            $isToday.sink { [weak self] isToday in
+                if isToday {
+                    self?.backgroundColor = .systemRed
+                } else {
+                    self?.backgroundColor = .systemBackground
+                }
+            }.store(in: &cancellables)
             return {}
         }()
 
