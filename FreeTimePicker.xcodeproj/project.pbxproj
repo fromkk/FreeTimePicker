@@ -32,6 +32,10 @@
 		AD33A55023F6AA50003DEE2C /* SearchDateDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */; };
 		AD33A55223F6ABF0003DEE2C /* DatePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */; };
 		AD33A55423F6AC8A003DEE2C /* DatePickerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */; };
+		AD363719240B2B3400384354 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD363718240B2B3400384354 /* CalendarView.swift */; };
+		AD36371B240B2CF300384354 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36371A240B2CF300384354 /* ReusableCell.swift */; };
+		AD36371C240B2CF300384354 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36371A240B2CF300384354 /* ReusableCell.swift */; };
+		AD36371D240B528500384354 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD363718240B2B3400384354 /* CalendarView.swift */; };
 		AD3CC64323F768F4006B6569 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CC64223F768F4006B6569 /* DateCreator.swift */; };
 		AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
 		AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FA12423F8D4F3002AE074 /* AdBanner.swift */; };
@@ -307,6 +311,8 @@
 		AD33A54F23F6AA50003DEE2C /* SearchDateDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateDelegateSpy.swift; sourceTree = "<group>"; };
 		AD33A55123F6ABF0003DEE2C /* DatePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTests.swift; sourceTree = "<group>"; };
 		AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDelegateSpy.swift; sourceTree = "<group>"; };
+		AD363718240B2B3400384354 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AD36371A240B2CF300384354 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		AD3CC64223F768F4006B6569 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		AD3CC64423F77847006B6569 /* FreeTimePicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = FreeTimePicker.xctestplan; path = FreeTimePickerTests/FreeTimePicker.xctestplan; sourceTree = SOURCE_ROOT; };
 		AD5E7B8023F81D0C00FA6111 /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -553,6 +559,7 @@
 		AD034B2423EBEE1C00415E9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD363717240B2B2400384354 /* CalendarView */,
 				AD97444C23EFAA3700EACECB /* Toolbar */,
 				AD034B3823EC08FB00415E9A /* DateTypeView */,
 				AD034B2823EBEEA300415E9A /* NoPermission */,
@@ -601,6 +608,7 @@
 			children = (
 				ADF2CDED23F9115200A41DD4 /* SearchDateTypeHandler.swift */,
 				ADFF52052403C8B100768C36 /* URLHandler.swift */,
+				AD36371A240B2CF300384354 /* ReusableCell.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -669,6 +677,14 @@
 				AD33A55323F6AC8A003DEE2C /* DatePickerDelegateSpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AD363717240B2B2400384354 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				AD363718240B2B3400384354 /* CalendarView.swift */,
+			);
+			path = CalendarView;
 			sourceTree = "<group>";
 		};
 		AD5E7B8123F81DC400FA6111 /* Config */ = {
@@ -1343,8 +1359,10 @@
 				AD034B2A23EBEEAE00415E9A /* NoPermissionView.swift in Sources */,
 				AD5FA12523F8D4F3002AE074 /* AdBanner.swift in Sources */,
 				ADFF51DC2403709A00768C36 /* EventRepositorySpy.swift in Sources */,
+				AD36371D240B528500384354 /* CalendarView.swift in Sources */,
 				AD33A50323F667CD003DEE2C /* SearchParametersStore.swift in Sources */,
 				AD034AF423EBE8ED00415E9A /* AppDelegate.swift in Sources */,
+				AD36371B240B2CF300384354 /* ReusableCell.swift in Sources */,
 				AD034AF623EBE8ED00415E9A /* SceneDelegate.swift in Sources */,
 				AD70587A23F3E48300C88099 /* DetailView.swift in Sources */,
 				ADFF52062403C8B100768C36 /* URLHandler.swift in Sources */,
@@ -1388,11 +1406,13 @@
 				AD71BA7C23F7E3680076EC84 /* DateTypeView.swift in Sources */,
 				AD71BA7D23F7E3680076EC84 /* SearchView.swift in Sources */,
 				ADFB40CA240127BA00F4C40A /* SearchFormView.swift in Sources */,
+				AD36371C240B2CF300384354 /* ReusableCell.swift in Sources */,
 				ADFF51E72403B37E00768C36 /* SearchDateTypeTouchBar.swift in Sources */,
 				AD71BA7E23F7E3680076EC84 /* SearchViewModel.swift in Sources */,
 				AD71BA7F23F7E3680076EC84 /* DatePickerView.swift in Sources */,
 				AD71BA8123F7E3680076EC84 /* NoPermissionView.swift in Sources */,
 				ADFF52072403C8B100768C36 /* URLHandler.swift in Sources */,
+				AD363719240B2B3400384354 /* CalendarView.swift in Sources */,
 				AD5FA12623F8DE16002AE074 /* AdBanner.swift in Sources */,
 				ADFF51DD2403709A00768C36 /* EventRepositorySpy.swift in Sources */,
 				AD71BA8223F7E3680076EC84 /* SearchParametersStore.swift in Sources */,

@@ -158,30 +158,45 @@ final class DatePicker: UITextField {
 
 struct DatePickerView: UIViewRepresentable {
     func makeCoordinator() -> DatePickerView.Coordinator {
-        Coordinator(date: $date, text: $text)
+        Coordinator(date: $date, text: $text, begin: $begin, end: $end)
     }
 
     let datePickerModel: UIDatePicker.Mode
     @Binding var date: Date?
     @Binding var text: String?
+    @Binding var begin: Bool
+    @Binding var end: Bool
 
-    final class Coordinator: DatePickerDelegate {
+    final class Coordinator: NSObject, DatePickerDelegate, UITextFieldDelegate {
         @Binding var date: Date?
         @Binding var text: String?
-        init(date: Binding<Date?>, text: Binding<String?>) {
+        @Binding var begin: Bool
+        @Binding var end: Bool
+        init(date: Binding<Date?>, text: Binding<String?>, begin: Binding<Bool>, end: Binding<Bool>) {
             _date = date
             _text = text
+            _begin = begin
+            _end = end
         }
 
         func datePickerDidChanged(_ datePicker: DatePicker) {
             date = datePicker.date
             text = datePicker.text
         }
+
+        func textFieldDidBeginEditing(_: UITextField) {
+            begin = true
+        }
+
+        func textFieldDidEndEditing(_: UITextField) {
+            end = true
+        }
     }
 
     func makeUIView(context: UIViewRepresentableContext<DatePickerView>) -> DatePicker {
         let datePicker = DatePicker(datePickerMode: datePickerModel)
         datePicker.datePickerDelegate = context.coordinator
+        datePicker.delegate = context.coordinator
         return datePicker
     }
 
@@ -199,8 +214,10 @@ struct DatePickerView: UIViewRepresentable {
 struct DatePickerView_Preview: PreviewProvider {
     @State static var date: Date?
     @State static var text: String?
+    @State static var begin: Bool = false
+    @State static var end: Bool = false
 
     static var previews: some View {
-        DatePickerView(datePickerModel: .date, date: $date, text: $text)
+        DatePickerView(datePickerModel: .date, date: $date, text: $text, begin: $begin, end: $end)
     }
 }
