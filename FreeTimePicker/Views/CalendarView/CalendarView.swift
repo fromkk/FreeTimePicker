@@ -111,20 +111,16 @@ final class CalendarViewController: UICollectionViewController, UICollectionView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateYearMonth()
         updateAppendWeekDay()
+        updateYearMonth()
     }
 
     private func backMonth() {
         currentDate = yearMonth.back(calendar)
-        updateAppendWeekDay()
-        updateYearMonth()
     }
 
     private func nextMonth() {
         currentDate = yearMonth.next(calendar)
-        updateAppendWeekDay()
-        updateYearMonth()
     }
 
     private func configureCollectionView() {
@@ -254,6 +250,7 @@ final class CalendarViewController: UICollectionViewController, UICollectionView
 
     var currentDate: Date! {
         didSet {
+            updateAppendWeekDay()
             updateYearMonth()
             collectionView.reloadData()
         }
@@ -462,3 +459,13 @@ struct CalendarView: UIViewControllerRepresentable {
         // nothing todo
     }
 }
+
+#if DEBUG
+    struct CalendarView_Preview: PreviewProvider {
+        @State static var date: Date? = Date()
+
+        static var previews: some View {
+            CalendarView(date: $date)
+        }
+    }
+#endif
