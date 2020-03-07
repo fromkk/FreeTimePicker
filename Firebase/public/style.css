@@ -153,6 +153,12 @@ p {
     text-align: center;
 }
 
+.youtube {
+    max-width: 100%;
+    display:block;
+    margin: 32pt auto;
+}
+
 @media screen and (max-width:768px) {
     .container {
         width: auto;
