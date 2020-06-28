@@ -116,6 +116,9 @@ final class DatePicker: UITextField {
         let picker = UIDatePicker(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 216)))
         picker.calendar = Calendar(identifier: .gregorian)
         picker.timeZone = .current
+        if #available(iOS 13.4, *) {
+            picker.preferredDatePickerStyle = .wheels
+        }
         picker.locale = Locale(identifier: "ja_JP")
         picker.addTarget(self, action: #selector(datePickerDidChange(_:)), for: .valueChanged)
         return picker
