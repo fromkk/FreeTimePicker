@@ -8,7 +8,7 @@
 
 import UIKit
 #if canImport(AppKit)
-import AppKit
+    import AppKit
 #endif
 
 struct MenuProvider {

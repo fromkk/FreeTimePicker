@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     #if targetEnvironment(macCatalyst)
-    override func buildMenu(with builder: UIMenuBuilder) {
-        MenuProvider.run(with: builder)
-    }
+        override func buildMenu(with builder: UIMenuBuilder) {
+            MenuProvider.run(with: builder)
+        }
     #endif
 
     // MARK: UISceneSession Lifecycle
